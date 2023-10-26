@@ -107,7 +107,7 @@ author:
   name             : #"성의제"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "의제의 개발노트입니다."
-  location         : #"Somewhere"
+  location         : "South Korea"
   email            :
   links:
     - label: "Email"

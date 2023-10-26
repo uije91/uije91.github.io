@@ -17,8 +17,8 @@ minimal_mistakes_skin    : "contrast" #"default", "air", "aqua", "contrast", "da
 # Site Settings
 locale                   : "ko-KR"
 title                    : "의제의 개발노트"
-title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
+title_separator          : "|"
+subtitle                 : "신입개발자 의제의 학습용 블로그입니다." # site tagline that appears below site title in masthead
 name                     : "의제"
 description              : "An amazing website."
 url                      : "https://uije91.github.io"
@@ -104,10 +104,10 @@ analytics:
 
 # Site Author
 author:
-  name             : #"성의제"
+  name             : "Sung UiJe"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "신입개발자 성의제의 개발노트 입니다."
-  location         : "South Korea"
+  bio              : #"신입개발자 성의제의 개발노트 입니다."
+  location         : "Seoul, South Korea"
   email            :
   links:
     - label: "Email"

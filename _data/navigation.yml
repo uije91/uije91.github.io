@@ -12,9 +12,9 @@ docs:
   - title: "코딩테스트"
     children:
       - title: "BackJoon"
-        url: /categories/coding/backjoon
+        url: /categories/backjoon
       - title: "Programers"
-        url: /categories/coding/programers
+        url: /categories/programers
 
   - title: Customization
     children:

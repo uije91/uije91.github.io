@@ -7,6 +7,17 @@ main:
 
 
 docs:
+  - title: Front-End
+    children:
+      - title: "추후작성예정"
+        url: 
+
+  - title: Back-End
+    children:
+      - title: "Java"
+        url: 
+      - title: "SpringFramework"
+        url:
   - title: "코딩테스트"
     children:
       - title: "BackJoon"
@@ -14,38 +25,11 @@ docs:
       - title: "Programers"
         url: categories/programers/
 
-  - title: Customization
-    children:
-      - title: "Configuration"
-        url: /docs/configuration/
-      - title: "Navigation"
-        url: /docs/navigation/
-      - title: "UI Text"
-        url: /docs/ui-text/
-      - title: "Authors"
-        url: /docs/authors/
-      - title: "Layouts"
-        url: /docs/layouts/
 
-  - title: Content
-    children:
-      - title: "Working with Posts"
-        url: /docs/posts/
-      - title: "Working with Pages"
-        url: /docs/pages/
-      - title: "Working with Collections"
-        url: /docs/collections/
-      - title: "Helpers"
-        url: /docs/helpers/
-      - title: "Utility Classes"
-        url: /docs/utility-classes/
-
-  - title: Extras
-    children:
-      - title: "Stylesheets"
-        url: /docs/stylesheets/
-      - title: "JavaScript"
-        url: /docs/javascript/
+counts:
+  -title: "카테고리"
+   use: true
+  
     
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/

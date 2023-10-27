@@ -15,9 +15,10 @@ docs:
       url: /java/
     - title: "코딩테스트"
     children:
-      - title: 프로그래머스
-        url: /
-      - title: 백준
+      - title: "프로그래머스"
+        url: /programers/
+      - title: "백준"
+        url: /backjoon/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"

@@ -9,16 +9,16 @@ main:
 
 
 docs:
-  -title: "Backend"
-  children:
-    - title: "자바"
-      url: /java/
-    - title: "코딩테스트"
+  - title: Backend
     children:
-      - title: "프로그래머스"
-        url: /programers/
-      - title: "백준"
-        url: /backjoon/
+      - title: "Java"
+        url: /docs/java/
+        children:
+        - title: "BackJoon"
+        url: /docs/java/
+        - title: "Programers"
+        url: /docs/java/
+    
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"

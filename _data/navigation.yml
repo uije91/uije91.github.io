@@ -12,10 +12,10 @@ docs:
   - title: "코딩테스트"
     children:
       - title: "BackJoon"
-        url: /categories/
+        url: /categories/coding/backjoon
       - title: "Programers"
-        url: /categories/
-        
+        url: /categories/coding/programers
+
   - title: Customization
     children:
       - title: "Configuration"

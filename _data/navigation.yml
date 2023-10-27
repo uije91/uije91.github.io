@@ -15,7 +15,7 @@ docs:
     children:
       - title: "Java"
         url: categories/java/
-      - title: "SpringFramework"
+      - title: "Spring Framework"
         url: categories/spring/
   - title: "코딩테스트"
     children:

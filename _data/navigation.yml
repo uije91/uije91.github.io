@@ -14,8 +14,8 @@ docs:
       - title: "BackJoon"
         url: /categories/
       - title: "Programers"
-        url: /categories/programers
-
+        url: /categories/
+        
   - title: Customization
     children:
       - title: "Configuration"

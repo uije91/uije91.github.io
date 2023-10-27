@@ -6,6 +6,18 @@ main:
     url: /tags/
   - title: "검색"
     url: /search/
+
+
+docs:
+  -title: "Backend"
+  children:
+    - title: "자바"
+      url: /java/
+    - title: "코딩테스트"
+    children:
+      - title: 프로그래머스
+        url: /
+      - title: 백준
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"

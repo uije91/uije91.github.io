@@ -285,11 +285,14 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true
+      author_profile: false
       read_time: true
       comments: true
       share: #true
       related: #true
       show_date: true
+      typora-root-url: ../
+      classes: wide
+
 
 date_format: "%Y-%m-%d"

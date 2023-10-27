@@ -105,7 +105,7 @@ analytics:
 # Site Author
 author:
   name             : "Sung UiJe"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/profile.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : #"신입개발자 성의제의 개발노트 입니다."
   location         : "Seoul, South Korea"
   email            :
@@ -293,7 +293,7 @@ defaults:
       show_date: true
       typora-root-url: ../
       sidebar:
-        nav: "docs"
+        nav: "docsi"
 
 
 date_format: "%Y-%m-%d"

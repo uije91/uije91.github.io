@@ -1,7 +1,7 @@
 ---
 title: "backjoon"
 layout: archive
-permalink: /categories/backjoon
+permalink: /backjoon/
 author_profile: true
 sidebar_main: true
 ---

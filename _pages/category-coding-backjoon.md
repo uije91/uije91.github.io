@@ -1,5 +1,5 @@
 ---
-title: "backjoon"
+title: "Backjoon"
 layout: archive
 permalink: categories/backjoon/
 author_profile: true

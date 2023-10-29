@@ -1,5 +1,5 @@
 ---
-title: "programers"
+title: "Programers"
 layout: archive
 permalink: categories/programers/
 author_profile: true

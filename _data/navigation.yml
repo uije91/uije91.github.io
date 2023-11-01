@@ -7,25 +7,25 @@ main:
 
 docs:
   - title: "Back-End"
-  children:
-    - title: "Java"
-      url: categories/java/
-     - title: "Spring Framework"
-      url: categories/spring/
-  - title: "Coding"
-  children:
-    - title: "Algorithm"
-      url: categories/algorithm
-    - title: "BackJoon"
-      url: categories/backjoon/
-    - title: "Programers"
-      url: categories/programers/
-  - title: "Portfolio"
-    children:
-    - title: "Personal Project"
-      url: categories/personalProject
-    - title: "Team Project"
-      url: categories/teamProject
+  # children:
+  #   - title: "Java"
+  #     url: categories/java/
+  #    - title: "Spring Framework"
+  #     url: categories/spring/
+  # - title: "Coding"
+  # children:
+  #   - title: "Algorithm"
+  #     url: categories/algorithm
+  #   - title: "BackJoon"
+  #     url: categories/backjoon/
+  #   - title: "Programers"
+  #     url: categories/programers/
+  # - title: "Portfolio"
+  #   children:
+  #   - title: "Personal Project"
+  #     url: categories/personalProject
+  #   - title: "Team Project"
+  #     url: categories/teamProject
 
   
     

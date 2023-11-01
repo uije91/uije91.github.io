@@ -7,7 +7,7 @@ main:
 
 
 docs:
-  - title: Front-End
+    - title: Front-End
     children:
       - title: "HTML"
         url: categoris/html/
@@ -16,9 +16,9 @@ docs:
       - title: "Sass"
         url: categoris/sass/
       - title: "JavaScript"
-        url: categoris/javaScript/
-
-  - title: "Back-End"
+         url: categoris/javaScript/
+    
+    - title: "Back-End"
     children:
       - title: "Java"
         url: categories/java/

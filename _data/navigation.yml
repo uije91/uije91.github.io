@@ -5,18 +5,17 @@ main:
   # - title: "검색"
   #   url: /search/
 
-
 docs:
     - title: Front-End
-      # children:
-      # - title: "HTML"
-      #   url: categories/html/
-      # - title: "CSS"
-      #   url: categories/css/
-      # - title: "Sass"
-      #   url: categories/sass/
-      # - title: "JavaScript"
-      #    url: categories/javaScript/
+      children:
+      - title: "HTML"
+        url: categories/html/
+      - title: "CSS"
+        url: categories/css/
+      - title: "Sass"
+        url: categories/sass/
+      - title: "JavaScript"
+         url: categories/javaScript/
       
     - title: "Back-End"
     children:
@@ -25,12 +24,21 @@ docs:
       - title: "Spring Framework"
         url: categories/spring/
         
-  - title: "코딩테스트"
+  - title: "Coding"
     children:
+      - title: "Algorithm"
+        url: categories/algorithm
       - title: "BackJoon"
         url: categories/backjoon/
       - title: "Programers"
         url: categories/programers/
+
+  - title: "Portfolio"
+    children:
+      - title: "Personal Project"
+        url: categories/personalProject
+      - title: "Team Project"
+        url: categories/teamProject
 
   
     

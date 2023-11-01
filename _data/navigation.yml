@@ -7,16 +7,16 @@ main:
 
 
 docs:
-    # - title: Front-End
-    # children:
-    #   - title: "HTML"
-    #     url: categories/html/
-    #   - title: "CSS"
-    #     url: categories/css/
-    #   - title: "Sass"
-    #     url: categories/sass/
-    #   - title: "JavaScript"
-    #      url: categories/javaScript/
+    - title: Front-End
+    children:
+      - title: "HTML"
+        url: categories/html/
+      - title: "CSS"
+        url: categories/css/
+      - title: "Sass"
+        url: categories/sass/
+      - title: "JavaScript"
+         url: categories/javaScript/
     
     - title: "Back-End"
     children:

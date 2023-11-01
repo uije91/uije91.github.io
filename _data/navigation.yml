@@ -17,12 +17,14 @@ docs:
         url: categoris/sass/
       - title: "JavaScript"
         url: categoris/javaScript/
+
   - title: "Back-End"
     children:
       - title: "Java"
         url: categories/java/
       - title: "Spring Framework"
         url: categories/spring/
+        
   - title: "코딩테스트"
     children:
       - title: "BackJoon"

@@ -294,6 +294,8 @@ defaults:
       typora-root-url: ../
       sidebar:
         nav: "docs"
+      futrue: true
+      published: true
 
 
 date_format: "%Y-%m-%d"

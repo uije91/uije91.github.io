@@ -16,7 +16,7 @@ docs:
       - title: "Sass"
         url: categoris/sass/
       - title: "JavaScript"
-        url: categoris/js/
+        url: categoris/javaScript/
   - title: "Back-End"
     children:
       - title: "Java"

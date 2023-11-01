@@ -7,11 +7,11 @@ main:
 
 docs:
   - title: "Back-End"
-  children:
-  - title: "Java"
-    url: categories/java/
-  - title: "Spring Framework"
-    url: categories/spring/
+    children:
+    - title: "Java"
+      url: categories/java/
+    - title: "Spring Framework"
+      url: categories/spring/
   # - title: "Coding"
   # children:
   #   - title: "Algorithm"

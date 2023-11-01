@@ -10,13 +10,13 @@ docs:
     - title: Front-End
     children:
       - title: "HTML"
-        url: categoris/html/
+        url: categories/html/
       - title: "CSS"
-        url: categoris/css/
+        url: categories/css/
       - title: "Sass"
-        url: categoris/sass/
+        url: categories/sass/
       - title: "JavaScript"
-         url: categoris/javaScript/
+         url: categories/javaScript/
     
     - title: "Back-End"
     children:

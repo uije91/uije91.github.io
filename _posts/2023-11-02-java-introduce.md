@@ -2,6 +2,7 @@
 title:  "자바(Java)-소개"
 category: java
 typora-root-url: ../
+toc_label: "자바소개"
 toc: true
 toc_sticky: true
 ---

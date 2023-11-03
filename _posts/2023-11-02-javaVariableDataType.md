@@ -37,6 +37,8 @@ toc_sticky: true
 
 
 
+
+
 ## 자료형(Data Type)
 
 - 자료형이란 변수가 저장하는 데이터 형식이다

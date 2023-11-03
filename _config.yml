@@ -292,8 +292,6 @@ defaults:
       related: #true
       show_date: true
       typora-root-url: ../
-      # sidebar:
-      #   nav: "docs"
       sidebar_main: true
 
 

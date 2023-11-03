@@ -5,37 +5,37 @@ main:
   # - title: "검색"
   #   url: /search/
 
-docs:
-  - title: "Front-End"
-    children:
-    - title: "HTML"
-      url: categories/html
-    - title: "CSS"
-      url: categories/css
-    - title: "Sass"
-      url: categories/sass
-    - title: "Java Script"
-      url: categories/javaScript
-  - title: "Back-End"
-    children:
-    - title: "Java"
-      url: categories/java/
-    - title: "Spring Framework"
-      url: categories/spring/
-  - title: "Coding"
-    children:
-    - title: "Algorithm"
-      url: categories/algorithm
-    - title: "BackJoon"
-      url: categories/backjoon/
-    - title: "Programers"
-      url: categories/programers/
-  - title: "Portfolio"
-    children:
-    - title: "Personal Project"
-      url: categories/personalProject
-    - title: "Team Project"
-      url: categories/teamProject
+# docs:
+#   - title: "Front-End"
+#     children:
+#     - title: "HTML"
+#       url: categories/html
+#     - title: "CSS"
+#       url: categories/css
+#     - title: "Sass"
+#       url: categories/sass
+#     - title: "Java Script"
+#       url: categories/javaScript
+#   - title: "Back-End"
+#     children:
+#     - title: "Java"
+#       url: categories/java/
+#     - title: "Spring Framework"
+#       url: categories/spring/
+#   - title: "Coding"
+#     children:
+#     - title: "Algorithm"
+#       url: categories/algorithm
+#     - title: "BackJoon"
+#       url: categories/backjoon/
+#     - title: "Programers"
+#       url: categories/programers/
+#   - title: "Portfolio"
+#     children:
+#     - title: "Personal Project"
+#       url: categories/personalProject
+#     - title: "Team Project"
+#       url: categories/teamProject
 
   
     

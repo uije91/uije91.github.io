@@ -134,7 +134,7 @@ a+=b; //결과 : 15 (+=는 a=a+b란 의미이다.)
 - 조건식?참:거짓 의 방법으로 사용하는 연산자다. 
 
 ```java
-int a = 10, int b=9;
+int a=10, int b=9;
 String result = (a>b)?"true":"false";
 System.out.println(result); //결과 : true
 ```

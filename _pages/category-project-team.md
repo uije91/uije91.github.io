@@ -3,8 +3,7 @@ title: "Team Project"
 layout: archive
 permalink: categories/teamProject/
 author_profile: true
-sidebar:
-    nav: "docs"
+sidebar_main: true
 ---
 
 {% assign posts = site.categories.teamProject %}

@@ -3,8 +3,7 @@ title: "Sass"
 layout: archive
 permalink: categories/sass/
 author_profile: true
-sidebar:
-    nav: "docs"
+sidebar_main: true
 ---
 
 {% assign posts = site.categories.sass %}

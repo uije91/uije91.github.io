@@ -3,8 +3,7 @@ title: "JavaScript"
 layout: archive
 permalink: categories/javaScript/
 author_profile: true
-sidebar:
-    nav: "docs"
+sidebar_main: true
 ---
 
 {% assign posts = site.categories.javaScript %}

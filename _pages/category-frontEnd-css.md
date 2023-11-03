@@ -3,8 +3,7 @@ title: "CSS"
 layout: archive
 permalink: categories/css/
 author_profile: true
-sidebar:
-    nav: "docs"
+sidebar_main: true
 ---
 
 {% assign posts = site.categories.css %}

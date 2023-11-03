@@ -3,8 +3,7 @@ title: "Java"
 layout: archive
 permalink: categories/java/
 author_profile: true
-sidebar:
-    nav: "docs"
+sidebar_main: true
 ---
 
 {% assign posts = site.categories.java %}

@@ -3,8 +3,7 @@ title: "Personal Project"
 layout: archive
 permalink: categories/personalProject/
 author_profile: true
-sidebar:
-    nav: "docs"
+sidebar_main: true
 ---
 
 {% assign posts = site.categories.personalProject %}

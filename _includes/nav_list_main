@@ -6,7 +6,7 @@
   <ul class="nav__items">
       <!--전체 글 수-->
       <li>
-            📂 <span style="font-family: 'Noto Sans KR', sans-serif; font-size: 15px;">전체 글 수 {{sum}} 개</style>
+            📂 <span style="font-family: 'Noto Sans KR', sans-serif; font-size: 15px;">전체 포스팅 : {{sum}}개</style>
       </li>
       <li>
         <!--span 태그로 카테고리들을 크게 분류-->

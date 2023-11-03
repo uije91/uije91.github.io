@@ -4,6 +4,8 @@ layout: archive
 permalink: categories/backjoon/
 author_profile: true
 sidebar_main: true
+paginate: 5
+paginate_path: /page:num/
 ---
 
 {% assign posts = site.categories.backjoon %}

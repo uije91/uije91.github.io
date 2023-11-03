@@ -10,11 +10,13 @@ toc_sticky: true
 
 
 
+
+
 ## 자바(Java)란?
 
 
 
-#### 자바의 특징
+### 자바의 특징
 
 - 플랫폼 독립적
   - 운영체제에 따라 코드를 재 작성하지 않아도 된다.
@@ -23,7 +25,7 @@ toc_sticky: true
 
 
 
-#### 자바 프로그램 작성/실행 과정
+### 자바 프로그램 작성/실행 과정
 
 
 
@@ -31,7 +33,7 @@ toc_sticky: true
 
 
 
-#### 자바 플랫폼(Java Platform)
+### 자바 플랫폼(Java Platform)
 
 - Java SE(Standard Edition)
   - 기본 개발 환경

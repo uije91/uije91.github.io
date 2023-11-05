@@ -97,9 +97,10 @@ try {
 
 #### throw
 
-- 개발자가 의도적으로 예외를 발생 시킨 후 처리할 때 사용합니다.
-- 예를 들어 은행 업무를 처리하는 프로그램에서 잔고 부족과 같은 예외는 API에 존재하지 않는데 이런 경우에는 개발자가 직접 예외를 정의해야 합니다.
-  - 다음 예제는 은행 계좌(Account) 클래스를 작성한것입니다. 출금(withdraw) 메소드에서 잔고(balance) 필드와 출금액을 비교하여 잔고가 부족하면 BalanceInsufficientException 을 발생 시키도록 했습니다.
+개발자가 의도적으로 예외를 발생 시킨 후 처리할 때 사용합니다.
+
+예를 들어 은행 업무를 처리하는 프로그램에서 잔고 부족과 같은 예외는 API에 존재하지 않는데 이런 경우에는 개발자가 직접 예외를 정의해야 합니다.
+- 다음 예제는 은행 계좌(Account) 클래스를 작성한것입니다. 출금(withdraw) 메소드에서 잔고(balance) 필드와 출금액을 비교하여 잔고가 부족하면 BalanceInsufficientException 을 발생 시키도록 했습니다.
 
 ```java
 public class Account {
@@ -146,8 +147,9 @@ public class Account {
 
 #### throws
 
-- 예외가 발생하면 상위 메소드로 예외를 전가시킬때 사용합니다.
-- main() 메소드에서는 try-catch로 예외를 최종 처리하는 것이 바람직합니다.
+예외가 발생하면 상위 메소드로 예외를 전가시킬때 사용합니다.
+
+main() 메소드에서는 try-catch로 예외를 최종 처리하는 것이 바람직합니다.
 
 ```java
 public class ThrowExample {

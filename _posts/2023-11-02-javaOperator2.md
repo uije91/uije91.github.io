@@ -18,20 +18,20 @@ typora-root-url: ../
 
 
 <div style="margin-left: 20px; padding-left: 40px;">
-    <table align="center";>
+    <table style="text-align: center">
         <tr style="height: 20px;">
-            <td style="width: 10%;">10진수</td>
-            <td style="width: 9%;">0</td>
-            <td style="width: 9%;">1</td>
-            <td style="width: 9%;">2</td>
-            <td style="width: 9%;">3</td>
-            <td style="width: 9%;">4</td>
-            <td style="width: 9%;">5</td>
-            <td style="width: 9%;">6</td>
-            <td style="width: 9%;">7</td>
-            <td style="width: 9%;">8</td>
-            <td style="width: 9%;">9</td>
-            <td style="width: 9%;">10</td>
+            <td>10진수</td>
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
         </tr>
         <tr style="height: 20px">
             <td>2진수</td>

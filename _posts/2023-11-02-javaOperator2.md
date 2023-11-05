@@ -16,12 +16,42 @@ typora-root-url: ../
 - 이진법은 우리가 사용하는 숫자(십진법) 과 다르게 컴퓨터에서 데이터 표현에 사용하는 방식입니다.
 - 이진법은 0과 1 두 개의 수를 이용하여 숫자를 표현합니다.
 
-| 10진수 |  0   |  1   |  2   |  3   |  4   |  5   |  6   |  7   |  8   |  9   |  10  |
-| :----: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-| 2진수  |  0   |  1   |  10  |  11  | 100  | 101  | 110  | 111  | 1000 | 1001 | 1010 |
+<table>
+    <tr style="height: 20px">
+        <td style="height:20px; text-align:center;"></b>10진수</td>
+        <td style="text-align:center;">0</td>
+        <td style="text-align:center;">1</td>
+        <td style="text-align:center;">2</td>
+        <td style="text-align:center;">3</td>
+        <td style="text-align:center;">4</td>
+        <td style="text-align:center;">5</td>
+        <td style="text-align:center;">6</td>
+        <td style="text-align:center;">7</td>
+        <td style="text-align:center;">8</td>
+        <td style="text-align:center;">9</td>
+        <td style="text-align:center;">10</td>
+    </tr>
+    <tr style="height: 20px">
+        <td style="height:20px; text-align:center;">2진수</td>
+        <td style="text-align:center;">0000</td>
+        <td style="text-align:center;">0001</td>
+        <td style="text-align:center;">0010</td>
+        <td style="text-align:center;">0011</td>
+        <td style="text-align:center;">0100</td>
+        <td style="text-align:center;">0101</td>
+        <td style="text-align:center;">0110</td>
+        <td style="text-align:center;">0111</td>
+        <td style="text-align:center;">1000</td>
+        <td style="text-align:center;">1001</td>
+        <td style="text-align:center;">1010</td>
+    </tr>
+</table>
+
 
 
 - 이진법에서 각 자리수는 우측부터 2<sup>0</sup>, 2<sup>1</sup>, 2<sup>2</sup>… 순을 의미합니다.
+
+
 - 예를들어 10진수 5를 2진수로 표현하면 2<sup>2</sup>(4) + 2<sup>0</sup>(1) 인 101입니다.
 - 이진법에서 양수와 음수를 판단하는 기준인 부호 비트는 제일 왼쪽에 있는 최상위 비트를 기준으로 하는데 부호 비트가 0이면 양수, 1이면 음수를 의미합니다. 
 

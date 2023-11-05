@@ -1,5 +1,5 @@
 ---
-title:  "자바(Java)-조건문"
+title:  "자바(Java) - 조건문"
 category: java
 toc: true
 toc_label: "조건문"
@@ -7,17 +7,11 @@ toc_sticky: true
 typora-root-url: ../
 ---
 
-
-
-
-
-
-
-## 조건문이란?
+## <br>조건문이란?
 
 조건문은 주어진 조건식의 결과에 따라 별도의 명령을 수행하도록 제어하는 명령문입니다.
 
-
+<br>
 
 ### IF문
 
@@ -34,9 +28,7 @@ if(조건문1){
 }
 ```
 
-
-
-### SWITCH문
+### <br>SWITCH문
 
 입력 값에 따라 어떤 case를 실행할지 판단하는 분기 구조입니다.
 

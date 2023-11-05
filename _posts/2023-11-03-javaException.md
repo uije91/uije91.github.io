@@ -1,5 +1,5 @@
 ---
-title:  "자바(Java)-예외 처리"
+title:  "자바(Java) - 예외 처리"
 category: java
 toc: true
 toc_label: "예외 처리"
@@ -7,13 +7,7 @@ toc_sticky: true
 typora-root-url: ../
 ---
 
-
-
-
-
-
-
-## 예외 처리
+## <br>예외 처리
 
 자바 문법에 맞지 않게 코드를 작성하고 컴파일하려고 하면, 자바 컴파일러는 문법 오류(syntax error)가 발생합니다.
 
@@ -23,11 +17,7 @@ typora-root-url: ../
 
 이러한 오류(error)는 개발자가 미리 예측할 수 없기에 예외(exception) 처리를 하여 발생할 수 있는 상황을 다른 흐름으로 바꿀 필요가 있습니다.
 
-
-
-
-
-### 예외 처리 방법
+### <br>예외 처리 방법
 
 ```java
 try {
@@ -43,11 +33,9 @@ finally {
 }
 ```
 
+### <br>
 
-
-
-
-### 예외 처리 예시
+### 자주 사용하는 예외처리
 
 - 0으로 나누기
 - 배열 인덱스 초과
@@ -89,18 +77,14 @@ try {
 에러 내용: java.io.FileNotFoundException: abc.txt (지정된 파일을 찾을 수 없습니다)
 ````
 
+### <br>예외 던지기
 
-
-
-
-### 예외 던지기
-
-#### throw
+#### <br>throw
 
 개발자가 의도적으로 예외를 발생 시킨 후 처리할 때 사용합니다.
 
 예를 들어 은행 업무를 처리하는 프로그램에서 잔고 부족과 같은 예외는 API에 존재하지 않는데 이런 경우에는 개발자가 직접 예외를 정의해야 합니다.
-- 다음 예제는 은행 계좌(Account) 클래스를 작성한것입니다. 출금(withdraw) 메소드에서 잔고(balance) 필드와 출금액을 비교하여 잔고가 부족하면 BalanceInsufficientException 을 발생 시키도록 했습니다.
+- 예제 : 은행 계좌(Account) 클래스를 작성한것입니다. 출금(withdraw) 메소드에서 잔고(balance) 필드와 출금액을 비교하여 잔고가 부족하면 BalanceInsufficientException 을 발생 시키도록 했습니다.
 
 ```java
 public class Account {
@@ -143,9 +127,7 @@ public class Account {
 }
 ```
 
-
-
-#### throws
+#### <br>throws
 
 예외가 발생하면 상위 메소드로 예외를 전가시킬때 사용합니다.
 

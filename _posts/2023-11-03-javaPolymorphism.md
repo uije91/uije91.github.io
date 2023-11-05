@@ -1,5 +1,5 @@
 ---
-title:  "자바(Java)-다형성"
+title:  "자바(Java) - 다형성"
 category: java
 toc: true
 toc_label: "다형성"
@@ -7,17 +7,13 @@ toc_sticky: true
 typora-root-url: ../
 ---
 
-
-
-
-
-
-
-## 다형성(Polymorphism)
+## <br>다형성(Polymorphism)
 
 나의 객체가 여러 가지 타입을 가질 수 있는 것을 의미합니다.
 
 부모 클래스 타입의 참조 변수로 자식 클래스 타입의 인스턴스를 참조합니다.
+
+- 문법
 
 ```java
 class Parent { ... }
@@ -27,6 +23,8 @@ class Child extends Parent { ... }
 Parent p = new Child();  // 허용
 Child c = new Parent();  // 오류 발생
 ```
+
+<br>
 
 참조 변수가 사용할 수 있는 멤버의 개수가 실제 인스턴스의 멤버 개수보다 같거나 적어야 참조할 수 있습니다.
 
@@ -38,11 +36,11 @@ class Person {
 }
 
 class Student extends Person {
-    public void print() {
+    public void print() {	//사용가능
         System.out.println("Student.print");
     }
 
-    public void print2() {
+    public void print2() {	//사용불가능
         System.out.println("Student.print2");
     }
 }
@@ -56,9 +54,7 @@ public class Main {
 }
 ```
 
-
-
-### 타입 변환(Casting)
+### <br>타입 변환(Casting)
 
 서로 상속 관계에 있는 클래스 사이에만 타입변환을 할 수 있습니다.
 
@@ -81,9 +77,7 @@ Person p3 = new Student();
 s1 = (Student)p3;
 ```
 
-
-
-### InstanceOf
+### <br>InstanceOf
 
 참조 변수가 참조하고 있는 인스턴스의 실제 타입을 확인할 수 있습니다.
 

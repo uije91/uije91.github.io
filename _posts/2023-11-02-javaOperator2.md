@@ -17,9 +17,50 @@ typora-root-url: ../
 - 이진법은 0과 1 두 개의 수를 이용하여 숫자를 표현합니다.
 
 
-<div style="margin-left: 20px; padding-left: 40px;">
-    <table style="text-align: center">
-        <tr style="height: 20px;">
+<style>
+    /* 기본 스타일 (데스크톱 화면) */
+    div {
+        margin-left: 20px;
+        padding-left: 40px;
+    }
+
+    table {
+        text-align: center;
+    }
+
+    th, td {
+        padding: 5px;
+    }
+
+    tr {
+        height: 20px;
+    }
+
+    /* 모바일 화면을 위한 미디어 쿼리 */
+    @media screen and (max-width: 768px) {
+        div {
+            margin-left: 0;
+            padding-left: 0;
+        }
+
+        table {
+            width: 100%; /* 테이블을 화면 너비에 맞게 확장 */
+        }
+
+        th, td {
+            padding: 2px; /* 셀 패딩 축소 */
+        }
+
+        tr {
+            height: auto; /* 행 높이 자동으로 조정 */
+        }
+    }
+</style>
+
+
+<div>
+    <table>
+        <tr>
             <td>10진수</td>
             <td>0</td>
             <td>1</td>
@@ -33,7 +74,7 @@ typora-root-url: ../
             <td>9</td>
             <td>10</td>
         </tr>
-        <tr style="height: 20px">
+        <tr>
             <td>2진수</td>
             <td>0000</td>
             <td>0001</td>
@@ -49,14 +90,6 @@ typora-root-url: ../
         </tr>
     </table>
 </div>
-
-
-    | 10진수 |  0   |  1   |  2   |  3   |  4   |  5   |  6   |  7   |  8   |  9   |  10  |
-    | :----: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-    | 2진수  | 0000 | 0001 | 0010 | 0011 | 0100 | 0101 | 0110 | 0111 | 100  | 1000 | 1010 |
-
-
-
 - 이진법에서 각 자리수는 우측부터 2<sup>0</sup>, 2<sup>1</sup>, 2<sup>2</sup>… 순을 의미합니다.
 
 

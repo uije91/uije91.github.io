@@ -1,10 +1,7 @@
 ---
 title:  "프론트엔드와 백엔드 차이 - 백엔드 개발자가 되고 싶은 이유"
-category: java
+category: blog
 tag: ["제로베이스","백엔드","Java","Spring","개발자","백엔드공부","백엔드스쿨"]
-toc: true
-toc_label: "인터페이스"
-toc_sticky: true
 typora-root-url: ../
 ---
 

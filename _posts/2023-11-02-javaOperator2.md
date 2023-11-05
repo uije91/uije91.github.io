@@ -16,36 +16,22 @@ typora-root-url: ../
 - 이진법은 우리가 사용하는 숫자(십진법) 과 다르게 컴퓨터에서 데이터 표현에 사용하는 방식입니다.
 - 이진법은 0과 1 두 개의 수를 이용하여 숫자를 표현합니다.
 
-<style>
-    .center-table {
-        display: flex;
-        justify-content: center;
-    }
-    table {
-        border: 1px solid black;
-        border-collapse: collapse;
-    }
-    th, td {
-        border: 1px solid black;
-        padding: 5px;
-    }
-</style>
 
-<div class="center-table">
+<div class="margin-left: 20px">
     <table>
         <tr style="height: 20px;">
-            <td>10진수</td>
-            <td>0</td>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
-            <td>10</td>
+            <td style="width: 10%;">10진수</td>
+            <td style="width: 8%;">0</td>
+            <td style="width: 8%;">1</td>
+            <td style="width: 8%;">2</td>
+            <td style="width: 8%;">3</td>
+            <td style="width: 8%;">4</td>
+            <td style="width: 8%;">5</td>
+            <td style="width: 8%;">6</td>
+            <td style="width: 8%;">7</td>
+            <td style="width: 8%;">8</td>
+            <td style="width: 8%;">9</td>
+            <td style="width: 8%;">10</td>
         </tr>
         <tr style="height: 20px">
             <td>2진수</td>

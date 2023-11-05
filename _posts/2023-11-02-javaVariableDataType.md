@@ -6,7 +6,7 @@ toc_label: "변수와 자료형"
 toc_sticky: true
 ---
 
-## <br>
+### <br>
 
 ## 변수(Variable)
 
@@ -43,6 +43,8 @@ System.out.println(num); // 오류 발생
 num = 20;                // 변수의 초기화
 System.out.println(num); // 20
 ```
+
+
 
 ## <br>자료형(Data Type)
 
@@ -88,8 +90,6 @@ boolean isOk = false;
 String s1 = "Hello World!";
 String s2 = "1234";
 ```
-
-<br>
 
 - 자주 사용하는 메소드
 

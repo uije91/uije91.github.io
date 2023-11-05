@@ -264,9 +264,9 @@ map.put("apple",3);
 
 ### <br>타입 변환
 
-기본형 변수중 boolean을 제외한 나머지 변수는 형 변환이 가능합니다.
+기본형 변수 중 boolean을 제외한 나머지 변수는 형 변환이 가능합니다.
 
-표현 범위가 좁은 범위에서 넓은 범위로 저장될 때, 자동 형 변환이 됩니다.(byte < short < int < long < float < double)
+표현 범위가 좁은 범위에서 넓은 범위로 저장될 때, 자동 형 변환이 됩니다.<br>(byte < short < int < long < float < double)
 
 - 예제
 

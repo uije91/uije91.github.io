@@ -21,6 +21,7 @@ typora-root-url: ../
     div {
         margin-left: 20px;
         padding-left: 20px;
+        text-align: center;
     }
     @media (min-width: 40em) {
     main {

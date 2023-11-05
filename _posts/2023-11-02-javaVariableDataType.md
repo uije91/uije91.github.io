@@ -1,24 +1,18 @@
 ---
-title:  "자바(Java)-변수와 자료형"
+title:  "자바(Java) - 변수와 자료형"
 category: java
 toc: true
 toc_label: "변수와 자료형"
 toc_sticky: true
 ---
 
-
-
-
-
-
+## <br>
 
 ## 변수(Variable)
 
 데이터를 저장하기 위해 프로그램에 의해 이름을 할당 받은 메모리 공간을 변수라고 합니다. 
 
-
-
-### 변수의 이름 규칙
+### <br>변수의 이름 규칙
 
 1. 변수의 이름은 문자와 숫자, _(underscore), $로 구성합니다.
 2. 숫자로는 시작할 수 없습니다.
@@ -26,9 +20,7 @@ toc_sticky: true
 4. 변수 이름 사이에 공백은 사용할 수 없습니다.
 5. 미리 예약된 이름으로는 사용할 수 없습니다.
 
-
-
-### 변수 표기법
+### <br>변수 표기법
 
 1. 카멜 표기법(camelCase)
   - 맨 첫 글자를 제외한 합성어의 첫 글자만 대문자로 표기하는 방식입니다.
@@ -37,9 +29,7 @@ toc_sticky: true
   - 각 문자의 첫 글자를 대문자로 표기하는 방식입니다.
   - 주로 클래스명 표기시 사용합니다.
 
-
-
-### 변수의 선언과 초기화
+### <br>변수의 선언과 초기화
 
 자바에서는 변수를 사용하기 전에 반드시 먼저 변수를 선언하고 초기화해야 합니다.
 
@@ -54,17 +44,11 @@ num = 20;                // 변수의 초기화
 System.out.println(num); // 20
 ```
 
-
-
-
-
-## 자료형(Data Type)
+## <br>자료형(Data Type)
 
 자료형이란 변수가 저장하는 데이터 형식입니다.
 
-
-
-### 숫자형(Number)
+### <br>숫자형(Number)
 
 숫자 형태의 자료형입니다. 정수와 실수형을 표현할 수 있습니다.
 
@@ -78,9 +62,7 @@ float floatNum = 0.23f;
 double doubleNum = 1.23;
 ```
 
-
-
-### 문자형(Character)
+### <br>문자형(Character)
 
 한 개의 문자 표현에 사용하는 자료형입니다.
 
@@ -89,9 +71,7 @@ char a = 'a';
 char z = 'z';
 ```
 
-
-
-### 논리형(Boolean)
+### <br>논리형(Boolean)
 
 참과 거짓을 나타내는 자료형입니다.
 
@@ -100,9 +80,7 @@ boolean isPass = true;
 boolean isOk = false;
 ```
 
-
-
-### 문자열(String)
+### <br>문자열(String)
 
 문자들로 이루어진 집합입니다.
 
@@ -111,9 +89,10 @@ String s1 = "Hello World!";
 String s2 = "1234";
 ```
 
+<br>
 
+- 자주 사용하는 메소드
 
-자주 사용하는 문자열 메소드입니다.
 
 ```java
 //equals : 문자열 비교
@@ -145,30 +124,28 @@ s4.toUpperCase(); //결과 : ABC!DE
 
 ```
 
-
-
-### 문자열(StringBuffer)
+### <br>문자열(StringBuffer)
 
 문자열을 자주 추가하거나 변경할 때 사용하는 자료형입니다.
 
 String과 다르게 객체를 새로 생성하는게 아니기 때문에 문자열 변경에 용이합니다.
 
+- 문법
+
 ```java
 StringBuffer sb = new StringBuffer("Hello World!");
 ```
 
-자주 사용하는 StringBuffer 메소드입니다. 
+- 자주 사용하는 메소드
 
-equals, indexOf, replace, substring 메소드는 String 메소드와 동일한 방법으로 사용됩니다.
+  equals, indexOf, replace, substring 메소드는 String 메소드와 동일한 방법으로 사용됩니다.
 
 ```java
 //append : 문자열을 추가한다.
 sb.append("@#"); //결과 : Hello world!@#
 ```
 
-
-
-### 배열(Array)
+### <br>배열(Array)
 
 많은 수의 데이터를 담을 수 있는 자료형입니다.
 
@@ -183,13 +160,12 @@ array3[1] = 2;
 array3[2] = 3;
 ```
 
-
-
-### 리스트(List)
+### <br>리스트(List)
 
 배열과 같이 여러 데이터를 담을 수 있는 자료형입니다.
 
-자주 사용하는 리스트(List) 메소드입니다.
+- 자주 사용하는 메소드
+
 
 ```java
 ArrayList list = new ArrayList();
@@ -227,20 +203,21 @@ list.contains("list"); //결과 : true
 list.contains("b");	//결과 : false
 ```
 
-
-
-### 맵(Map)
+### <br>맵(Map)
 
 key와 value형태로 데이터를 저장하는 자료형입니다.
 
 list와 다르게 순서대로 저장되지 않으므로 key값을 이용하여 데이터에 접근합니다.
+
+- 문법
 
 ```java
 HashMap map = new HashMap();
 map.put("key","value");
 ```
 
-자주사용하는 맵(Map) 메소드입니다.
+- 자주 사용하는 메소드
+
 
 ```java
 //put : 데이터 추가
@@ -266,13 +243,13 @@ map.remove("b"); //결과 : {a=9000, c=11000}
 map.containsKey("c"); //결과 : true , 결과가 없을경우 false
 ```
 
-
-
-### 제네릭스(Generics)
+### <br>제네릭스(Generics)
 
 변환될 자료형을 개발자가 직접 지정하는 명시적 형변환입니다.
 
 제한적일 수 있지만 안정성을 높여주고 형변환을 줄여줍니다.
+
+- 문법
 
 ```java
 //<>안에 String으로 지정하여 해당 자료형만 추가할 수 있게 제한
@@ -285,11 +262,13 @@ map.put(1,2);	//key 값의 자료형이 맞지 않으므로 error
 map.put("apple",3);
 ```
 
-
-
-### 타입 변환
+### <br>타입 변환
 
 기본형 변수중 boolean을 제외한 나머지 변수는 형 변환이 가능합니다.
+
+표현 범위가 좁은 범위에서 넓은 범위로 저장될 때, 자동 형 변환이 됩니다.(byte < short < int < long < float < double)
+
+- 예제
 
 ```java
 double doubleNum = 123.456;
@@ -300,5 +279,3 @@ int num = 1234;
 str = Integer.toString(num);	//int를 String 타입으로 변환
 num = Integer.parseInt(str);	//String을 int 타입으로 변환
 ```
-
-- 표현범위가 좁은 범위에서 넓은 범위로 저장될 때, 자동 형 변환이 됩니다.<br>byte < short < int < long < float < double

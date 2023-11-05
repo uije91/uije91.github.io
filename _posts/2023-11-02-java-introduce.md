@@ -17,9 +17,7 @@ toc_sticky: true
 
 sun사(이후 Oracle에 인수됨)에서 C++를 기반으로 개발한 객체 지향 언어입니다.
 
-
-
-### 자바의 특징
+### <br>자바의 특징
 
 1. 자바 가상머신(JVM)을 사용하여 어느 운영체제에서나 같은 형태로 실행될 수 있습니다.
 
@@ -27,17 +25,13 @@ sun사(이후 Oracle에 인수됨)에서 C++를 기반으로 개발한 객체 �
 
 3. 객체 지향 언어를 사용하여 절차 지향적 언어(문제를 풀이하기 위해 순서대로 처리)에 비해 문제를 각각 처리하여 생산성 및 보안성이 높습니다.
 
-
-
-### 자바 프로그램 작성/실행 과정
+### <br>자바 프로그램 작성/실행 과정
 
 
 
 <img src="/images/2023-11-02-001/java_compile_jvm.png" alt="java_compile_jvm" style="zoom:50%;" />
 
-
-
-### 자바 플랫폼(Java Platform)
+### <br>자바 플랫폼(Java Platform)
 
 - Java SE(Standard Edition)
   - 기본 개발 환경

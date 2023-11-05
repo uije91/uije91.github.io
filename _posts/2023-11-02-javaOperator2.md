@@ -18,17 +18,15 @@ typora-root-url: ../
 
 <style>
     .center-table {
-        width: 100%;
-        text-align: center;
+        display: flex;
+        justify-content: center;
     }
     table {
-        margin: 0 auto;
-    }
-    table, th, td {
         border: 1px solid black;
         border-collapse: collapse;
     }
     th, td {
+        border: 1px solid black;
         padding: 5px;
     }
 </style>
@@ -66,6 +64,7 @@ typora-root-url: ../
     </table>
 </div>
 
+
 - 이진법에서 각 자리수는 우측부터 2<sup>0</sup>, 2<sup>1</sup>, 2<sup>2</sup>… 순을 의미합니다.
 
 
@@ -78,9 +77,7 @@ typora-root-url: ../
 
 ## 2의 보수
 
-- 10진수에서 음수를 표현하고 싶을 때는 마이너스(-)기호를 사용하면 되지만, 2진수에서는 다른 방식으로 음수를 표현합니다. 
-- 그렇기 때문에 이진법에서 음수를 표현하고 싶을 때에는 2의 보수를 이용합니다.
-- 예를 들어서 -5를 표현하고 싶다면 10진수 5의 2진수(0101) 을 <u>반전 후 1을 더한 값</u> 1011은 2의 보수입니다. (101의 반전 : 010 + 1)
+- 10진수에서 음수를 표현하고 싶을 때는 마이너스(-)기호를 사용하면 되지만, 2진수에서는 다른 방식으로 음수를 표현합니다. <br>그렇기 때문에 이진법에서 음수를 표현하고 싶을 때에는 2의 보수를 이용합니다.<br>예를 들어서 -5를 표현하고 싶다면 10진수 5의 2진수(0101) 을 <u>반전 후 1을 더한 값</u> 1011은 2의 보수입니다. (101의 반전 : 010 + 1)
 
 
 

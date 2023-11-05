@@ -39,6 +39,22 @@ toc_sticky: true
 
 
 
+### 변수의 선언과 초기화
+
+- 자바에서는 변수를 사용하기 전에 반드시 먼저 변수를 선언하고 초기화해야 합니다.
+- 변수를 선언하는 방법에는 다음과 같이 두 가지 방법이 있습니다.
+  - 변수의 선언만 하는 방법
+  - 변수의 선언과 동시에 초기화하는 방법
+
+```java
+int num;                 // 변수의 선언
+System.out.println(num); // 오류 발생
+num = 20;                // 변수의 초기화
+System.out.println(num); // 20
+```
+
+
+
 
 
 ## 자료형(Data Type)
@@ -262,3 +278,20 @@ map.put(1,2);	//key 값의 자료형이 맞지 않으므로 error
 map.put("apple",3);
 ```
 
+
+
+### 타입 변환
+
+- 기본형 변수중 boolean을 제외한 나머지 변수는 형 변환이 가능합니다.
+
+```java
+double doubleNum = 123.456;
+int intNum = (int)doubleNum;	//실수형 doubleNum을 정수형으로 변환
+
+String str = "1234";
+int num = 1234;
+str = Integer.toString(num);	//int를 String 타입으로 변환
+num = Integer.parseInt(str);	//String을 int 타입으로 변환
+```
+
+- 표현범위가 좁은 범위에서 넓은 범위로 저장될 때, 자동 형 변환이 됩니다.<br>byte < short < int < long < float < double

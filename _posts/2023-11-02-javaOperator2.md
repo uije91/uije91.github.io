@@ -77,8 +77,8 @@ typora-root-url: ../
 ```java
 int num1 = 8, num2 = -8;
 
-System.out.println("<< 연산자에 의한 결과 : "+ (num1 << 2));	//결과 : 32
-System.out.println(">> 연산자에 의한 결과 : "+ (num2 >> 2));	//결과 : -2
+System.out.println("<< 연산자에 의한 결과 : "+ (num1 << 1));	//결과 : 16 (곱셈 : num1 * 2^1)
+System.out.println(">> 연산자에 의한 결과 : "+ (num2 >> 2));	//결과 : -2 (나눗셈 : num2 / 2^2)
 System.out.println(">>> 연산자에 의한 결과 : "+ (num1 >>> 2));	//결과 : 2
 System.out.println(">>> 연산자에 의한 결과 : "+ (num2 >>> 2));	//결과 : 1073741822
 ```

@@ -51,9 +51,9 @@ typora-root-url: ../
 
 
 
-- 이미지 출처 : [https://www.tcpschool.com/c/c_operator_bitwise](https://www.tcpschool.com/c/c_operator_bitwise)
+이미지 출처 : [https://www.tcpschool.com/c/c_operator_bitwise](https://www.tcpschool.com/c/c_operator_bitwise)
 
-## <br>
+## <br><br>
 
 ## 비트 이동 연산자
 

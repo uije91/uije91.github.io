@@ -17,21 +17,21 @@ typora-root-url: ../
 - 이진법은 0과 1 두 개의 수를 이용하여 숫자를 표현합니다.
 
 
-<div style="margin-left: 20px">
-    <table>
+<div style="margin-left: 20px; padding-left: 40px;">
+    <table align="center";>
         <tr style="height: 20px;">
             <td style="width: 10%;">10진수</td>
-            <td style="width: 8%;">0</td>
-            <td style="width: 8%;">1</td>
-            <td style="width: 8%;">2</td>
-            <td style="width: 8%;">3</td>
-            <td style="width: 8%;">4</td>
-            <td style="width: 8%;">5</td>
-            <td style="width: 8%;">6</td>
-            <td style="width: 8%;">7</td>
-            <td style="width: 8%;">8</td>
-            <td style="width: 8%;">9</td>
-            <td style="width: 8%;">10</td>
+            <td style="width: 9%;">0</td>
+            <td style="width: 9%;">1</td>
+            <td style="width: 9%;">2</td>
+            <td style="width: 9%;">3</td>
+            <td style="width: 9%;">4</td>
+            <td style="width: 9%;">5</td>
+            <td style="width: 9%;">6</td>
+            <td style="width: 9%;">7</td>
+            <td style="width: 9%;">8</td>
+            <td style="width: 9%;">9</td>
+            <td style="width: 9%;">10</td>
         </tr>
         <tr style="height: 20px">
             <td>2진수</td>

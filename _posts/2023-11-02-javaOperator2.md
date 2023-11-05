@@ -21,7 +21,7 @@ typora-root-url: ../
     /* 기본 스타일 (데스크톱 화면) */
     div {
         margin-left: 20px;
-        padding-left: 40px;
+        padding-left: 20px;
     }
 
     table {

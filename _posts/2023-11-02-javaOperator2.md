@@ -19,7 +19,7 @@ typora-root-url: ../
 <div align="center">
 	<table style="width: 100%;">
         <tr style="height: 20px;">
-            <td style="height:20px; text-align:center;">10진수</td>
+            <td style="text-align:center;">10진수</td>
             <td style="text-align:center;">0</td>
             <td style="text-align:center;">1</td>
             <td style="text-align:center;">2</td>
@@ -33,7 +33,7 @@ typora-root-url: ../
             <td style="text-align:center;">10</td>
         </tr>
         <tr style="height: 20px">
-            <td style="height:20px; text-align:center;">2진수</td>
+            <td style="text-align:center;">2진수</td>
             <td style="text-align:center;">0000</td>
             <td style="text-align:center;">0001</td>
             <td style="text-align:center;">0010</td>

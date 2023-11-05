@@ -16,36 +16,38 @@ typora-root-url: ../
 - 이진법은 우리가 사용하는 숫자(십진법) 과 다르게 컴퓨터에서 데이터 표현에 사용하는 방식입니다.
 - 이진법은 0과 1 두 개의 수를 이용하여 숫자를 표현합니다.
 
-<table>
-    <tr style="height: 20px">
-        <td style="height:20px; text-align:center;"></b>10진수</td>
-        <td style="text-align:center;">0</td>
-        <td style="text-align:center;">1</td>
-        <td style="text-align:center;">2</td>
-        <td style="text-align:center;">3</td>
-        <td style="text-align:center;">4</td>
-        <td style="text-align:center;">5</td>
-        <td style="text-align:center;">6</td>
-        <td style="text-align:center;">7</td>
-        <td style="text-align:center;">8</td>
-        <td style="text-align:center;">9</td>
-        <td style="text-align:center;">10</td>
-    </tr>
-    <tr style="height: 20px">
-        <td style="height:20px; text-align:center;">2진수</td>
-        <td style="text-align:center;">0000</td>
-        <td style="text-align:center;">0001</td>
-        <td style="text-align:center;">0010</td>
-        <td style="text-align:center;">0011</td>
-        <td style="text-align:center;">0100</td>
-        <td style="text-align:center;">0101</td>
-        <td style="text-align:center;">0110</td>
-        <td style="text-align:center;">0111</td>
-        <td style="text-align:center;">1000</td>
-        <td style="text-align:center;">1001</td>
-        <td style="text-align:center;">1010</td>
-    </tr>
-</table>
+<div align="center">
+	<table style="width: 100%;">
+        <tr style="height: 20px;">
+            <td style="height:20px; text-align:center;">10진수</td>
+            <td style="text-align:center;">0</td>
+            <td style="text-align:center;">1</td>
+            <td style="text-align:center;">2</td>
+            <td style="text-align:center;">3</td>
+            <td style="text-align:center;">4</td>
+            <td style="text-align:center;">5</td>
+            <td style="text-align:center;">6</td>
+            <td style="text-align:center;">7</td>
+            <td style="text-align:center;">8</td>
+            <td style="text-align:center;">9</td>
+            <td style="text-align:center;">10</td>
+        </tr>
+        <tr style="height: 20px">
+            <td style="height:20px; text-align:center;">2진수</td>
+            <td style="text-align:center;">0000</td>
+            <td style="text-align:center;">0001</td>
+            <td style="text-align:center;">0010</td>
+            <td style="text-align:center;">0011</td>
+            <td style="text-align:center;">0100</td>
+            <td style="text-align:center;">0101</td>
+            <td style="text-align:center;">0110</td>
+            <td style="text-align:center;">0111</td>
+            <td style="text-align:center;">1000</td>
+            <td style="text-align:center;">1001</td>
+            <td style="text-align:center;">1010</td>
+        </tr>
+    </table>
+</div>
 
 - 이진법에서 각 자리수는 우측부터 2<sup>0</sup>, 2<sup>1</sup>, 2<sup>2</sup>… 순을 의미합니다.
 

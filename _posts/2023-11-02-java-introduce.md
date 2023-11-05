@@ -1,19 +1,13 @@
 ---
-title:  "자바(Java)-소개"
+title:  "자바(Java) - 소개"
 category: java
 typora-root-url: ../
-toc_label: "자바소개"
+toc_label: "자바(Java) 소개"
 toc: true
 toc_sticky: true
 ---
 
-
-
-
-
-
-
-## 자바(Java)란?
+## <br>자바(Java)란?
 
 sun사(이후 Oracle에 인수됨)에서 C++를 기반으로 개발한 객체 지향 언어입니다.
 
@@ -25,13 +19,13 @@ sun사(이후 Oracle에 인수됨)에서 C++를 기반으로 개발한 객체 �
 
 3. 객체 지향 언어를 사용하여 절차 지향적 언어(문제를 풀이하기 위해 순서대로 처리)에 비해 문제를 각각 처리하여 생산성 및 보안성이 높습니다.
 
-### <br>자바 프로그램 작성/실행 과정
+### <br>자바 프로그램 실행 과정
 
 
 
 <img src="/images/2023-11-02-001/java_compile_jvm.png" alt="java_compile_jvm" style="zoom:50%;" />
 
-### <br>자바 플랫폼(Java Platform)
+### <br>자바 플랫폼 (Java Platform)
 
 - Java SE(Standard Edition)
   - 기본 개발 환경

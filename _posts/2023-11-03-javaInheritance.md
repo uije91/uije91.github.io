@@ -1,5 +1,5 @@
 ---
-title:  "자바(Java)-상속"
+title:  "자바(Java) - 상속"
 category: java
 toc: true
 toc_label: "상속"
@@ -7,23 +7,15 @@ toc_sticky: true
 typora-root-url: ../
 ---
 
-
-
-
-
-
-
-## 상속(Inheritance)
+## <br>상속(Inheritance)
 
 기존의 클래스에 기능을 추가하거나 재정의하여 새로운 클래스를 정의하는 것을 의미합니다.
 - 부모 클래스(상위 클래스, 기초 클래스) : 상속 대상이 되는 기존 클래스
 - 자식 클래스(하위 클래스, 파생 클래스) : 부모 클래스를 상속하는 클래스
 
-부모 클래스의 <u>필드</u>와 <u>메소드</u>가 상속됩니다.
+부모 클래스의 <u>필드</u>와 <u>메소드</u>가 상속되며, 다중 상속은 불가능합니다. 또한 (private, default) 멤버는 자식 클래스에서 접근이 불가능합니다.
 
-다중 상속은 불가능합니다.
-
-private, default 멤버는 자식클래스에서 접근 불가합니다.
+- 문법
 
 ```java
 class 자식클래스명 extends 부모클래스명 {
@@ -37,15 +29,13 @@ class 자식클래스명 extends 부모클래스명 {
 
 ![img_java_inheritance_diagram](/images/2023-11-03-javaInheritance/img_java_inheritance_diagram.png)
 
-
-
-
-
-### super, super()
+### <br>super, super()
 
 super : 부모 클래스로부터 상속받은 필드나 메소드를 자식 클래스에서 참조하는 데 사용하는 참조 변수
 
 super() : 부모 클래스의 생성자를 호출할 때 사용합니다.
+
+- 예제
 
 ```java
 //부모 클래스
@@ -84,11 +74,7 @@ class Child extends Parent{
 }
 ```
 
-
-
-
-
-### 오버라이딩(Overriding)
+### <br>오버라이딩(Overriding)
 
 부모클래스의 메소드를 자식클래스에서 재정의 할 떄 사용합니다.
 
@@ -97,6 +83,8 @@ class Child extends Parent{
 2. 반환 타입은 부모 클래스의 반환 타입으로 타입 변환할 수 있는 타입이라면 변경가능합니다.
 3. 부모 클래스의 메소드보다 접근 제어자를 더 좁은 범위로 변경할 수 없습니다.
 4. 부모 클래스의 메소드보다 더 큰 범위의 예외를 선언할 수 없습니다.
+
+- 예제 : 부모 클래스의 메소드를 자식 클래스가 상속 받은 후 오버라이딩을 통해 내용 수정 후 출력
 
 ```java
 //부모 클래스

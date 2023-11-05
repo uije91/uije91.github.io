@@ -22,43 +22,59 @@ typora-root-url: ../
         margin-left: 20px;
         padding-left: 20px;
     }
-
+    @media (min-width: 40em) {
+    main {
+        display: flex;
+    }
+    aside {
+        flex: 0 1 20vw;
+        order: 1;
+        border-right: 1px solid #ddd;
+    }
+    .primary {
+        order: 2;
+    }
+    }
     table {
-        text-align: center;
+    border-collapse: collapse;
+    border: 0;
     }
-    
-    th, td {
-        padding: 5px;
+    th,td {
+    border: 1px solid #aaa;
+    background-clip: padding-box;
+    scroll-snap-align: start;
     }
-    
-    tr {
-        height: 20px;
+    tbody tr:last-child th,
+    tbody tr:last-child td {
+    border-bottom: 0;
     }
-    
-    /* 모바일 화면을 위한 미디어 쿼리 */
-    @media screen and (max-width: 768px) {
-        div {
-            margin: auto;
-            padding: auto;
-        }
-    
-        table {
-            width: 90%; /* 테이블을 화면 너비에 맞게 확장 */
-        }
-    
-        th, td {
-            padding: 2px; /* 셀 패딩 축소 */
-        }
-    
-        tr {
-            height: auto; /* 행 높이 자동으로 조정 */
-        }
+    th,td {
+    padding: 0.6rem;
+    min-width: 6rem;
+    text-align: left;
+    margin: 0;
+    }
+    tbody th {
+    background-clip: padding-box;
+    border-left: 0;
+    }
+    tbody {
+    z-index: 10;
+    position: relative;
+    }
+    tbody th {
+    position: sticky;
+    left: 0;
+    }
+    tbody th {
+    background-color: #f8f8f8;
     }
 </style>
 
 
 <div>
     <table>
+      <tbody>
         <tr>
             <td>10진수</td>
             <td>0</td>
@@ -87,16 +103,9 @@ typora-root-url: ../
             <td>1001</td>
             <td>1010</td>
         </tr>
+        <tbody>
     </table>
 </div>
-
-
-&nbsp;| 10진수 |  0   |  1   |  2   |  3   |  4   |  5   |  6   |  7   |  8   |  9   |  10  |
-| :----: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-| 2진수  | 0000 | 0001 | 0010 | 0011 | 0100 | 0101 | 0110 | 0111 | 1000 | 1001 | 1010 |
-
-
-
 - 이진법에서 각 자리수는 우측부터 2<sup>0</sup>, 2<sup>1</sup>, 2<sup>2</sup>… 순을 의미합니다.
 
 

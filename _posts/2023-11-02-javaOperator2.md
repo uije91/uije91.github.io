@@ -17,7 +17,7 @@ typora-root-url: ../
 - 이진법은 0과 1 두 개의 수를 이용하여 숫자를 표현합니다.
 
 
-<div class="margin-left: 20px">
+<div style="margin-left: 20px">
     <table>
         <tr style="height: 20px;">
             <td style="width: 10%;">10진수</td>

@@ -39,12 +39,12 @@ typora-root-url: ../
     /* 모바일 화면을 위한 미디어 쿼리 */
     @media screen and (max-width: 768px) {
         div {
-            margin-left: 0;
-            padding-left: 0;
+            margin: auto;
+            padding: auto;
         }
 
         table {
-            width: 100%; /* 테이블을 화면 너비에 맞게 확장 */
+            width: 90%; /* 테이블을 화면 너비에 맞게 확장 */
         }
 
         th, td {

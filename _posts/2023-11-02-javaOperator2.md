@@ -47,8 +47,6 @@ typora-root-url: ../
     </tr>
 </table>
 
-
-
 - 이진법에서 각 자리수는 우측부터 2<sup>0</sup>, 2<sup>1</sup>, 2<sup>2</sup>… 순을 의미합니다.
 
 

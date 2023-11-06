@@ -85,13 +85,25 @@ int[][] Array = {
 int[][] Array2 = new int[2][3];	//2행3열만큼 데이터가 생성된다.
 
 //삼차원 배열
-int[][][] Array3 = {1,2},{3,4},{5,6},{7,8}
+int[][][] Array3 = {
+    {
+        {1,2},
+        {3,4}
+    },
+    {
+        {5,6},
+        {7,8}
+    }
+}
 ```
 
 - 예제
 
 ```java
-int[][] array = {1,2,3},{4,5,6}
+int[][] array = {
+    {1,2,3},
+    {4,5,6}
+}
 
 for (int i = 0; i < array.length; i++) {
     for (int j = 0; j < array[i].length; j++) {

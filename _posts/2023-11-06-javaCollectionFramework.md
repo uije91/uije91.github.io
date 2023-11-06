@@ -36,7 +36,7 @@ ArrayList list1 = new ArrayList();
 LinkedList list2 = new LinkedList();
 ```
 
-### <br>
+<br>
 
 #### 1. Array List
 
@@ -75,7 +75,7 @@ Collections.sort(list1);
 System.out.println("리스트의 크기 : " + list1.size());
 ```
 
-#### <br>
+<br>
 
 #### 2. Linked List
 
@@ -119,7 +119,7 @@ System.out.println("리스트의 크기 : " + list2.size());
 
 
 
-### <br>셋(Set) 인터페이스
+<br>셋(Set) 인터페이스
 
 순서가 없는 데이터의 집합으로, 데이터의 중복을 허용하지 않습니다.
 
@@ -132,9 +132,7 @@ HashSet set1 = new HashSet();
 TreeSet set2 = new TreeSet();
 ```
 
-### <br>
-
-#### 1.HashSet
+#### <br>1.HashSet
 
 HashSet 클래스는 Set 컬렉션 클래스에서 가장 많이 사용되는 클래스 중 하나입니다.
 
@@ -161,9 +159,7 @@ set1.remove(2);	//index값이 아닌 요소의 값으로 지운다.(set은 순�
 System.out.println("집합의 크기 : " + set1.size());
 ```
 
-#### <br>
-
-#### 2. TreeSet
+#### <br>2. TreeSet
 
 TreeSet 클래스는 데이터가 정렬된 상태로 저장되는 이진 검색 트리(binary search tree)의 형태로 요소를 저장합니다.
 
@@ -216,9 +212,7 @@ HashMap map1 = new HashMap();
 TreeMap map2 = new TreeMap();
 ```
 
-#### <br>
-
-#### 1. HashMap
+#### <br>1. HashMap
 
 HashMap 클래스는 Map 컬렉션 클래스에서 가장 많이 사용되는 클래스 중 하나입니다.
 
@@ -246,9 +240,7 @@ map1.remove(2);
 System.out.println("맵의 크기 : " + map1.size());
 ```
 
-#### <br>
-
-#### 2. TreeMap
+#### <br>2. TreeMap
 
 TreeMap 클래스는 키와 값을 한 쌍으로 하는 데이터를 이진 검색 트리(binary search tree)의 형태로 저장합니다.
 

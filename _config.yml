@@ -106,7 +106,7 @@ analytics:
 author:
   name             : "Sung UiJe"
   avatar           : "/assets/images/profile.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : #"신입개발자 성의제의 개발노트 입니다."
+  bio              : #"신입개발자 의제의 개발노트 입니다."
   location         : "Seoul, South Korea"
   email            :
   links:

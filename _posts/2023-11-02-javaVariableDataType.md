@@ -151,7 +151,7 @@ sb.append("@#"); //결과 : Hello world!@#
 
 ```java
 int[] array1 = {1,2,3};
-char[] array2 = ['a','b','c'];
+char[] array2 = {'a','b','c'};
 
 //array1은 아래와 같이 생성할수도 있다.
 int[] array3 = new int[3];

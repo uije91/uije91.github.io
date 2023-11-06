@@ -68,6 +68,7 @@ for(int i = 0; i < array2.length; i++){
 for(int num : array1){
     System.out.print(num+"\t");
 }
+
 ```
 
 ### <br>이차원 배열
@@ -110,4 +111,3 @@ for(int[] ints : array){
 1	2	3	
 4	5	6	
 ```
-

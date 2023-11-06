@@ -26,7 +26,7 @@ typora-root-url: ../
 
 ```java
 int[] array1 = {1,2,3};
-char[] array2 = ['a','b','c'];
+char[] array2 = {'a','b','c'};
 
 //array1은 아래와 같이 생성할수도 있다.
 int[] array3 = new int[3];
@@ -68,7 +68,6 @@ for(int i = 0; i < array2.length; i++){
 for(int num : array1){
     System.out.print(num+"\t");
 }
-
 ```
 
 ### <br>이차원 배열
@@ -83,7 +82,7 @@ int[][] Array = {{1,2,3},{4,5,6}};
 int[][] Array2 = new int[2][3];	//2행3열만큼 데이터가 생성된다.
 
 //삼차원 배열
-int[][][] Array3 = {{{1,2}{3,4}}{{5,6},{7,8}}};
+int[][][] Array3 = {{{1,2},{3,4}},{{5,6},{7,8}}};
 ```
 
 - 예제

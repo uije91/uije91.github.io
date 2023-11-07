@@ -23,7 +23,7 @@ typora-root-url: ../
 ```java
 interface Compute {
     abstract int min(int x,int y);
-    //abstract int max(int x,int y); //인터페이스의 추상메소드가 2개일경우는 람다식을 사용할 수 없다.
+    //abstract int max(int x,int y); //인터페이스의 메소드가 2개일경우는 람다식을 사용할 수 없다.
 }
 
 public class LambdaExample {
@@ -34,7 +34,7 @@ public class LambdaExample {
             public int min(int x, int y) {
                 return x<y?x:y;
             }
-            //추상메소드가 2개일 경우에 익명클래스는 추가할 수있다.
+            //메소드가 2개이상일 경우에 익명클래스는 추가할 수 있다.
             /*
             @Override
             public int max(int x, int y) {
@@ -52,8 +52,6 @@ public class LambdaExample {
 
 }
 ```
-
-
 
 ### <br>람다식의 장점
 

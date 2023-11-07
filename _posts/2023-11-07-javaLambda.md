@@ -23,7 +23,7 @@ typora-root-url: ../
 ```java
 interface Compute {
     abstract int min(int x,int y);
-    //abstract int max(int x,int y); //인터페이스의 메소드가 2개일경우는 람다식을 사용할 수 없다.
+    //abstract int max(int x,int y); //인터페이스의 메소드가 2개 이상이면 람다식을 사용할 수 없다.
 }
 
 public class LambdaExample {
@@ -34,7 +34,7 @@ public class LambdaExample {
             public int min(int x, int y) {
                 return x<y?x:y;
             }
-            //메소드가 2개이상일 경우에 익명클래스는 추가할 수 있다.
+            //메소드가 2개이상이면 익명클래스는 추가할 수 있다.
             /*
             @Override
             public int max(int x, int y) {
@@ -64,5 +64,3 @@ public class LambdaExample {
 1. 재사용이 불가능합니다.(익명)
 2. 디버깅이 어렵습니다.
 3. 재귀 함수(함수 안에 자신의 함수를 다시 호출하는 함수)로는 맞지 않습니다.
-
-### 

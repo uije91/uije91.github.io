@@ -180,7 +180,7 @@ list.add(0,1); //결과 : [1, array, list]
 list.get(1); //결과 : array
 
 
-//size : 리스트의 데이터 갯수 출력
+//size : 리스트의 데이터 개수 출력
 list.size(); //결과 : 3
 
 
@@ -231,7 +231,7 @@ map.get("a"); //결과 : 9000
 map.get("z"); //결과 : null
 
 
-//size : 맵의 데이터 갯수 출력
+//size : 맵의 데이터 개수 출력
 map.size(); //결과 : 3
 
 

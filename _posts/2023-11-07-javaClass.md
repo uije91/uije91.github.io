@@ -169,7 +169,7 @@ class StaticExample {
 public class Main {
 	public static void main(String[] args) {
         StaticExample st = new StaticExample();	
-        st.number = "";	//static으로 지정하지 않은 변수는 객체를 생성해야 사용할 수 있다.
+        st.number = 1;	//static으로 지정하지 않은 변수는 객체를 생성해야 사용할 수 있다.
         
         //Static 변수 및 메소드는 객체를 생성하지 않아도 호출이 가능
         StaticExample.name = "Chulsoo";

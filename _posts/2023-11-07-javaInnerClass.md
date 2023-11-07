@@ -99,16 +99,16 @@ class Student extends Person{
 
 public class Main {
     public static void main(String[] args) {
-		//외부 클래스
+        //외부 클래스
         Outer outer = new Outer();
 
-		//내부 클래스 - 인스턴스
+        //내부 클래스 - 인스턴스
         Outer.Inner inner = new Outer().new Inner();
 
-		//내부 클래스 - 정적 : static이기 떄문에 객체생성은 안하고 클래스 이름으로 접근
+        //내부 클래스 - 정적 : static이기 떄문에 객체생성은 안하고 클래스 이름으로 접근
         Outer.InnerStaticClass innerStatic = new Outer.InnerStaticClass();
-
-		//익명 클래스 : 추상 클래스를 사용하는 두번째 방법 
+        
+        //익명 클래스 : 추상 클래스를 사용하는 두번째 방법 
         Person p1 = new Person() {
             @Override
             public void printInfo() {

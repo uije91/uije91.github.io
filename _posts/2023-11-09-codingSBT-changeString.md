@@ -81,3 +81,25 @@ public void reverseNum(int num){
 
 
 
+### <br>배열을 이용한 뒤집기
+
+```java
+public void reverseArray() {
+    //정수형 뒤집기
+    int[] arrInt = {1,2,3,4,5};
+    int[] reverseInt = new int[arrInt.length];
+
+    for (int i = arrInt.length-1, j=0; i >= 0; i--,j++) {
+        reverseInt[j] = arrInt[i];
+    }
+
+    //문자열 뒤집기
+    String[] arrStr = {"a","b","c","d","e"};
+    String[] reverseStr = new String[arrStr.length];
+
+    for (int i = arrStr.length-1 , j=0; i >=0 ; i--,j++) {
+        reverseStr[j] = arrStr[i];
+    }
+}
+```
+

@@ -1,12 +1,12 @@
 ---
-title:  "코딩 테스트 : 문자열 뒤집기"
+title:  "자료형 뒤집기"
 category: SBT
 typora-root-url: ../
 ---
 
-## <br>문자열 뒤집기
+## <br>자료형 뒤집기
 
-입력된 문자열을 거꾸로 뒤집는 문제는 상당히 많이 출제되는 문제입니다.
+입력된 자료형을 거꾸로 뒤집는 문제는 상당히 많이 출제되는 문제입니다.
 
 그 중에서도 크게 두 가지로 분류하면 문자열과 숫자를 뒤집는 문제가 많이 나옵니다.
 
@@ -16,7 +16,7 @@ typora-root-url: ../
 
 문자열 뒤집기는 여러가지 방법을 사용할 수 있다.
 
-- StringBuilder의 reverse함수 이용
+- StringBuilder의 reverse()함수 이용
 
 ```java
 public void reverseWord(String str){
@@ -51,7 +51,7 @@ public void reverseWord(String str){
 
 
 
-수식을 이용하여 변환하는 방법은 다음과 같습니다.
+<br>수식을 이용하여 변환하는 방법은 다음과 같습니다.
 
 12345 라는 숫자를 뒤집는 과정을 예로 들어보겠습니다.
 

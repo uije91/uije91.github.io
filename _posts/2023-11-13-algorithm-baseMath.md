@@ -1,5 +1,5 @@
 ---
-title:  "(자료구조&알고리즘) - 기초 수학 "
+title:  "(자료구조&알고리즘) - 기초 수학"
 category: algorithm
 typora-root-url: ../
 toc: true
@@ -143,4 +143,8 @@ class MySet {
     }
 }
 ```
+
+
+
+## <br>경우의 수
 

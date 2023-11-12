@@ -1,5 +1,5 @@
 ---
-title:  "(자료구조&알고리즘) - 소개 "
+title:  "(자료구조&알고리즘) - 소개"
 category: algorithm
 typora-root-url: ../
 toc: true

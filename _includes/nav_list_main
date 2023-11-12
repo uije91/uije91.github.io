@@ -70,7 +70,6 @@
             -->
 
         <span class="nav__sub-title">Coding</span>
-            <!--카테고리 주석
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "algorithm" %}
@@ -78,7 +77,6 @@
                     {% endif %}
                 {% endfor %}
             </ul>
-            -->
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "SBT" %}

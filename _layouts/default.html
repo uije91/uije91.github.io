@@ -10,12 +10,12 @@
 -->
 <html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
   <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+
     {% if page.use_math %}
     {% include mathjax_support.html %}
     {% endif %}
-
-    {% include head.html %}
-    {% include head/custom.html %}
   </head>
   
 

@@ -402,7 +402,7 @@ System.out.println(IntStream.range(2,6).reduce(1,(x,y) -> x*y));
 
 - 예시) 서로 다른 4명 중 주번 2명 뽑는 방법
 
-<blockquote>$ nCr =  \frac{(n-r)!r!}{n!} = \frac{r!}{nPr!}  $ 단(0<r≤n)</blockquote>
+<blockquote>$ nCr =  \frac{(n-r)!r!}{n!} = \frac{r!}{nPr!} $ (단(0&lt;r≤n) </blockquote>
 
 ### <br>중복 조합
 

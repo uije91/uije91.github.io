@@ -655,8 +655,8 @@ double log10_1000 = Math.log10(1000);
 - 일반적으로 메모리사용량은 MB단위이며 기술의 발전으로 시간 복잡도에 비해 덜 중요해 졌습니다. 
 
 ```java
-int[] a = new int[1000];			//4KB
-int[][] a = new int[1000][1000];	//4MB
+int[] a = new int[1000]; //4KB
+int[][] a = new int[1000][1000]; //4MB
 ```
 
 

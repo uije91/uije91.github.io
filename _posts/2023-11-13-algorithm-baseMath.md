@@ -405,24 +405,32 @@ System.out.println(IntStream.range(2,6).reduce(1,(x,y) -> x*y));
 <blockquote>$ nCr =  \frac{n!}{(n-r)!r!} = \frac{nPr}{r!} $ (단(0&lt;r≤n) </blockquote>
 
 ```java
-//서로 다른 4명중 주번 2명을 뽑는 경우의 수
-int n = 4;
-int r = 2;
+ static int getCombination(int n, int r) {
+     int pResult = 1;
+     int rResult = 1;
 
-int pResult = 1;
-int rResult = 1;
+     //nPr
+     for (int i = n; i >= n - r + 1; i--) {
+         pResult *= i;
+     }
 
-//nPr
-for (int i = n; i >= n - r + 1; i--) {
-    pResult *= i;
+     //r!
+     for (int i = 1; i <= r; i++) {
+         rResult *= i;
+     }
+
+     return pResult / rResult;
+ }
+
+
+public static void main(String[] args) {
+    //후보 4명, 유권자 2명일 때 무기명 투표 경우의 수
+    int n = 4;
+    int r = 2;
+
+    System.out.println(getCombination(n,r));		//조합 ( 결과 : 6 )
+    System.out.println(getCombination(n+r-1,r));	//중복 조합 ( 결과 : 10 )
 }
-
-//r!
-for (int i = 1; i <= r; i++) {
-    rResult *= i;
-}
-
-System.out.println(pResult / rResult);
 ```
 
 

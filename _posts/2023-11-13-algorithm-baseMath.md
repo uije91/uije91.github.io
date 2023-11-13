@@ -317,7 +317,7 @@ public int getLCM(int numA, int numB) {
 - 예시1) 5명을 3줄로 세우는 방법
 - 예시2) 서로 다른 4명 중 반장, 부반장을 뽑는 방법
 
-​	`$ nPr = \frac {n!}{(n - r)!} = n(n - 1)(n - 2) .... (n - r + 1) $`
+<blockquote>$ nPr = \frac {n!}{(n - r)!} = n(n - 1)(n - 2) .... (n - r + 1) $</blockquote>
 
 ```java
 // 5!
@@ -337,10 +337,9 @@ System.out.println(result);	//결과 : 60
 서로 다른 n개 중에 r 개를 순서와 선택하는 경우의 수입니다.(순서O, 중복O)
 
 - 예시1) 서로 다른 4개의 수 중 2개를 뽑는 방법(중복 허용)
-
 - 예시2) 후보 2명, 유권자 3명일 때 기명 투표 방법
 
-  `$ n\Pi r = n^r $`
+<blockquote>$ n\Pi r = n^r $</blockquote>
 
 ```java
 int n = 4;
@@ -362,7 +361,7 @@ System.out.println(Math.pow(n, r));
 
 - 예시) 원 모양의 테이블에 3명을 앉히는 경우
 
-  `$ \frac{n!}{n} = (n-1)! $`
+<blockquote>$ \frac{n!}{n} = (n-1)! $</blockquote>
 
 ```java
 int n = 3;
@@ -378,7 +377,7 @@ System.out.println(result);
 
 n! 로 나타내며 1부터 n까지의 자연수를 모두 곱하는 것을 의미합니다.
 
-​	`$ n! = n(n-1)(n-2)....1 $`
+<blockquote>$ n! = n(n-1)(n-2)....1 $</blockquote>
 
 
 ```java

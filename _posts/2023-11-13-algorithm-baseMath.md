@@ -555,18 +555,11 @@ public class main{
 
 ## <br>지수와 로그
 
-### 제곱,제곱근,지수
+### <br>제곱,제곱근,지수
 
 - 제곱 : 같은 수를 두 번 곱하는 것
 
-  ```java
-  Math.pow(2,3)
-  ```
-
-  
-
 - 거듭제곱 : 같은 수를 거듭하여 곱함
-
 - 제곱근(Root, $ \sqrt{} $) : a를 제곱하여 b가 될 때 a를 b의 제곱근이라고 합니다.
 
 <blockquote>
@@ -575,14 +568,60 @@ $ \sqrt{4} = \sqrt{2^2} $<br>
 $ a^x $ -> a:밑, x:지수
 </blockquote>
 
-​	
+```java
+//제곱
+Math.pow(2,3);	//결과 : 8
+
+//제곱근
+Math.sqrt(4);	//결과 : 2
+Math.pow(4,1.0/2);
+
+//참고) 절대 값(양수)
+Math.abs(-5);	//결과 : 5
+
+//제곱을 Math 없이 구현하기
+static double pow(int a, double b) {
+    double result = 1;
+    boolean isMinus = false;
+
+    if (b == 0) {
+        return 1;
+    } else if (b < 0) {
+        b *= -1;
+        isMinus = true;
+    }
+
+    for (int i = 0; i < b; i++) {
+        result *= a;
+    }
+
+    return isMinus ? 1 / result : result;
+}
+//제곱근을 Math없이 구현하기
+static double sqrt(int a) {
+    double result = 1;
+
+    for (int i = 0; i < 10; i++) {
+        result = (result + (a / result)) / 2;
+    }
+
+    return result;
+}
+```
+
+
 
 ### 로그
 
-a가 b가 되기 위해 제곱해야 하는 수 입니다.
+a가 b가 되기 위해 제곱 해야 하는 수 입니다.
 
 <blockquote>
     $\log_2 4 = 2$<br>
     $\log_{10} 1000 = 3$
 </blockquote>
+
+```java
+double log2_4 = Math.log(4) / Math.log(2);
+double log10_1000 = Math.log10(1000);
+```
 

@@ -5,9 +5,10 @@ typora-root-url: ../
 toc: true
 toc_label: "기초 수학"
 toc_sticky: true
+use_math: true
 ---
 
-# <br>기초 수학
+## <br>기초 수학
 
 본격적으로 자료구조와 알고리즘을 공부하기 전 기초 수학에 대한 정리를 하려고 합니다.
 

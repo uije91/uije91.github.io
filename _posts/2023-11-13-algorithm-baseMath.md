@@ -555,3 +555,12 @@ public class main{
 
 ## <br>지수와 로그
 
+- 제곱 : 같은 수를 두 번 곱하는 것
+- 거듭제곱 : 같은 수를 거듭하여 곱함
+- 제곱근(Root, $\sqrt$) : a를 제곱하여 b가 될 때 a를 b의 제곱근이라고 합니다.
+
+​	2<sup>3</sup> = 2 x 2 x 2
+
+​	$ \sqrt4 = \sqrt{2<sup>2</sup>} $
+
+​	a<sup>x</sup> = a:밑, x:지수

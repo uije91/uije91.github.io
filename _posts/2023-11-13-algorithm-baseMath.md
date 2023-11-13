@@ -317,7 +317,7 @@ public int getLCM(int numA, int numB) {
 - 예시1) 5명을 3줄로 세우는 방법
 - 예시2) 서로 다른 4명 중 반장, 부반장을 뽑는 방법
 
-​	$ nPr = \frac {n!}{(n - r)!} = n(n - 1)(n - 2) .... (n - r + 1) $
+​	`$ nPr = \frac {n!}{(n - r)!} = n(n - 1)(n - 2) .... (n - r + 1) $`
 
 ```java
 // 5!
@@ -332,8 +332,6 @@ for (int i = n; i >= n - r + 1; i--) {
 System.out.println(result);	//결과 : 60
 ```
 
-
-
 ### <br>중복 순열
 
 서로 다른 n개 중에 r 개를 순서와 선택하는 경우의 수입니다.(순서O, 중복O)
@@ -342,7 +340,7 @@ System.out.println(result);	//결과 : 60
 
 - 예시2) 후보 2명, 유권자 3명일 때 기명 투표 방법
 
-  $ n\Pi r = n^r $
+  `$ n\Pi r = n^r $`
 
 ```java
 int n = 4;
@@ -358,17 +356,13 @@ System.out.println(result);	//결과 : 16
 System.out.println(Math.pow(n, r));
 ```
 
-
-
-
-
 ### <br>원 순열
 
 원 모양의 테이블에 n개의 원소를 나열하는 경우의 수 입니다.
 
 - 예시) 원 모양의 테이블에 3명을 앉히는 경우
 
-  $ \frac{n!}{n} = (n-1)! $
+  `$ \frac{n!}{n} = (n-1)! $`
 
 ```java
 int n = 3;
@@ -380,15 +374,11 @@ for (int i = 1; i < n; i++) {
 System.out.println(result);
 ```
 
-
-
-
-
 ### <br>팩토리얼(Factorial)
 
 n! 로 나타내며 1부터 n까지의 자연수를 모두 곱하는 것을 의미합니다.
 
-​	$ n! = n(n-1)(n-2)....1 $
+​	`$ n! = n(n-1)(n-2)....1 $`
 
 
 ```java
@@ -413,7 +403,7 @@ System.out.println(IntStream.range(2,6).reduce(1,(x,y) -> x*y));
 
 - 예시) 서로 다른 4명 중 주번 2명 뽑는 방법
 
-  $ nCr =  \frac{(n-r)!r!}{n!} = \frac{r!}{nPr!}  $ 단(0<r≤n)
+  `$ nCr =  \frac{(n-r)!r!}{n!} = \frac{r!}{nPr!}  $ 단(0<r≤n)`
 
 ### <br>중복 조합
 
@@ -421,4 +411,4 @@ System.out.println(IntStream.range(2,6).reduce(1,(x,y) -> x*y));
 
 - 예시) 후보2명,유권자 3명일 때 무기명 투표방법
 
-  $ nHr = n + r - 1Cr $
+  `$ nHr = n + r - 1Cr $`

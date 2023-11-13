@@ -403,7 +403,7 @@ System.out.println(IntStream.range(2,6).reduce(1,(x,y) -> x*y));
 
 - 예시) 서로 다른 4명 중 주번 2명 뽑는 방법
 
-  `$ nCr =  \frac{(n-r)!r!}{n!} = \frac{r!}{nPr!}  $ 단(0<r≤n)`
+<blockquote>$ nCr =  \frac{(n-r)!r!}{n!} = \frac{r!}{nPr!}  $ 단(0<r≤n)</blockquote>
 
 ### <br>중복 조합
 
@@ -411,4 +411,4 @@ System.out.println(IntStream.range(2,6).reduce(1,(x,y) -> x*y));
 
 - 예시) 후보2명,유권자 3명일 때 무기명 투표방법
 
-  `$ nHr = n + r - 1Cr $`
+<blockquote>$ nHr = n + r - 1Cr $</blockquote>

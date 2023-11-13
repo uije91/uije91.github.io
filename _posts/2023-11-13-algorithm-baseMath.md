@@ -414,7 +414,7 @@ System.out.println(IntStream.range(2,6).reduce(1,(x,y) -> x*y));
 
 서로 다른 n개 중에서 r개를 선택하는 경우의 수입니다.
 
-$ nCr =  \frac{(n-r)!r!}{n!} = \frac{r!}{nPr!} $
+$ nCr =  \frac{(n-r)!r!}{n!} = \frac{r!}{nPr!} 단(0<r≤n) $
 
 - 예시) 서로 다른 4명 중 주번 2명 뽑는 방법
 

@@ -447,15 +447,32 @@ public static void main(String[] args) {
 
 ## <br>점화식과 재귀함수
 
-
-
 ### <br>점화식(Recurrence)
 
 어떤 수열의 일반항을 그 이전의 항들을 이용하여 정의한 식입니다.
 
-- 예시) 피보나치 수열
+- 예시) 피보나치 수열 : 앞의 두 수의 합이 바로 뒤가 되는 수의 배열
 
-<blockquote>$ 
+<blockquote>
     1,1,2,3,5,8,13, ...<br>
     F<sub>1</sub> = F<sub>2</sub> = 1, F<sub>n+2</sub> = F<sub>n+1</sub> + F<sub>n</sub>
-    $</blockquote>
+    </blockquote>
+
+
+
+### <br>재귀 함수(Recursive Function)
+
+어떤 함수가 자신을 다시 호출하여 작업을 수행하는 방식
+
+- 문법
+
+```java
+반환타입 함수이름 (매개 변수) {
+    종료조건
+        ...
+    함수이름(...)
+}
+```
+
+
+

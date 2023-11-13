@@ -561,9 +561,11 @@ public class main{
 - 거듭제곱 : 같은 수를 거듭하여 곱함
 - 제곱근(Root, $ \sqrt{} $) : a를 제곱하여 b가 될 때 a를 b의 제곱근이라고 합니다.
 
-​	$ 2^3 = 2 x 2 x 2 $
+<blockquote>
+$ 2^3 = 2 x 2 x 2 $<br>
+$ \sqrt{4} = \sqrt{2^2} $<br>
+$ a^x $ -> a:밑, x:지수
+</blockquote>
 
-​	$ \sqrt{4} = \sqrt{2^2} $
-
-​	$ a^x -> a:밑, x:지수$ 
+​	
 

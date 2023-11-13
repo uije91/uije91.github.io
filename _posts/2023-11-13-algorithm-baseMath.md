@@ -442,3 +442,20 @@ public static void main(String[] args) {
 - 예시) 후보2명,유권자 3명일 때 무기명 투표방법
 
 <blockquote>$ nHr = n + r - 1Cr $</blockquote>
+
+
+
+## <br>점화식과 재귀함수
+
+
+
+### <br>점화식(Recurrence)
+
+어떤 수열의 일반항을 그 이전의 항들을 이용하여 정의한 식입니다.
+
+- 예시) 피보나치 수열
+
+<blockquote>$ 
+    1,1,2,3,5,8,13, ...<br>
+    F<sub>1</sub> = F<sub>2</sub> = 1, F<sub>n+2</sub> = F<sub>n+1</sub> + F<sub>n</sub>
+    $</blockquote>

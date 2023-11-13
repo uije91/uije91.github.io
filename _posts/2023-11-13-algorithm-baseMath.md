@@ -314,7 +314,7 @@ public int getLCM(int numA, int numB) {
 
 서로 다른 n개 중에 r 개를 순서와 선택하는 경우의 수입니다.(순서O, 중복X)
 
-$ nPr = \frac {n!}{(n - r)!} = n(n - 1)(n - 2) .... (n - r + 1) $
+- $ nPr = \frac {n!}{(n - r)!} = n(n - 1)(n - 2) .... (n - r + 1) $
 
 - 예시1) 5명을 3줄로 세우는 방법
 
@@ -341,7 +341,7 @@ System.out.println(result);	//결과 : 60
 
 서로 다른 n개 중에 r 개를 순서와 선택하는 경우의 수입니다.(순서O, 중복O)
 
-$ n\Pi r = n^r $
+- $ n\Pi r = n^r $
 
 - 예시1) 서로 다른 4개의 수 중 2개를 뽑는 방법(중복 허용)
 
@@ -369,7 +369,7 @@ System.out.println(Math.pow(n, r));
 
 원 모양의 테이블에 n개의 원소를 나열하는 경우의 수 입니다.
 
-$ \frac{n!}{n} = (n-1)! $
+- $ \frac{n!}{n} = (n-1)! $
 
 - 예시) 원 모양의 테이블에 3명을 앉히는 경우
 
@@ -391,7 +391,7 @@ System.out.println(result);
 
 n! 로 나타내며 1부터 n까지의 자연수를 모두 곱하는 것을 의미합니다.
 
-$ n! = n(n-1)(n-2)....1 $
+- $ n! = n(n-1)(n-2)....1 $
 
 
 ```java
@@ -414,7 +414,7 @@ System.out.println(IntStream.range(2,6).reduce(1,(x,y) -> x*y));
 
 서로 다른 n개 중에서 r개를 선택하는 경우의 수입니다.(순서X, 중복X)
 
-$ nCr =  \frac{(n-r)!r!}{n!} = \frac{r!}{nPr!}  $ 단(0<r≤n)
+- $ nCr =  \frac{(n-r)!r!}{n!} = \frac{r!}{nPr!}  $ 단(0<r≤n)
 
 - 예시) 서로 다른 4명 중 주번 2명 뽑는 방법
 

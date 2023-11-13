@@ -643,38 +643,7 @@ double log10_1000 = Math.log10(1000);
 
 ***
 
-<div style="width: 30%; height:100px; float: left;">
-    <br>
-    <b style="font-size: 1.75rem";>&nbsp;&nbsp;BIG-O 표기법</b>
-    <br><br><br><br>
-	<img src="/images/2023-11-13-algorithm-baseMath/bigO1.png">
-</div>
-<div style="width: 65%; height:80px; float: right;">
-	<img src="/images/2023-11-13-algorithm-baseMath/bigOGraph.png">
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![biGO](/images/2023-11-13-algorithm-baseMath/biGO.png)
 
 
 ***
@@ -682,7 +651,7 @@ double log10_1000 = Math.log10(1000);
 ### <br>공간 복잡도(Space Complexity)
 
 - 어떤 문제를 해결하기 위한 알고리즘의 필요 메모리 사용량
-- 빅오 표기법을 통해 나타냅니다.
+- 빅오(Big-O) 표기법을 통해 나타냅니다.
 - 일반적으로 메모리사용량은 MB단위이며 기술의 발전으로 시간 복잡도에 비해 덜 중요해 졌습니다. 
 
 ```java

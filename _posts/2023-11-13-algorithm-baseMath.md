@@ -283,6 +283,15 @@ public int getGCD(int numA, int numB) {
     }
     return gcd;
 }
+
+//재귀 함수로 구현
+static int gcd(int a, int b) {
+    if (a % b == 0) {
+        return b;
+    }
+
+    return gcd(b, a % b);
+}
 ```
 
 
@@ -474,5 +483,75 @@ public static void main(String[] args) {
 }
 ```
 
+- 재귀 함수 변환 예제
 
+```java
+public class main{
+    public static void main(String[] args) {
+        //문제1) 1, 3, 9, 27, ... 의 n번째 수
+        int n = 4;
+        int result = 1;
+        for (int i = 0; i < n; i++) {
+            if (i == 0) {
+                result = 1;
+            } else {
+                result *= 3;
+            }
+        }
+        System.out.println(result);
+
+        //문제2) 1, 2, 3, 4, 5, 6, ... 의 n번째 까지의 합
+        n = 5;
+        result = 0;
+        for (int i = 1; i < n + 1; i++) {
+            result += i;
+        }
+        System.out.println(result);
+
+		//문제3) 1, 1, 2, 3, 5, 8, 13, ...의 n번 째 수
+        n = 6;
+        result = 0;
+        int a = 1;
+        int b = 1;
+
+        if (n < 3) {
+            result = 1;
+        } else {
+            for (int i = 2; i < n; i++) {
+                result = a + b;
+                a = b;
+                b = result;
+            }
+        }
+        System.out.println(result);
+    }
+    
+    //1번문제 > 재귀함수로 변환
+    static int recursion1(int n) {
+        if (n == 1) {
+            return 1;
+        }
+        return 3 * recursion1(n - 1);
+    }
+    
+    //2번문제 > 재귀함수로 변환
+    static int recursion2(int n) {
+        if (n == 1) {
+            return 1;
+        }
+        return n + recursion2(n - 1);
+    }
+    
+    //3번문제 > 재귀함수로 변한
+    static int recursion3(int n) {
+        if (n < 3) {
+            return 1;
+        }
+        return recursion3(n - 2) + recursion3(n - 1);
+    }
+    
+}
+```
+
+## <br>지수와 로그
 

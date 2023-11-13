@@ -625,3 +625,70 @@ double log2_4 = Math.log(4) / Math.log(2);
 double log10_1000 = Math.log10(1000);
 ```
 
+
+
+## <br>알고리즘 복잡도(Algorithm Complexity)
+
+알고리즘 복잡도란 알고리즘 성능을 나타내는 척도입니다.
+
+시간 복잡도와 공간 복잡도로 나뉘어지며 두 복잡도의 관계는 일반적으로 Trade-off 관계입니다.
+
+
+
+### 시간 복잡도(Time Complexity)
+
+- 어떤 문제를 해결하기 위한 알고리즘의 필요  횟수
+
+- 빅오(Big-O) 표기법을 통해 나타냅니다.
+
+***
+
+<div style="width: 30%; height:100px; float: left;">
+    <br>
+    <b style="font-size: 1.75rem";>&nbsp;&nbsp;BIG-O 표기법</b>
+    <br><br><br><br>
+	<img src="/images/2023-11-13-algorithm-baseMath/bigO1.png">
+</div>
+<div style="width: 65%; height:80px; float: right;">
+	<img src="/images/2023-11-13-algorithm-baseMath/bigOGraph.png">
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+***
+
+### <br>공간 복잡도(Space Complexity)
+
+- 어떤 문제를 해결하기 위한 알고리즘의 필요 메모리 사용량
+- 빅오 표기법을 통해 나타냅니다.
+- 일반적으로 메모리사용량은 MB단위이며 기술의 발전으로 시간 복잡도에 비해 덜 중요해 졌습니다. 
+
+```java
+int[] a = new int[1000];			//4KB
+int[][] a = new int[1000][1000];	//4MB
+```
+
+
+

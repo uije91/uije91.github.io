@@ -15,8 +15,9 @@ figure.highlight {
 
   > pre,
   pre.highlight {
-    margin: 0;
-    padding: 1em;
+    white-space: pre-wrap;
+    // margin: 0;
+    // padding: 1em;
   }
 }
 

@@ -64,7 +64,7 @@ list1.remove(1);					//1번 인덱스의 값을 제거
 list1.remove(Integer.valueOf(1));	//값이 1인 요소 제거
 
 //Enhanced for 문과 get() 메소드를 이용한 요소의 출력
-for (Object e : list1) {		//Object를 사용하는 이유 : 데이터 타입을 명시적으로 사용하기위해선 처음에 제네릭스로 형 지정을 해야 한다.
+for (Object e : list1) {		
     System.out.print(e + " ");
 }
 

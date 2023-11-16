@@ -1,0 +1,148 @@
+---
+title:  "(선형 자료구조) - 스택"
+category: algorithm
+typora-root-url: ../
+toc: true
+toc_label: "스택(Stack)"
+toc_sticky: true
+use_math: true
+---
+
+## <br>스택(Stack)
+
+- 후입선출(Last In First Out: LIFO) 자료구조
+  - 마지막에 들어온 데이터가 먼저 나가는 구조
+- 데이터가 입력된 순서의 역순으로 처리되어야 할 때 사용
+  - 예) 함수 콜 스택,수식 계산,인터럽트 처리 등
+
+<img src="/images/2023-11-15-algorithm-Stack/st.png" alt="st" style="zoom: 42%;" />
+
+
+
+### 스택의 기본 연산
+
+- Push() : 스택의 가장 마지막 위치에 데이터를 추가합니다.
+- Pop() : 스택의 가장 마지막 위치에서 데이터 꺼냅니다.
+- Peek() : 최상위 요소를 제거하지 않고 값을 가져옵니다.
+
+```java
+public Class StackExample(){
+    public static void main(String[] args) {
+        Stack stack = new Stack();
+        //데이터 추가
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+
+        //데이터 꺼내기
+        System.out.println(stack.pop());
+
+        //스택의 최상단 값 출력(제거X)
+        System.out.println(stack.peek());
+    }
+}
+```
+
+
+
+### <br>스택 연습문제
+
+- Q1) 문자열 뒤집기
+
+```java
+static String reverseString(String str) {
+    Stack stack = new Stack();
+    StringBuilder result = new StringBuilder();
+
+    for(String s : str.split("")){
+        stack.push(s);
+    }
+
+    while(!stack.isEmpty()){
+        result.append(stack.pop());
+    }
+
+    return result.toString();
+}
+```
+
+<br>
+
+- Q2) 괄호 짝 검사
+
+```java
+static void checkParenthesis(String str) {
+    Stack stack = new Stack();
+    boolean checkFlag = true;
+
+    for(String s : str.split("")){
+        if(s.equals("(")){
+            stack.push(s);
+        } else{
+            if(stack.isEmpty()){
+                checkFlag = false;
+                break;
+            } else {
+                stack.pop();
+            }
+        }
+    }
+    
+    if(checkFlag && stack.isEmpty()){
+        System.out.println("PASS!");
+    } else {
+        System.out.println("FAIL!");
+    }
+}
+```
+
+<br>
+
+- Q3) 후위표기법 연산
+
+```java
+static double calculate(String string) {
+    Stack<Double> stack = new Stack();
+
+    for(String str : string.split(" ")){
+        if(str.equals("+")){
+            stack.push(stack.pop() + stack.pop());
+        } else if(str.equals("-")){
+            stack.push(-stack.pop() + stack.pop());
+        } else if(str.equals("*")){
+            stack.push(stack.pop() * stack.pop());
+        } else if(str.equals("/")){
+            stack.push(1 / stack.pop() * stack.pop());
+        } else {
+            stack.push(Double.parseDouble(str));
+        }
+    }
+    return stack.pop();
+}
+```
+
+<br>
+
+- Q4) 두 문자열 비교( 단, #은 backspace 로 바로 이전의 문자를 삭제하는 기능이라고 가정 )
+
+```java
+static boolean stringCompare(String s1, String s2) {
+        String s1After = doBackspace(s1);
+        String s2After = doBackspace(s2);
+        return s1After.equals(s2After);
+    }
+
+static String doBackspace(String s){
+    Stack stack = new Stack();
+    for (char c : s.toCharArray()) {
+        if(c == '#' && !stack.isEmpty()){
+            stack.pop();
+        }else {
+            stack.push(c);
+        }
+    }
+    return String.valueOf(stack);
+}
+```
+
+ 

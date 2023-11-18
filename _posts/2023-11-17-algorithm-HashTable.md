@@ -66,11 +66,77 @@ use_math: true
     - 해시 함수 2 : 충돌 발생 시 탐사 이동 간격을 구할 때 사용
   - 선형 탐사, 제곱 탐사에 비해 데이터가 골고루 분포됨
 
-
-
 <br>
 
 - #### 분리 연결법(Separate Chaining)
 
   - 해시 테이블을 연결 리스트로 구성
   - 충돌 발생 시 테이블 내의 다른 위치를 탐색하는 것이 아닌 연결 리스트를 이용하여 해당 테이블에 데이터 연결
+
+
+
+### <br>해시테이블 연습 문제
+
+- Q1) 주어진 첫 번째 배열을 이용하여 해시 테이블을 초기화 한 후 두 번째 배열이 주어졌을 때 해당 배열 내 데이터가 해시 테이블에 있는지 확인하는 코드를 작성하세요.
+
+  ```java
+  public class Solution {
+      public void solution(int[] arr1, int[] arr2) {
+          Hashtable<Integer, Integer> ht = new Hashtable<>();
+  
+          for (int i = 0; i < arr1.length; i++) {
+              ht.put(arr1[i], arr1[i]);
+          }
+  
+          for (int i = 0; i < arr2.length; i++) {
+              if (ht.contains(arr2[i])) {
+                  System.out.println("True");
+              } else {
+                  System.out.println("False");
+              }
+          }
+      }
+  }
+  ```
+
+<br>
+
+- Q2) 정수형 배열 nums 와 target 이 주어졌을 때 nums 에서 임의의 두 수를 더해 target 을 구할 수 있는지 확인하는 프로그램을 작성하세요.
+  	두 수 의 합으로 target 을 구할 수 있으면 해당 값의 index 를 반환하고 없는 경우 null 을 반환하세요.
+
+```java
+public class Solution {
+        public int[] solution(int[] numbers, int target) {
+        int[] result = new int[2];
+        Hashtable<Integer, Integer> ht = new Hashtable<>();
+
+        for (int i = 0; i < numbers.length; i++) {
+            if (ht.containsKey(numbers[i])) {
+                result[0] = ht.get(numbers[i]);
+                result[1] = i;
+                return result;
+            }
+            ht.put(target - numbers[i], i);
+        }
+        return null;
+    }
+}
+```
+
+
+
+### <br>참고) HashTable? , HashMap?
+
+- HashMap 
+  - 단일 쓰레드에서 사용하기 좋은 자료구조
+  - 동기화를 지원하지 않습니다.
+  - Key에 Null 사용이 가능합니다.
+  - ConcurrentHashMap을 이용하면 HashTable의 대안으로 사용이 가능합니다.
+- HashTable
+  - 멀티 쓰레드에서 사용하기 좋은 자료구조지만 HashMap에 비해 느립니다.
+  - 동기화를 지원하며 Thread-safe 합니다.
+  - Key에 Null 사용이 불가능합니다.
+
+- Thread-safe
+
+  하나의 함수가 한 스레드로부터 호출되어 실행 중일 때, 다른 스레드가 그 함수를 호출하여 동시에 함께 실행되더라도 실행중인 스레드에서의 다른 스레드의 접근을 차단하여 함수의 수행 결과가 올바르게 나오는 것을 의미합니다.

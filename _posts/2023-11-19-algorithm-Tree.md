@@ -126,3 +126,156 @@ use_math: true
 ![Complete-Binary-Trees](/images/2023-11-19-algorithm-Tree/Complete-Binary-Trees.png)
 
 - 연결 리스트 : 값과 간선을 관리하기 위한 노드로 연결 리스트 구성
+
+
+
+#### <br>배열을 이용한 이진 트리 구성 및 순회
+
+```java
+class BinaryTree {
+    char[] arr;
+
+    public BinaryTree(char[] arr) {
+        this.arr = arr;
+    }
+
+    public void preOrder(int idx) { //전위 순회(preOrder)
+        System.out.print(this.arr[idx]+" ");
+        int left = 2 * idx + 1;
+        int right = 2 * idx + 2;
+
+        if(left < this.arr.length){
+            this.preOrder(left);
+        }
+        if(right < this.arr.length){
+            this.preOrder(right);
+        }
+    }
+
+    public void inOrder(int idx) { //중위 순회(inOrder)
+        int left = 2 * idx + 1;
+        int right = 2 * idx + 2;
+
+        if(left < this.arr.length){
+            this.inOrder(left);
+        }
+
+        System.out.print(this.arr[idx]+" ");
+
+        if(right < this.arr.length){
+            this.inOrder(right);
+        }
+    }
+    public void postOrder(int idx) { //후위 순회(postOrder)
+        int left = 2 * idx + 1;
+        int right = 2 * idx + 2;
+
+        if(left < this.arr.length){
+            this.postOrder(left);
+        }
+        if(right < this.arr.length){
+            this.postOrder(right);
+        }
+
+        System.out.print(this.arr[idx]+" ");
+    }
+
+    public void levelOrder(int idx){ //레벨 순회(levelOrder)
+        for (int i = 0; i < this.arr.length; i++) {
+            System.out.print(arr[i]+" ");
+        }
+        System.out.println();
+    }
+}
+```
+
+
+
+<br>연결 리스트를 이용한 이진 트리 구성 및 순회
+
+```java
+class Node {
+    char data;
+    Node left;
+    Node right;
+
+    public Node(char data, Node left, Node right) {
+        this.data = data;
+        this.left = left;
+        this.right = right;
+    }
+}
+
+class BinaryTree2 {
+    Node head;
+
+    public BinaryTree2() {
+    }
+
+    public BinaryTree2(char[] arr) {
+        Node[] nodes = new Node[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            nodes[i] = new Node(arr[i], null, null);
+        }
+
+        for (int i = 0; i < arr.length; i++) {
+            int left = 2 * i + 1;
+            int right = 2 * i + 2;
+
+            if (left < arr.length) {
+                nodes[i].left = nodes[left];
+            }
+            if (right < arr.length) {
+                nodes[i].right = nodes[right];
+            }
+        }
+
+        this.head = nodes[0];
+    }
+
+    public void preOrder(Node node) {
+        if (node == null) {
+            return;
+        }
+        System.out.print(node.data + " ");
+        this.preOrder(node.left);
+        this.preOrder(node.right);
+    }
+
+    public void inOrder(Node node) {
+        if (node == null) {
+            return;
+        }
+        this.inOrder(node.left);
+        System.out.print(node.data+" ");
+        this.inOrder(node.right);
+    }
+
+    public void postOrder(Node node){
+        if(node==null){
+            return;
+        }
+        this.postOrder(node.left);
+        this.postOrder(node.right);
+        System.out.print(node.data+" ");
+    }
+
+    public void levelOrder(Node node){
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(node);
+
+        while(!queue.isEmpty()){
+            Node cur = queue.poll();
+
+            System.out.print(cur.data+" ");
+            if(cur.left!=null){
+                queue.offer(cur.left);
+            }
+            if(cur.right!=null){
+                queue.offer(cur.right);
+            }
+        }
+    }
+}
+```
+

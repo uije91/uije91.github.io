@@ -508,7 +508,7 @@ public class main{
         }
         System.out.println(result);
 
-		//문제3) 1, 1, 2, 3, 5, 8, 13, ...의 n번 째 수
+        //문제3) 1, 1, 2, 3, 5, 8, 13, ...의 n번 째 수
         n = 6;
         result = 0;
         int a = 1;

@@ -80,4 +80,49 @@ use_math: true
 
 - 포화 이진 트리의 높이가 h일 때 노드의 수는 2<sup>h+1</sup> - 1개
 - 포화(or완전) 이진 트리의 노드가 N개 일 때 높이는 $log_2$N
-- 이진 트리의 노드가 N개 일 때 최대 가능 높이는 N
+- 이진 트리의 노드가 N개 일 때 최대 가능 높이는 N-1
+
+
+
+### <br>이진 트리의 순회(Travelsal)
+
+- 모든 노드를 빠뜨리거나 중복하지 않고 방문하는 연산
+- 순회 종류는 4가지
+  - 전위 순회,중위 순회,후위 순회(DFS)
+  - 레벨 순회(BFS)
+
+
+
+#### <br>전위 순회(Preorder Traversal)
+
+- 방문 순서: 현재 노드 -> 왼쪽 노드 -> 오른쪽 노드
+
+![preorder-Traversal](/images/2023-11-19-algorithm-Tree/preorder-Traversal.png)
+
+#### <br>중위 순회(Inorder Traversal)
+
+- 방문 순서: 왼쪽 노드 -> 현재 노드 -> 오른쪽 노드
+
+ ![Inorder-Traversal](/images/2023-11-19-algorithm-Tree/Inorder-Traversal.png)
+
+#### <br>후위 순회(Postorder Traversal)
+
+- 방문 순서: 왼쪽 노드 -> 오른쪽 노드 -> 현재 노드
+
+![Postorder-Traversal](/images/2023-11-19-algorithm-Tree/Postorder-Traversal.png)
+
+#### <br>레벨 순회(Levelorder Traversal)
+
+- 방문 순서: 위쪽 레벨부터 왼쪽 노드 -> 오른쪽 노드
+
+![level-traversal](/images/2023-11-19-algorithm-Tree/level-traversal.png)
+
+
+
+### <br>이진 트리 구현
+
+- 배열 : 레벨 순회 순으로 배열을 구성
+
+![Complete-Binary-Trees](/images/2023-11-19-algorithm-Tree/Complete-Binary-Trees.png)
+
+- 연결 리스트 : 값과 간선을 관리하기 위한 노드로 연결 리스트 구성

@@ -191,31 +191,46 @@ class BinaryTree {
 
 
 
-<br>연결 리스트를 이용한 이진 트리 구성 및 순회
+#### <br>연결 리스트를 이용한 이진 트리 구성 및 순회
 
 ```java
+import java.util.LinkedList;
+import java.util.Queue;
+
 class Node {
     char data;
     Node left;
     Node right;
+    Node parent;
 
     public Node(char data, Node left, Node right) {
         this.data = data;
         this.left = left;
         this.right = right;
     }
+
+    public Node(char data, Node left, Node right, Node parent) {
+        this.data = data;
+        this.left = left;
+        this.right = right;
+        this.parent = parent;
+    }
 }
 
-class BinaryTree2 {
+class BinaryTree {
     Node head;
 
-    public BinaryTree2() {
+    public BinaryTree() {
     }
 
-    public BinaryTree2(char[] arr) {
+    public BinaryTree(Node head) {
+        this.head = head;
+    }
+
+    public BinaryTree(char[] arr) {
         Node[] nodes = new Node[arr.length];
         for (int i = 0; i < arr.length; i++) {
-            nodes[i] = new Node(arr[i], null, null);
+            nodes[i] = new Node(arr[i], null, null, null);
         }
 
         for (int i = 0; i < arr.length; i++) {
@@ -224,15 +239,19 @@ class BinaryTree2 {
 
             if (left < arr.length) {
                 nodes[i].left = nodes[left];
+                nodes[left].parent = nodes[i];
             }
+
             if (right < arr.length) {
                 nodes[i].right = nodes[right];
+                nodes[right].parent = nodes[i];
             }
         }
 
         this.head = nodes[0];
     }
 
+    // 전위 순회(Pre-Order Traversal)
     public void preOrder(Node node) {
         if (node == null) {
             return;
@@ -242,39 +261,292 @@ class BinaryTree2 {
         this.preOrder(node.right);
     }
 
+    //중위 순회(In-Order Traversal)
     public void inOrder(Node node) {
         if (node == null) {
             return;
         }
+
         this.inOrder(node.left);
-        System.out.print(node.data+" ");
+        System.out.print(node.data + " ");
         this.inOrder(node.right);
     }
 
-    public void postOrder(Node node){
-        if(node==null){
+    //후위 순회(Post-Order Traversal)
+    public void postOrder(Node node) {
+        if (node == null) {
             return;
         }
+
         this.postOrder(node.left);
         this.postOrder(node.right);
-        System.out.print(node.data+" ");
+        System.out.print(node.data + " ");
     }
 
-    public void levelOrder(Node node){
+    //레벨 순회(Level-Order Traversal)
+    public void levelOrder(Node node) {
         Queue<Node> queue = new LinkedList<>();
         queue.add(node);
 
-        while(!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             Node cur = queue.poll();
+            System.out.print(cur.data + " ");
 
-            System.out.print(cur.data+" ");
-            if(cur.left!=null){
+            if (cur.left != null) {
                 queue.offer(cur.left);
             }
-            if(cur.right!=null){
+            if (cur.right != null) {
                 queue.offer(cur.right);
             }
         }
+    }
+
+    //노드 검색
+    public Node searchNode(char data) {
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(this.head);
+
+        while (!queue.isEmpty()) {
+            Node cur = queue.poll();
+            if (cur.data == data) {
+                return cur;
+            }
+            if (cur.left != null) {
+                queue.offer(cur.left);
+            }
+            if (cur.right != null) {
+                queue.offer(cur.right);
+            }
+        }
+        return null;
+    }
+
+    public Integer checkSize(char data) {
+        Node node = this.searchNode(data);
+
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(node);
+        int size = 1; // 자기자신포함
+        while (!queue.isEmpty()) {
+            Node cur = queue.poll();
+
+            if (cur.left != null) {
+                queue.offer(cur.left);
+                size++;
+            }
+            if (cur.right != null) {
+                queue.offer(cur.right);
+                size++;
+            }
+        }
+        return size;
+    }
+}
+
+public class Tree {
+    public static void main(String[] args) {
+        //Test Code
+        char[] arr = new char[10];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = (char) ('A' + i);
+        }
+
+        BinaryTree bt = new BinaryTree(arr);
+
+        System.out.println("==Pre-Order==");
+        bt.preOrder(bt.head);
+        System.out.println();
+
+        System.out.println("==In-Order==");
+        bt.inOrder(bt.head);
+        System.out.println();
+
+        System.out.println("==Post-Order==");
+        bt.postOrder(bt.head);
+        System.out.println();
+
+        System.out.println("==Level-Order==");
+        bt.levelOrder(bt.head);
+        System.out.println();
+
+        // Root node
+        System.out.println("Root: " + bt.head.data);
+
+        // B's child node
+        Node B = bt.searchNode('B');
+        if (B.left != null) {
+            System.out.println("B -> left child: " + B.left.data);
+        }
+        if (B.left != null) {
+            System.out.println("B -> right child: " + B.right.data);
+        }
+
+        // F's parent node
+        Node F = bt.searchNode('F');
+        System.out.println("F -> parent: " + F.parent.data);
+
+        // Leaf node
+        System.out.print("Leaf node: ");
+        for (int i = 0; i < arr.length; i++) {
+            Node cur = bt.searchNode((char) ('A' + i));
+
+            if (cur.left == null && cur.right == null) {
+                System.out.print(cur.data + " ");
+            }
+        }
+        System.out.println();
+
+        // E's Depth
+        Node E = bt.searchNode('E');
+        Node cur = E;
+        int cnt = 0;
+        while (cur.parent != null) {
+            cur = cur.parent;
+            cnt++;
+        }
+        System.out.println("E depth: " + cnt);
+
+
+        // Level2 Node
+        System.out.print("Level2 Node: ");
+        for (int i = 0; i < arr.length; i++) {
+            Node target = bt.searchNode((char) ('A' + i));
+            cur = target;
+            cnt = 0;
+            while (cur.parent != null) {
+                cur = cur.parent;
+                cnt++;
+            }
+            if (cnt == 2) {
+                System.out.print(target.data + " ");
+            }
+        }
+        System.out.println();
+
+        // Height
+        int maxCnt = Integer.MIN_VALUE;
+        for (int i = 0; i < arr.length; i++) {
+            Node target = bt.searchNode((char) ('A' + i));
+            cur = target;
+            cnt = 0;
+            while (cur.parent != null) {
+                cur = cur.parent;
+                cnt++;
+            }
+
+            if (maxCnt < cnt) {
+                maxCnt = cnt;
+            }
+        }
+        System.out.println();
+
+        // B's Size
+        int size = bt.checkSize('B');
+        System.out.println("B size = "+size);
+    }
+}
+```
+
+
+
+### <br>트리 연습 문제
+
+- 문제1)
+
+```
+종이를 반으로 접었을 때, 안으로 파인 부분은 0, 볼록 튀어나온 부분은 1이라고 하자.
+종이를 접을 때는 오른쪽에서 왼쪽으로 접는다.
+종이를 N번 접었을 때의 접힌 상태를 출력하는 문제를 작성하세요.
+
+입출력 예시
+입력: 1 / 출력: 0
+입력: 2 / 출력: 0, 0, 1
+입력: 3 / 출력: 0, 0, 1, 0, 0, 1, 1
+```
+
+- 코드
+
+```java
+public class Solution {
+    public static void solution(int n) {
+        //In-order 포화이진트리
+        int[] binaryTree = new int[(int) Math.pow(2, n)];
+
+        binaryTree[0] = 0;
+        for (int i = 0; i < (int) Math.pow(2, n - 1) - 1; i++) {
+            binaryTree[i * 2 + 1] = 0;
+            binaryTree[i * 2 + 2] = 1;
+        }
+
+        inOrder(binaryTree, 0);
+        System.out.println();
+    }
+
+    public static void inOrder(int[] arr, int idx) {
+        int left = 2 * idx + 1;
+        int right = 2 * idx + 2;
+        if (left < arr.length - 1) {
+            inOrder(arr, left);
+        }
+        System.out.print(arr[idx] + " ");
+        if (right < arr.length - 1) {
+            inOrder(arr, right);
+        }
+    }
+}
+```
+
+<br>
+
+- 문제2)
+
+```
+각각의 에지에 가중치가 있는 포화 이진 트리가 있다.
+루트에서 각 리프까지의 경로 길이를 모두 같게 설정하고,
+이 때, 모든 가중치들의 총합이 최소가 되도록 하는 프로그램을 작성하세요.
+```
+
+- 코드
+
+```java
+class BinaryTree {
+    int h;
+    int[] arr;
+    int result;
+
+    public BinaryTree(int h, int[] w) {
+        this.h = h;
+        arr = new int[(int) Math.pow(2, h + 1)];
+        result = 0;
+        /*
+        초기값 2 설정이유 :
+        1.초기값0은 사용안함
+        2.포화이진트리에서 노드의 갯수는 7갠데 간선의 갯수는 (노드-1개)
+        간선의 갯수가 필요한 것이기 때문에 초기값은 2부터 시작
+         */
+        for (int i = 2; i < (int) Math.pow(2, h + 1); i++) {
+            arr[i] = w[i - 2];
+        }
+    }
+
+    public int dfs(int idx, int h) {
+        if (this.h == h) {
+            result += arr[idx];
+            return arr[idx];
+        }
+
+        int left = dfs(idx * 2, h + 1);
+        int right = dfs(idx * 2 + 1, h + 1);
+        result += arr[idx] + Math.abs(left - right);
+        return arr[idx] + Math.max(left, right);
+    }
+}
+
+public class Solution {
+    public static void solution(int h, int[] w) {
+        BinaryTree bt = new BinaryTree(h, w);
+        bt.dfs(1,0);
+        System.out.println(bt.result);
     }
 }
 ```

@@ -45,7 +45,7 @@ use_math: true
 
 ### <br>데크 연습문제
 
-- Q1) 데이터 재정렬
+- 문제1) 데이터 재정렬
   - D_0 -> D_1 -> ... -> D_n-1 -> D_n 순으로 되어 있는 데이터를 D_0 -> D_n -> D_1 -> D_n-1 -> ... 순이 되도록 재정렬 하시오.
   - 입력예시 : [1 - 2 - 3 - 4 - 5] -> [1 -> 5 -> 2 -> 4 -> 3 ]
 
@@ -78,7 +78,7 @@ public class Practice1 {
 
 <br>
 
-- Q2) Palindrome 찾기 : Palindrome 이면 true, 아니면 false 를 반환하세요.
+- 문제2) Palindrome 찾기 : Palindrome 이면 true, 아니면 false 를 반환하세요.
   - Palindrome : 앞으로 읽어도 거꾸로 읽어도 같은 문자열
 
 ```java

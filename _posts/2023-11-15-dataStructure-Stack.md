@@ -46,7 +46,7 @@ public Class StackExample(){
 
 ### <br>스택 연습문제
 
-- Q1) 문자열 뒤집기
+- 문제1) 문자열 뒤집기
 
 ```java
 static String reverseString(String str) {
@@ -67,7 +67,7 @@ static String reverseString(String str) {
 
 <br>
 
-- Q2) 괄호 짝 검사
+- 문제2) 괄호 짝 검사
 
 ```java
 static void checkParenthesis(String str) {
@@ -97,7 +97,7 @@ static void checkParenthesis(String str) {
 
 <br>
 
-- Q3) 후위표기법 연산
+- 문제3) 후위표기법 연산
 
 ```java
 static double calculate(String string) {
@@ -122,7 +122,7 @@ static double calculate(String string) {
 
 <br>
 
-- Q4) 두 문자열 비교( 단, #은 backspace 로 바로 이전의 문자를 삭제하는 기능이라고 가정 )
+- 문제4) 두 문자열 비교( 단, #은 backspace 로 바로 이전의 문자를 삭제하는 기능이라고 가정 )
 
 ```java
 static boolean stringCompare(String s1, String s2) {

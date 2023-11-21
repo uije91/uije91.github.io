@@ -83,7 +83,7 @@ use_math: true
 
 
 
-### <br>이진 트리의 순회(Travelsal)
+### <br>이진 트리의 순회
 
 - 모든 노드를 빠뜨리거나 중복하지 않고 방문하는 연산
 - 순회 종류는 4가지
@@ -92,25 +92,33 @@ use_math: true
 
 
 
-#### <br>전위 순회(Preorder Traversal)
+#### <br>전위 순회
+
+- Preorder Traversal
 
 - 방문 순서: 현재 노드 -> 왼쪽 노드 -> 오른쪽 노드
 
 ![preorder-Traversal](/images/2023-11-19-algorithm-Tree/preorder-Traversal.png)
 
-#### <br>중위 순회(Inorder Traversal)
+#### <br>중위 순회
+
+- Inorder Traversal
 
 - 방문 순서: 왼쪽 노드 -> 현재 노드 -> 오른쪽 노드
 
  ![Inorder-Traversal](/images/2023-11-19-algorithm-Tree/Inorder-Traversal.png)
 
-#### <br>후위 순회(Postorder Traversal)
+#### <br>후위 순회
+
+- Postorder Traversal
 
 - 방문 순서: 왼쪽 노드 -> 오른쪽 노드 -> 현재 노드
 
 ![Postorder-Traversal](/images/2023-11-19-algorithm-Tree/Postorder-Traversal.png)
 
-#### <br>레벨 순회(Levelorder Traversal)
+#### <br>레벨 순회
+
+- Levelorder Traversal
 
 - 방문 순서: 위쪽 레벨부터 왼쪽 노드 -> 오른쪽 노드
 
@@ -128,7 +136,7 @@ use_math: true
 
 
 
-#### <br>배열을 이용한 이진 트리 구성 및 순회
+#### <br>이진 트리 구성(Array)
 
 ```java
 class BinaryTree {
@@ -190,7 +198,7 @@ class BinaryTree {
 
 
 
-#### <br>연결 리스트를 이용한 이진 트리 구성 및 순회
+#### <br>이진 트리 구성(Linked List)
 
 ```java
 import java.util.LinkedList;
@@ -452,14 +460,13 @@ public class Tree {
 
 - 문제1)
 
-  종이를 반으로 접었을 때, 안으로 파인 부분은 0, 볼록 튀어나온 부분은 1이라고 하자.
-  종이를 접을 때는 오른쪽에서 왼쪽으로 접는다.
-  종이를 N번 접었을 때의 접힌 상태를 출력하는 문제를 작성하세요.
-
-  입출력 예시
-  입력: 1 / 출력: 0
-  입력: 2 / 출력: 0, 0, 1
-  입력: 3 / 출력: 0, 0, 1, 0, 0, 1, 1
+  종이를 반으로 접었을 때, 안으로 파인 부분은 0, 볼록 튀어나온 부분은 1이라고 하자.<br>종이를 접을 때는 오른쪽에서 왼쪽으로 접는다.<br>
+  종이를 N번 접었을 때의 접힌 상태를 출력하는 문제를 작성하세요.<br>
+  
+  입출력 예시<br>
+  입력: 1 / 출력: 0<br>
+  입력: 2 / 출력: 0, 0, 1<br>
+  입력: 3 / 출력: 0, 0, 1, 0, 0, 1, 1	
 
 ```java
 public class Solution {
@@ -495,9 +502,8 @@ public class Solution {
 
 - 문제2)
 
-  각각의 에지에 가중치가 있는 포화 이진 트리가 있다.
-  루트에서 각 리프까지의 경로 길이를 모두 같게 설정하고,
-  이 때, 모든 가중치들의 총합이 최소가 되도록 하는 프로그램을 작성하세요.
+  각각의 에지에 가중치가 있는 포화 이진 트리가 있다.<br>
+  루트에서 각 리프까지의 경로 길이를 모두 같게 설정하고 모든 가중치들의 총합이 최소가 되도록 하는 프로그램을 작성하세요.
 
 ```java
 class BinaryTree {

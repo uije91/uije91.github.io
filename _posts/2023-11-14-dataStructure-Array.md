@@ -34,7 +34,7 @@ use_math: true
 
 ### <br>배열 연습문제
 
-- Q1) 배열 arr 의 모든 데이터에 대해서 짝수 데이터들의 평균과 홀수 데이터들의 평균을 출력하세요.
+- 문제1) 배열 arr 의 모든 데이터에 대해서 짝수 데이터들의 평균과 홀수 데이터들의 평균을 출력하세요.
 
 ```java
 void Solution(int[] arr){
@@ -60,7 +60,7 @@ void Solution(int[] arr){
 
 <br>
 
-- Q2) 배열 arr 에서 target 에 해당하는 값의 인덱스를 출력, 해당 값이 여러 개인 경우 가장 큰 인덱스 출력
+- 문제2) 배열 arr 에서 target 에 해당하는 값의 인덱스를 출력, 해당 값이 여러 개인 경우 가장 큰 인덱스 출력
 
 ``` java
 void Solution(int[] arr, int target) {
@@ -81,7 +81,7 @@ void Solution(int[] arr, int target) {
 
 <br>
 
-- Q3) 배열 arr 의 데이터 순서를 거꾸로 변경하세요.
+- 문제3) 배열 arr 의 데이터 순서를 거꾸로 변경하세요.
 
 ```java
 void Solution(int[] arr) {
@@ -98,7 +98,7 @@ void Solution(int[] arr) {
 
 <br>
 
-- Q4) 배열 arr 에서 peek 값 모두 출력
+- 문제4) 배열 arr 에서 peek 값 모두 출력
 
 ```java
 void Solution(int[] arr) {
@@ -119,7 +119,7 @@ void Solution(int[] arr) {
 
 <br>
 
-- Q5) 배열 arr 의 값을 오름차순으로 출력
+- 문제5) 배열 arr 의 값을 오름차순으로 출력
 
 ```java
 void Solution(int[] arr) {
@@ -151,7 +151,7 @@ void Solution(int[] arr) {
 
 <br>
 
-- Q6) 배열 arr 에서 중복 값을 제거한 새 배열을 만드시오.
+- 문제6) 배열 arr 에서 중복 값을 제거한 새 배열을 만드시오.
 
 ```java
 void Solution(int[] arr) {
@@ -180,7 +180,7 @@ void Solution(int[] arr) {
 
 <br>
 
-- Q7) 2차원 배열 arr 을 시계방향 90도 회전시킨 결과를 출력하세요.
+- 문제7) 2차원 배열 arr 을 시계방향 90도 회전시킨 결과를 출력하세요.
 
 ```java
 void Solution(int[][] arr){

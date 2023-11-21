@@ -38,27 +38,26 @@ use_math: true
 
 
 
-### <br>해시 충돌 해결 방법
+#### <br>해시 충돌 해결 방법
 
-- #### 개방 주소법(Open Address)
-
+- 개방 주소법(Open Address)
   - 충돌 시 테이블에서 비어있는 공간의 hash를 찾아 데이터를 저장
   - hash와 value 가 1:1 관계 유지
   - 비어 있는 공간 탐색 방법에 따라 분류(선형 탐사법,제곱 탐사법, 이중 해싱)
-
-- **선형 탐사법**
+  
+- 선형 탐사법
   - Linear Probing
   - 빈 공간을 순차적으로 탐사하는 방법 
     - 충돌 발생 지점부터 이후의 빈 공간을 순서대로 탐사
   - 일차 군집화 문제 발생
     - 반복된 충돌 발생 시 해당 지점 주변에 데이터가 물리는 경우 발생
-- **제곱 탐사법**
+- 제곱 탐사법
   - Quadratic Probing
   - 빈 공간을 n제곱만큼의 간격을 두고 탐사하는 방법
     - 충돌 발생 지점부터 이후의 빈 공간을 n제곱 간격으로 탐사
   - 일차 군집화 문제 일부 보완
   - 이차 군집화 문제 발생 가능성
-- **이중 해싱**
+- 이중 해싱
   - Double Hashing
   - 해싱 함수를 이중으로 사용
     - 해시 함수 1 : 최초 해시를 구할 때 사용
@@ -67,8 +66,7 @@ use_math: true
 
 <br>
 
-- #### 분리 연결법(Separate Chaining)
-
+- 분리 연결법(Separate Chaining)
   - 해시 테이블을 연결 리스트로 구성
   - 충돌 발생 시 테이블 내의 다른 위치를 탐색하는 것이 아닌 연결 리스트를 이용하여 해당 테이블에 데이터 연결
 
@@ -78,25 +76,27 @@ use_math: true
 
 - Q1) 주어진 첫 번째 배열을 이용하여 해시 테이블을 초기화 한 후 두 번째 배열이 주어졌을 때 해당 배열 내 데이터가 해시 테이블에 있는지 확인하는 코드를 작성하세요.
 
-  ```java
-  public class Solution {
-      public void solution(int[] arr1, int[] arr2) {
-          Hashtable<Integer, Integer> ht = new Hashtable<>();
-  
-          for (int i = 0; i < arr1.length; i++) {
-              ht.put(arr1[i], arr1[i]);
-          }
-  
-          for (int i = 0; i < arr2.length; i++) {
-              if (ht.contains(arr2[i])) {
-                  System.out.println("True");
-              } else {
-                  System.out.println("False");
-              }
-          }
-      }
-  }
-  ```
+```java
+public class Solution {
+    public void solution(int[] arr1, int[] arr2) {
+        Hashtable<Integer, Integer> ht = new Hashtable<>();
+
+        for (int i = 0; i < arr1.length; i++) {
+            ht.put(arr1[i], arr1[i]);
+        }
+
+        for (int i = 0; i < arr2.length; i++) {
+            if (ht.contains(arr2[i])) {
+                System.out.println("True");
+            } else {
+                System.out.println("False");
+            }
+        }
+    }
+}
+```
+
+
 
 <br>
 
@@ -124,7 +124,7 @@ public class Solution {
 
 
 
-### <br>참고) HashTable? , HashMap?
+### <br>HashTable? , HashMap?
 
 - HashMap 
   - 단일 쓰레드에서 사용하기 좋은 자료구조

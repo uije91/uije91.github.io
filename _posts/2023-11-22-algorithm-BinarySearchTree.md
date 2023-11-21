@@ -318,3 +318,209 @@ class BinarySearchTree {
   - 단순 회전 : LL, RR
   - 이중 회전 : LR, RL
 
+
+
+#### AVL 트리 - LL(Left-Left)
+
+- 오른쪽 방향으로 1회 회전
+
+<img src="/images/2023-11-22-algorithm-BinarySearchTree/LL.png" alt="LL" style="zoom: 80%;" />
+
+
+
+#### <br>AVL 트리 - RR(Right-Right)
+
+- 왼쪽 방향으로 1회 회전
+
+<img src="/images/2023-11-22-algorithm-BinarySearchTree/RR.png" alt="RR" style="zoom:48%;" />
+
+#### <br>AVL 트리 LR(Left-Right)
+
+- RR 회전 후 LL 회전
+
+![LR](/images/2023-11-22-algorithm-BinarySearchTree/LR.png)
+
+#### <br>AVL 트리 RL(Right-Left)
+
+- LL회전 후 RR 회전
+
+![RL](/images/2023-11-22-algorithm-BinarySearchTree/RL-1700578098157-8.png)
+
+
+
+### <br>AVL 트리 구현
+
+```java
+class Node {
+    int key;
+    int height;
+    Node left;
+    Node right;
+
+    public Node(int key, Node left, Node right) {
+        this.key = key;
+        this.height = 0;
+        this.left = left;
+        this.right = right;
+    }
+}
+
+class AVLTree {
+    Node head;
+
+    //높이 정보
+    public int height(Node node) {
+        if (node == null) {
+            return -1;
+        }
+        return node.height;
+    }
+
+    // LL case
+    public Node rightRotate(Node node) {
+        Node lNode = node.left;
+
+        node.left = lNode.right;
+        lNode.right = node;
+
+        node.height = Math.max(height(node.left), height(node.right)) + 1;
+        lNode.height = Math.max(height(lNode.left), height(lNode.right)) + 1;
+
+        return lNode;
+    }
+
+    // RR case
+    public Node leftRotate(Node node) {
+        Node rNode = node.right;
+
+        node.right = rNode.left;
+        rNode.left = node;
+
+        node.height = Math.max(height(node.left), height(node.right)) + 1;
+        rNode.height = Math.max(height(rNode.left), height(rNode.right)) + 1;
+
+        return rNode;
+    }
+
+    // LR case
+    public Node lrRotate(Node node) {
+        node.left = leftRotate(node.left);
+        return rightRotate(node);
+    }
+
+    // RL case
+    public Node rlRotate(Node node) {
+        node.right = rightRotate(node.right);
+        return leftRotate(node);
+    }
+
+    //BF 계산
+    public int getBalance(Node node) {
+        if (node == null) {
+            return 0;
+        }
+        return height(node.left) - height(node.right);
+    }
+    
+    //데이터 추가(BF정보까지 체크)
+    public void insert(int key) {
+        this.head = insert(this.head, key);
+
+    }
+
+    public Node insert(Node node, int key) {
+        if (node == null) {
+            return new Node(key, null, null);
+        }
+
+        if (key < node.key) {
+            node.left = insert(node.left, key);
+        } else {
+            node.right = insert(node.right, key);
+        }
+
+        node.height = Math.max(height(node.left), height(node.right)) + 1;
+
+        int balance = getBalance(node);
+
+
+        if (balance > 1 && key < node.left.key) {   //LL
+            return rightRotate(node);
+        }
+
+
+        if (balance < -1 && key > node.right.key) { //RR
+            return leftRotate(node);
+        }
+
+        if (balance > 1 && key > node.left.key) {   //LR
+            return lrRotate(node);
+        }
+
+        if (balance < -1 && key < node.right.key) { //RL
+            return rlRotate(node);
+        }
+
+        return node;
+    }
+    
+    //데이터 삭제
+    public void delete(int key) {
+        this.head = delete(this.head, key);
+    }
+
+    public Node delete(Node node, int key) {
+        if (node == null) {
+            return null;
+        }
+
+        if (key < node.key) {
+            node.left = delete(node.left, key);
+        } else if (key > node.key) {
+            node.right = delete(node.right, key);
+        } else {
+            if (node.left == null) {
+                return node.right;
+            } else if (node.right == null) {
+                return node.left;
+            } else {
+                Node predecessor = node;
+                Node successor = node.left;
+
+                while (successor.right != null) {
+                    predecessor = successor;
+                    successor = successor.right;
+                }
+
+                predecessor.right = successor.left;
+                node.key = successor.key;
+            }
+        }
+
+        node.height = Math.max(height(node.left), height(node.right)) + 1;
+
+        int balance = getBalance(node);
+
+        if (balance > 1 && getBalance(node.left) > 0) { //LL
+            return rightRotate(node);
+        }
+
+        if (balance < -1 && getBalance(node.right) < 0) { //RR
+            return leftRotate(node);
+        }
+
+        if (balance > 1 && getBalance(node.left) < 0) { //LR
+            return lrRotate(node);
+        }
+
+        if (balance < -1 && getBalance(node.right) > 0) { //RL
+            return rlRotate(node);
+        }
+
+        return node;
+    }
+    
+    
+}
+```
+

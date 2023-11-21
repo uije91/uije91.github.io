@@ -53,12 +53,27 @@
         <span class="nav__sub-title">Back-End</span>
             <ul>
                 {% for category in site.categories %}
+                    {% if category[0] == "dataStructure" %}
+                        <li><a href="/categories/dataStructure" class="">Data Structure ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <!--
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "algorithm" %}
+                        <li><a href="/categories/algorithm" class="">Algorithm ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            -->
+            <ul>
+                {% for category in site.categories %}
                     {% if category[0] == "java" %}
                         <li><a href="/categories/java" class="">JAVA ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
-
             <!-- 카테고리 주석 
             <ul>
                 {% for category in site.categories %}
@@ -72,15 +87,8 @@
         <span class="nav__sub-title">Coding</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "algorithm" %}
-                        <li><a href="/categories/algorithm" class="">DataStructure & Algorithm ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "SBT" %}
-                        <li><a href="/categories/SBT" class="">Solving By Type ({{category[1].size}})</a></li>
+                    {% if category[0] == "programers" %}
+                        <li><a href="/categories/programers" class="">Programers ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -93,8 +101,8 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "programers" %}
-                        <li><a href="/categories/programers" class="">Programers ({{category[1].size}})</a></li>
+                    {% if category[0] == "SBT" %}
+                        <li><a href="/categories/SBT" class="">Solving By Type ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>

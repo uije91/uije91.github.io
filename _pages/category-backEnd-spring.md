@@ -1,5 +1,5 @@
 ---
-title: "스프링 프레임워크"
+title: "스프링 프레임워크(Spring Framework)"
 layout: archive
 permalink: categories/spring/
 author_profile: true

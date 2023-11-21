@@ -3,7 +3,6 @@ title:  "[자료구조] 기초 수학"
 category: dataStructure
 typora-root-url: ../
 toc: true
-toc_label: "기초 수학"
 toc_sticky: true
 use_math: true
 ---

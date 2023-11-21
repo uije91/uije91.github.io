@@ -3,7 +3,6 @@ title:  "[선형 자료구조] 배열"
 category: dataStructure
 typora-root-url: ../
 toc: true
-toc_label: "배열(Array)"
 toc_sticky: true
 use_math: true
 ---

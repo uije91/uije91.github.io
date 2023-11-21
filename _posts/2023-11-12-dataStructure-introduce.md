@@ -3,7 +3,6 @@ title:  "[자료구조] 소개"
 category: dataStructure
 typora-root-url: ../
 toc: true
-toc_label: "자료구조란?"
 toc_sticky: true
 ---
 

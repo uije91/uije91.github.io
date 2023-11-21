@@ -17,6 +17,7 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+            <!--
             <span class="nav__sub-title">Front-End</span>
             <ul>
                 {% for category in site.categories %}
@@ -46,6 +47,7 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+        -->
         <span class="nav__sub-title">Back-End</span>
             <ul>
                 {% for category in site.categories %}

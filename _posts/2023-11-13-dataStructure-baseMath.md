@@ -1,6 +1,6 @@
 ---
-title:  "(자료구조&알고리즘) - 기초 수학"
-category: algorithm
+title:  "[자료구조] 기초 수학"
+category: dataStructure
 typora-root-url: ../
 toc: true
 toc_label: "기초 수학"

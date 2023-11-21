@@ -1,9 +1,9 @@
 ---
-title:  "(선형 자료구조) - 연결 리스트"
-category: algorithm
+title:  "[선형 자료구조] 연결 리스트"
+category: dataStructure
 typora-root-url: ../
 toc: true
-toc_label: "연결 리스트(Linked List)"
+toc_label: "연결 리스트       (Linked List)"
 toc_sticky: true
 use_math: true
 ---
@@ -71,7 +71,9 @@ use_math: true
 
 
 
-### <br>단순 연결 리스트 구현
+### <br>연결리스트 구현
+
+#### <br>단순 연결 리스트
 
 ```java
 //노드 구현
@@ -215,7 +217,7 @@ class LinkedList {
 
 
 
-### <br>양방향 연결 리스트 구현
+#### <br>양방향 연결 리스트
 
 ```java
 class DoublyLinkedList extends LinkedList {
@@ -326,7 +328,7 @@ class DoublyLinkedList extends LinkedList {
 
 
 
-### <br>원형 연결 리스트 구현
+#### <br>원형 연결 리스트
 
 ```java
 class CircularLinkedList {

@@ -1,9 +1,8 @@
 ---
-title:  "(비선형 자료구조) - 힙"
-category: algorithm
+title:  "[비선형 자료구조] 힙"
+category: dataStructure
 typora-root-url: ../
 toc: true
-toc_label: "힙(Heap)"
 toc_sticky: true
 use_math: true
 ---

@@ -1,9 +1,8 @@
 ---
-title:  "(비선형 자료구조) - 이진 탐색 트리"
-category: algorithm
+title:  "[비선형 자료구조] 이진 탐색 트리"
+category: dataStructure
 typora-root-url: ../
 toc: true
-toc_label: "이진 탐색 트리(Binary Search Tree)"
 toc_sticky: true
 use_math: true
 ---

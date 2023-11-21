@@ -1,9 +1,8 @@
 ---
-title:  "(선형 자료구조) - 해시 테이블"
-category: algorithm
+title:  "[선형 자료구조] 해시 테이블"
+category: dataStructure
 typora-root-url: ../
 toc: true
-toc_label: "해시 테이블(Hash Table)"
 toc_sticky: true
 use_math: true
 ---

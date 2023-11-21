@@ -1,9 +1,8 @@
 ---
-title:  "(선형 자료구조) - 데크"
-category: algorithm
+title:  "[선형 자료구조] - 데크"
+category: dataStructure
 typora-root-url: ../
 toc: true
-toc_label: "데크(Deque)"
 toc_sticky: true
 use_math: true
 ---

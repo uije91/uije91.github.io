@@ -15,7 +15,7 @@ use_math: true
 
 
 
-## 집합(Set)
+### <br>집합(Set)
 
 어떤 조건에 의하여 원소(집합을 이루고 있는 각각의 대상)들의 모임을 집합이라고 합니다.
 
@@ -27,7 +27,7 @@ use_math: true
 
 <br>
 
-### <br>교집합(A∩B) 
+#### <br>교집합(A∩B) 
 
 두 집합이 공통으로 포함하는 원소로 이루어진 집합입니다.
 
@@ -40,7 +40,7 @@ a.retainAll(b);
 System.out.println("교집합: " + a);
 ```
 
-### <br>합집합(A∪B) 
+#### <br>합집합(A∪B) 
 
 어느 하나에라도 속하는 원소들을 모두 모은 집합입니다.
 
@@ -53,7 +53,7 @@ a.addAll(b);
 System.out.println("합집합: "+a);
 ```
 
-### <br>차집합(A - B)
+#### <br>차집합(A - B)
 
 - A(or B)에만 속하는 원소들의 집합입니다.
 
@@ -66,13 +66,13 @@ a.removeAll(b);
 System.out.println("차집합:" +a);
 ```
 
-### <br>여집합(A<sup>c</sup>)
+#### <br>여집합(A<sup>c</sup>)
 
 - 전체 집합(U) 중 A의 원소가 아닌 것들의 집합입니다.
 
 
 
-### Set을 이용하지 않고 구현
+#### ArrayList를 이용한 배열 구현
 
 ```java
 class MySet {
@@ -146,13 +146,13 @@ class MySet {
 
 
 
-## <br>경우의 수
+### <br>경우의 수
 
 어떤 사건(일)이 일어날 수 있는 경우의 가짓수를 수로 표현한 것입니다.
 
 
 
-### <br>합의 법칙
+#### <br>합의 법칙
 
 사건 A 또는 사건 B가 일어날 경우의 수입니다.
 
@@ -201,7 +201,7 @@ System.out.println("Set 결과 : " + allCase.size());	//결과 : 20
 
 
 
-### <br>곱의 법칙
+#### <br>곱의 법칙
 
 사건 A와 사건 B가 동시에 일어날 경우의 수입니다.
 
@@ -258,9 +258,9 @@ public ArrayList getDivisor(int num) {
 
 
 
-### <br>최대 공약수(GCD : Greatest Common Divisor)
+### <br>최대 공약수(GCD)
 
-두 수의 약수 중 공통된 약수를 공약수라고 부릅니다. 그 중 가장 큰 공약수를 최대 공약수라고 합니다.
+두 수의 약수 중 공통된 약수를 공약수라고 부릅니다. 그 중 가장 큰 공약수를 최대 공약수(Greatest Common Divisor: GCD)라고 합니다.
 
 예를 들어 4와 12의 약수 중 공약수는 ( 1,2,4 ) 이고 최대 공약수는 4를 의미합니다.
 
@@ -295,9 +295,9 @@ static int gcd(int a, int b) {
 
 
 
-### <br>최소 공배수(LCM : Least Common Multiple)
+### <br>최소 공배수(LCM)
 
-두 수의 배수들 중 공통된 배수를 공배수라고 부릅니다. 그 중 가장 작은 공배수를 최소 공배수라고 합니다.
+두 수의 배수들 중 공통된 배수를 공배수라고 부릅니다. 그 중 가장 작은 공배수를 최소 공배수(Least Common Multiple: LCM)라고 합니다.
 
 예를 들어 2와 3의 배수는 ( 6, 12, 18 ...) 인데 이중 최소 값인 6이 최소 공배수 입니다.
 
@@ -318,7 +318,7 @@ public int getLCM(int numA, int numB) {
 
 
 
-## <br>순열(permutation)
+### <br>순열(Permutation)
 
 서로 다른 n개 중에 r 개를 순서와 선택하는 경우의 수입니다.(순서O, 중복X)
 
@@ -340,7 +340,7 @@ for (int i = n; i >= n - r + 1; i--) {
 System.out.println(result);	//결과 : 60
 ```
 
-### <br>중복 순열
+#### <br>중복 순열
 
 서로 다른 n개 중에 r 개를 순서와 선택하는 경우의 수입니다.(순서O, 중복O)
 
@@ -363,7 +363,7 @@ System.out.println(result);	//결과 : 16
 System.out.println(Math.pow(n, r));
 ```
 
-### <br>원 순열
+#### <br>원 순열
 
 원 모양의 테이블에 n개의 원소를 나열하는 경우의 수 입니다.
 
@@ -381,7 +381,7 @@ for (int i = 1; i < n; i++) {
 System.out.println(result);
 ```
 
-### <br>팩토리얼(Factorial)
+#### <br>팩토리얼(Factorial)
 
 n! 로 나타내며 1부터 n까지의 자연수를 모두 곱하는 것을 의미합니다.
 
@@ -404,7 +404,7 @@ System.out.println(IntStream.range(2,6).reduce(1,(x,y) -> x*y));
 
 
 
-## <br>조합(Combination)
+### <br>조합(Combination)
 
 서로 다른 n개 중에서 r개를 선택하는 경우의 수입니다.(순서X, 중복X)
 
@@ -443,7 +443,7 @@ public static void main(String[] args) {
 
 
 
-### <br>중복 조합
+#### <br>중복 조합
 
 서로 다른n개 중에서 r개를 선택하는 경우의 수입니다.(순서X,중복O)
 
@@ -453,9 +453,9 @@ public static void main(String[] args) {
 
 
 
-## <br>점화식과 재귀함수
+### <br>점화식과 재귀함수
 
-### <br>점화식(Recurrence)
+#### <br>점화식(Recurrence)
 
 어떤 수열의 일반항을 그 이전의 항들을 이용하여 정의한 식입니다.
 
@@ -468,7 +468,7 @@ public static void main(String[] args) {
 
 
 
-### <br>재귀 함수(Recursive Function)
+#### <br>재귀 함수(Recursive Function)
 
 어떤 함수가 자신을 다시 호출하여 작업을 수행하는 방식
 
@@ -552,9 +552,9 @@ public class main{
 }
 ```
 
-## <br>지수와 로그
+### <br>지수와 로그
 
-### <br>제곱,제곱근,지수
+#### <br>제곱,제곱근,지수
 
 - 제곱 : 같은 수를 두 번 곱하는 것
 
@@ -610,7 +610,7 @@ static double sqrt(int a) {
 
 
 
-### 로그
+#### 로그
 
 a가 b가 되기 위해 제곱 해야 하는 수 입니다.
 
@@ -626,7 +626,7 @@ double log10_1000 = Math.log10(1000);
 
 
 
-## <br>알고리즘 복잡도(Algorithm Complexity)
+### <br>알고리즘 복잡도(Algorithm Complexity)
 
 알고리즘 복잡도란 알고리즘 성능을 나타내는 척도입니다.
 
@@ -634,7 +634,7 @@ double log10_1000 = Math.log10(1000);
 
 
 
-### 시간 복잡도(Time Complexity)
+#### 시간 복잡도(Time Complexity)
 
 - 어떤 문제를 해결하기 위한 알고리즘의 필요  횟수
 
@@ -647,7 +647,7 @@ double log10_1000 = Math.log10(1000);
 
 ***
 
-### <br>공간 복잡도(Space Complexity)
+#### <br>공간 복잡도(Space Complexity)
 
 - 어떤 문제를 해결하기 위한 알고리즘의 필요 메모리 사용량
 - 빅오(Big-O) 표기법을 통해 나타냅니다.

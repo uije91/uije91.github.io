@@ -58,7 +58,6 @@
                     {% endif %}
                 {% endfor %}
             </ul>
-            <!--
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "algorithm" %}
@@ -66,7 +65,6 @@
                     {% endif %}
                 {% endfor %}
             </ul>
-            -->
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "java" %}
@@ -87,15 +85,15 @@
         <span class="nav__sub-title">Coding</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "programers" %}
-                        <li><a href="/categories/programers" class="">Programers ({{category[1].size}})</a></li>
+                    {% if category[0] == "backjoon" %}
+                        <li><a href="/categories/backjoon" class="">Backjoon ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "backjoon" %}
-                        <li><a href="/categories/backjoon" class="">Backjoon ({{category[1].size}})</a></li>
+                    {% if category[0] == "programers" %}
+                        <li><a href="/categories/programers" class="">Programers ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>

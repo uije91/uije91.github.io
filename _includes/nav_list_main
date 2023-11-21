@@ -9,8 +9,7 @@
             📂 <span style="font-family: 'Noto Sans KR', sans-serif; font-size: 15px;">전체 포스팅 : {{sum}}개</style>
       </li>
       <li>
-        <!--span 태그로 카테고리들을 크게 분류-->
-            <span class="nav__sub-title">Comunity</span>
+        <span class="nav__sub-title">Comunity</span>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "blog" %}
@@ -18,7 +17,6 @@
                     {% endif %}
                 {% endfor %}
             </ul>
-            <!-- 카테고리 주석
             <span class="nav__sub-title">Front-End</span>
             <ul>
                 {% for category in site.categories %}
@@ -48,8 +46,6 @@
                     {% endif %}
                 {% endfor %}
             </ul>
-
-        -->
         <span class="nav__sub-title">Back-End</span>
             <ul>
                 {% for category in site.categories %}
@@ -72,7 +68,6 @@
                     {% endif %}
                 {% endfor %}
             </ul>
-            <!-- 카테고리 주석 
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "spring" %}
@@ -80,8 +75,6 @@
                     {% endif %}
                 {% endfor %}
             </ul>
-            -->
-
         <span class="nav__sub-title">Coding</span>
             <ul>
                 {% for category in site.categories %}

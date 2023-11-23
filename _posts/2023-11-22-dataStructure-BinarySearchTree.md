@@ -300,7 +300,7 @@ class BinarySearchTree {
 
 
 
-## <br>AVL 트리
+### <br>AVL 트리
 
 - 노드가 삽입, 삭제될 때 균형을 체크하고 유지하는 트리
 - 각 노드의 BF를 [-1,0,1] 만 가지게 하여 균형을 유지
@@ -308,7 +308,7 @@ class BinarySearchTree {
 
 
 
-### <br>AVL 트리 - 리밸런싱
+#### <br>AVL 트리 - 리밸런싱
 
 - 균형이 깨진 경우
   - BF가 '+' 이면 왼쪽 서브트리에 이상 있음
@@ -319,7 +319,7 @@ class BinarySearchTree {
 
 
 
-#### AVL 트리 - LL(Left-Left)
+##### AVL 트리 - LL(Left-Left)
 
 - 오른쪽 방향으로 1회 회전
 
@@ -327,19 +327,19 @@ class BinarySearchTree {
 
 
 
-#### <br>AVL 트리 - RR(Right-Right)
+##### <br>AVL 트리 - RR(Right-Right)
 
 - 왼쪽 방향으로 1회 회전
 
 <img src="/images/2023-11-22-algorithm-BinarySearchTree/RR.png" alt="RR" style="zoom:48%;" />
 
-#### <br>AVL 트리 LR(Left-Right)
+##### <br>AVL 트리 LR(Left-Right)
 
 - RR 회전 후 LL 회전
 
 ![LR](/images/2023-11-22-algorithm-BinarySearchTree/LR.png)
 
-#### <br>AVL 트리 RL(Right-Left)
+##### <br>AVL 트리 RL(Right-Left)
 
 - LL회전 후 RR 회전
 
@@ -347,7 +347,7 @@ class BinarySearchTree {
 
 
 
-### <br>AVL 트리 구현
+#### <br>AVL 트리 구현
 
 ```java
 class Node {
@@ -525,7 +525,7 @@ class AVLTree {
 
 
 
-## <br>Red-Black 트리
+### <br>Red-Black 트리
 
 - 조건
   - root 노드와 leaf 노드의 색은 black (RB Tree 에서는 Null Node가 leaf 노드)
@@ -539,7 +539,7 @@ NIL : RB Tree의 leaf node (규칙을 위한 노드, Null Node라고 이해)
 
 
 
-### <br>Red-Black 트리 - 삽입
+#### <br>Red-Black 트리 - 삽입
 
 - case1) 노드 삽입 후 double red발생 : 부모 노드의 형제 노드가 red일 때
 
@@ -561,14 +561,14 @@ NIL : RB Tree의 leaf node (규칙을 위한 노드, Null Node라고 이해)
 
 
 
-### <br>Red-Black 트리 - 삭제
+#### <br>Red-Black 트리 - 삭제
 
 - 삭제 대상 노드가 Black 이고 그 자리에 오는 노드가 red인 경우
   - 해당 자리로 오는 red 노드를 black으로 변경
 
 <img src="/images/2023-11-22-dataStructure-BinarySearchTree/delete1.png" alt="delete1" style="zoom:70%;" />
 
-#### 이중 흑색
+##### 이중 흑색
 
 - 삭제 대상의 노드가 black, 그 자리에 오는 노드가 black인 경우(Double black case)
 - case1) 이중 흑색 노드의 형제 노드가 black이고 형제의 양쪽 자식이 모두 black인 경우
@@ -609,7 +609,7 @@ NIL : RB Tree의 leaf node (규칙을 위한 노드, Null Node라고 이해)
 
 
 
-### <br>Red-Black 트리 구현
+#### <br>Red-Black 트리 구현
 
 - 삽입 과정만 진행
 
@@ -773,7 +773,7 @@ class RedBlackTree {
 
 
 
-## AVL트리 vs Red-Black 트리
+### <br>AVL트리 vs Red-Black 트리
 
 - 시간복잡도 : 둘다 O(logN)
 - 균형 수준 
@@ -782,3 +782,7 @@ class RedBlackTree {
 - 실 사용시
   - Tree 체계가 잡힌 후 탐색이 많은 경우에는 AVL 트리가 유리
   - 삽입 삭제가 빈번한 경우에는 Red-Black 트리가 유리
+
+
+
+### <br>이진 탐색 트리 문제풀이

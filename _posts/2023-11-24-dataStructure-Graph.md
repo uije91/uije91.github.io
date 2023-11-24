@@ -42,22 +42,34 @@ use_math: true
 
 ### <br>그래프의 종류
 
-
-
-<img src="/images/2023-11-24-dataStructure-Graph/img.png" alt="img" style="zoom:60%;" />
-
 - 무방향 그래프
+
   - 간선에 방향이 없는 그래프 (양방향 이동 가능)
+
   - 정점 A - B 간선의 표현: (A, B) = (B, A)
 
+![1](/images/2023-11-24-dataStructure-Graph/1-1700812360306-8.png)
+
+
+
 - 방향 그래프
+
   - 간선에 방향이 있는 그래프 (해당 방향으로만 이동 가능)
+
   - 정점 A → B 간선의 표현: <A, B> ≠ <B, A>
+
+![2](/images/2023-11-24-dataStructure-Graph/2-1700812381412-10.png)
+
 - 가중치 그래프
   - 간선에 값이 있는 그래프 (이동 비용)
+
+![3](/images/2023-11-24-dataStructure-Graph/3.png)
+
 - 완전 그래프
   - 모든 정점이 서로 연결되어 있는 그래프
   - 정점이 N개일 경우, 간선의 수는 n(n-1)/2 개
+
+![4](/images/2023-11-24-dataStructure-Graph/4.png)
 
 
 
@@ -76,6 +88,42 @@ use_math: true
 - 각 노드에 방문했는지 여부를 체크할 배열과 큐를 이용하여 구현
 
 <img src="/images/2023-11-24-dataStructure-Graph/bfs.gif" alt="bfs" style="zoom:80%;" />
+
+
+
+### <br>그래프의 구현
+
+- **인접 행렬(Adjacency Matrix)** : 2차원 배열 이용
+
+- 인접 행렬의 장단점
+  - 간선 정보의 확인과 업데이트가 빠름
+  - 인접 행렬을 위한 메모리 공간 차지
+
+<img src="/images/2023-11-24-dataStructure-Graph/그래프_인접_행렬.png" alt="그래프_인접_행렬" style="zoom:80%;" />
+
+- **인접 리스트(Adjacency List)** : 연결 리스트 이용
+- 인접 리스트의 장단점
+  - 메모리 사용량이 상대적으로 적고 노드의 추가 삭제가 빠름
+  - 간선 정보 확인이 상대적으로 오래 걸림
+
+
+
+
+
+<img src="/images/2023-11-24-dataStructure-Graph/그래프_인접_연결_리스트1.png" alt="그래프_인접_연결_리스트1" style="zoom:80%;" />
+
+<img src="/images/2023-11-24-dataStructure-Graph/그래프_인접_연결_리스트2.png" alt="그래프_인접_연결_리스트2" style="zoom:80%;" />
+
+
+
+
+
+### <br>인접 행렬 vs 인접 리스트
+
+- 인접 행렬 : 노드의 수가 적고 간선의 수가 많을 때 유리
+- 인접 리스트 : 노드의 수가 많고 간선의 수가 적을 때 유리
+
+<img src="/images/2023-11-24-dataStructure-Graph/인접행렬 리스트 비교.png" alt="인접행렬 리스트 비교" style="zoom:80%;" />
 
 
 

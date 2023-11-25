@@ -126,7 +126,7 @@ use_math: true
 
 
 
-### <br>이진 트리 구현
+### <br>이진 트리 구성
 
 - 배열 : 레벨 순회 순으로 배열을 구성
 
@@ -136,7 +136,7 @@ use_math: true
 
 
 
-#### <br>이진 트리 구성(Array)
+#### <br>이진 트리 구현(Array)
 
 ```java
 class BinaryTree {
@@ -198,7 +198,7 @@ class BinaryTree {
 
 
 
-#### <br>이진 트리 구성(Linked List)
+#### <br>이진 트리 구현(Linked List)
 
 ```java
 import java.util.LinkedList;

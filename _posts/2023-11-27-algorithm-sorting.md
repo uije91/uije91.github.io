@@ -36,11 +36,12 @@ use_math: true
 - 알고리즘 복잡도: O(n<sup>2</sup>)
 
 <p align="center">
-  <img src="/images/2023-11-27-algorithm-sorting/1.png" width="30%">
-  <img src="/images/2023-11-27-algorithm-sorting/2.png" width="30%">
+  <img src="/images/2023-11-27-algorithm-sorting/1.png" width="40%">
+  <img src="/images/2023-11-27-algorithm-sorting/2.png" width="40%">
 </p>
 
 <p align="center">
-  <img src="/images/2023-11-27-algorithm-sorting/3.png" width="30%">
-  <img src="/images/2023-11-27-algorithm-sorting/4.png" width="30%">
+  <img src="/images/2023-11-27-algorithm-sorting/3.png" width="40%">
+  <img src="/images/2023-11-27-algorithm-sorting/4.png" width="40%">
 </p>
+

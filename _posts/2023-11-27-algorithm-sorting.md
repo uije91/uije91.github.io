@@ -30,7 +30,7 @@ use_math: true
 
 
 
-### 버블 정렬(Bubble sort)
+### <br>버블 정렬(Bubble sort)
 
 - 인접한 데이터를 비교하며 자리 바꾸는 방식
 - 알고리즘 복잡도: O(n<sup>2</sup>)
@@ -44,4 +44,40 @@ use_math: true
   <img src="/images/2023-11-27-algorithm-sorting/3.png" width="40%">
   <img src="/images/2023-11-27-algorithm-sorting/4.png" width="40%">
 </p>
+
+
+
+### <br>삽입 정렬(Insertion Sort)
+
+- 앞의 데이터를 정렬 해가면서 삽입 위치를 찾아 정렬하는 방식
+- 알고리즘 복잡도: O(n<sup>2</sup>)
+
+<p align="center">
+  <img src="/images/2023-11-27-algorithm-sorting/Insertion-sort1.png" width="40%">
+  <img src="/images/2023-11-27-algorithm-sorting/Insertion-sort2.png" width="40%">
+</p>
+
+<p align="center">
+  <img src="/images/2023-11-27-algorithm-sorting/Insertion-sort3.png" width="40%">
+  <img src="/images/2023-11-27-algorithm-sorting/Insertion-sort4.png" width="40%">
+</p>
+
+
+
+### <br>선택 정렬(Selection Sort)
+
+- 최소 또는 최대 값을 찾아서 가장 앞 또는 뒤부터 정렬하는 방식
+- 알고리즘 복잡도: O(n<sup>2</sup>)
+
+<p align="center">
+  <img src="/images/2023-11-27-algorithm-sorting/Selection-sort1.png" width="45%">
+  <img src="/images/2023-11-27-algorithm-sorting/Selection-sort2.png" width="45%">
+</p>
+
+<p align="center">
+  <img src="/images/2023-11-27-algorithm-sorting/Selection-sort3.png" width="45%">
+  <img src="/images/2023-11-27-algorithm-sorting/Selection-sort4.png" width="45%">
+</p>
+
+
 

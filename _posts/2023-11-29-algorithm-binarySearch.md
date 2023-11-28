@@ -106,7 +106,30 @@ public class BinarySearch {
 
 ```java
 public class Practice1 {
-    
+    public static int solution(int[] arr, int target) {
+        if (arr == null || arr.length == 0) {
+            return -1;
+        }
+
+        int left = 0;
+        int right = arr.length - 1;
+
+        while (left <= right) {
+            int mid = (left + right) / 2;
+            //오버 플로우시 아래와 같은 방식으로 표현 가능
+            mid = left + (right - left) / 2;
+            
+            if (target == arr[mid]) {
+                return mid;
+            } else if (target < arr[mid]) {
+                right = mid - 1;
+            } else {
+                left = mid + 1;
+            }
+        }
+
+        return -left - 1;
+    }
 }
 ```
 
@@ -121,7 +144,40 @@ public class Practice1 {
 
 ```java
 public class Practice2 {
-    
+    public static int solution(int[] arr, int target) {
+        if (arr == null || arr.length == 0) {
+            return -1;
+        }
+
+        int left = 0;
+        int right = arr.length - 1;
+
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+
+            if (target == arr[mid]) {
+                return mid;
+            }
+
+            //4, 5, 6, 7, 8, 0, 1, 2
+            if (arr[left] < arr[mid]) {
+                if (target >= arr[left] && target < arr[mid]) {
+                    right = mid - 1;
+                } else {
+                    left = mid - 1;
+                }
+            } else {
+                //11, 5, 6, 7, 8, 9, 10
+                if (target > arr[mid] && target <= arr[right]) {
+                    left = mid + 1;
+                } else {
+                    right = mid - 1;
+                }
+            }
+
+        }
+        return -1;
+    }
 }
 ```
 
@@ -135,7 +191,29 @@ public class Practice2 {
 
 ```java
 public class Practice3 {
-    
+    public static boolean solution(int[][] matrix, int target) {
+        if (matrix == null || matrix.length == 0) {
+            return false;
+        }
+
+        int left = 0;
+        int rows = matrix.length;
+        int cols = matrix[0].length;
+        int right = rows * cols - 1;
+
+        while (left <= right) {
+            int mid = (left + right) / 2;
+
+            if (matrix[mid / cols][mid % cols] == target) {
+                return true;
+            } else if (matrix[mid / cols][mid % cols] < target) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
+        }
+        return false;
+    }
 }
 ```
 
@@ -153,7 +231,38 @@ public class Practice3 {
 
 ```java
 public class Practice4 {
-    
+    public static int solution(int[] weights, int days) {
+        int left = 0;
+        int right = 0;
+
+        // 차량의 최소한의 적재량을 배열로 이용한다.
+        for (int w : weights) {
+            left = Math.max(left, w);
+            right += w;
+        }
+
+        while (left <= right) {
+            int mid = (left + right) / 2;
+            int cnt = 1;
+            int cur = 0;
+
+            for (int w : weights) {
+                if (cur + w > mid) {
+                    cnt += 1;
+                    cur = 0;
+                }
+                cur += w;
+            }
+
+            if (cnt > days) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
+        }
+        
+        return left;
+    }
 }
 ```
 
@@ -170,7 +279,42 @@ public class Practice4 {
 
 ```java
 public class Practice5 {
-    
+    public static int solution(int[] nums, int m) {
+        //값의 합을 배열로 만들고 이진 탐색
+        int left = 0;
+        int right = 0;
+
+        for (int num : nums) {
+            left = Math.max(num, left);
+            right += num;
+        }
+
+        if (m == 1) {
+            return right;
+        }
+
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            int cnt = 1;
+            int total = 0;
+
+            for (int num : nums) {
+                total += num;
+                if (total > mid) {
+                    total = num;
+                    cnt++;
+                }
+            }
+
+            if (cnt <= m) {
+                right = mid - 1;
+            } else {
+                left = mid + 1;
+            }
+        }
+
+        return left;
+    }
 }
 ```
 

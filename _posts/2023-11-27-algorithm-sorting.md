@@ -455,7 +455,7 @@ public class ShellSort {
 
 
 
-### <br>정렬 연습 문제
+### <br>연습 문제
 
 - Q1) nums 배열에 3가지 색으로 구분되는 데이터들이 들어 있다.<br>
   0은 흰색, 1은 파랑, 2는 빨강이라고 할때 주어진 nums 배열에서 흰색 부터 빨강 순으로 인접하게 정렬시킨 후 출력하는 프로그램을 작성하세요<br>
@@ -464,6 +464,27 @@ public class ShellSort {
   입력: [2, 0, 2, 1, 1, 0]<br>출력: [0, 0, 1, 1, 2, 2] 
 
 ```java
+public class Practice1 {
+    // 계수 정렬( Counting Sort )
+    public static void solution(int[] arr) {
+        if (arr == null || arr.length == 0) {
+            return;
+        }
+
+        int[] cntArr = new int[3];
+        for (int i = 0; i < arr.length; i++) {
+            cntArr[arr[i]]++;
+        }
+
+        int idx = 0;
+        for (int i = 0; i < cntArr.length; i++) {
+            while (cntArr[i] > 0) {
+                arr[idx++] = i;
+                cntArr[i] -= 1;
+            }
+        }
+    }
+}
 ```
 
 
@@ -478,6 +499,42 @@ public class ShellSort {
   출력: [[eat, tea, ate], [bat], [tan, nat]]
 
 ```java
+public class Practice2 {
+    // 문자열을 정렬하여 anagram 인지 확인 ( eat-> ate / tea -> ate )
+    public static ArrayList<ArrayList<String>> solution(String[] strs) {
+        if (strs == null || strs.length == 0) {
+            return new ArrayList<>();
+        }
+
+        HashMap<String, ArrayList<String>> map = new HashMap<>();
+        for (String s : strs) {
+            char[] cArr = s.toCharArray();
+            sort(cArr);
+            String key = String.valueOf(cArr);
+
+            if (!map.containsKey(key)) {
+                map.put(key, new ArrayList<>());
+            }
+
+            map.get(key).add(s);
+        }
+
+        return new ArrayList<>(map.values());
+    }
+
+    public static void sort(char[] arr) {
+        // 삽입 정렬 이용
+        for (int i = 1; i < arr.length; i++) {
+            for (int j = i; j > 0; j--) {
+                if (arr[j] < arr[j - 1]) {
+                    char tmp = arr[j];
+                    arr[j] = arr[j - 1];
+                    arr[j - 1] = tmp;
+                }
+            }
+        }
+    }
+}
 ```
 
 
@@ -489,6 +546,72 @@ public class ShellSort {
   출력: [1, 6] [8, 10] [15, 18]
 
 ```java
+import java.util.*;
+
+public class Practice3 {
+    public static ArrayList<int[]> solution(int[][] intervals) {
+        if (intervals == null || intervals.length < 2) {
+            return new ArrayList<>();
+        }
+
+        sort(intervals);
+        ArrayList<int[]> result = new ArrayList<>();
+        int[] curInterval = intervals[0];
+        result.add(curInterval);
+
+        for (int i = 1; i < intervals.length; i++) {
+            if (curInterval[1] >= intervals[i][0]) {
+                curInterval[1] = intervals[i][1];
+            } else {
+                curInterval = intervals[i];
+                result.add(curInterval);
+            }
+        }
+
+        return result;
+    }
+
+    public static void sort(int[][] intervals) {
+        quickSort(intervals, 0, intervals.length - 1);
+    }
+
+    public static void quickSort(int[][] arr, int left, int right) {
+        if (left >= right) {
+            return;
+        }
+
+        int pivot = partition(arr, left, right);
+        quickSort(arr, left, pivot - 1);
+        quickSort(arr, pivot + 1, right);
+    }
+
+    public static int partition(int[][] arr, int left, int right) {
+        int pivot = arr[left][0];
+        int i = left;
+        int j = right;
+
+        while (i < j) {
+            while (arr[j][0] > pivot && i < j) {
+                j--;
+            }
+
+            while (arr[i][0] <= pivot && i < j) {
+                i++;
+            }
+
+            swap(arr, i, j);
+        }
+        swap(arr, left, i);
+
+        return i;
+    }
+
+    public static void swap(int[][] arr, int i, int j) {
+        int[] tmp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = tmp;
+    }
+}
 ```
 
 - Q4) 정수 배열 nums 가 주어졌을 때 오름차순으로 정렬하기 위해 배열 내에서 정렬이 필요한 구간의 길이를 출력하는 프로그램을 작성하세요.<br>
@@ -497,5 +620,33 @@ public class ShellSort {
   입력: 2, 6, 4, 8, 5, 3, 9, 10 / 출력: 5<br>입력: 1, 3, 1 / 출력: 2<br>
 
 ```java
+public class Practice4 {
+    public static int solution(int[] nums) {
+        if (nums == null || nums.length < 2) {
+            return 0;
+        }
+
+        // 좌측에 변경해야 할 값 찾기
+        int min = Integer.MAX_VALUE;
+        int firstIdx = 0;
+        for (int i = nums.length - 1; i >= 0; i--) {
+            min = Math.min(min, nums[i]);
+            if (nums[i] > min) {
+                firstIdx = i;
+            }
+        }
+        // 우측부터 변경해야 할 값 찾기
+        int max = Integer.MIN_VALUE;
+        int lastIdx = -1;
+        for (int i = 0; i < nums.length; i++) {
+            max = Math.max(max, nums[i]);
+            if (nums[i] < max) {
+                lastIdx = i;
+            }
+        }
+        
+        return lastIdx - firstIdx + 1;
+    }
+}
 ```
 

@@ -324,3 +324,178 @@ public class QuickSort {
 
 - 이진 탐색 트리(BST)를 만들어서 정렬하는 방식
 - 알고리즘 복잡도 O(logN)
+
+
+
+### <br>기수 정렬(Radix Sort)
+
+- 낮은 자리 수부터 정렬하는 방식
+- 각 원소 간의 비교  연산을 하지 않아 빠른 대신 기수 테이블을 위한 메모리 필요
+- 알고리즘 복잡도 : O(dn) 
+  - d:최대 자리수
+
+```java
+public class RadixSort {
+    public static void radixSort(int[] arr) {
+        //기수 테이블 생성
+        ArrayList<Queue<Integer>> list = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            list.add(new LinkedList<>());
+        }
+
+        int idx = 0;
+        int div = 1;
+        int maxLen = getMaxLen(arr);
+
+        for (int i = 0; i < maxLen; i++) {
+            for (int j = 0; j < arr.length; j++) {
+                list.get((arr[j] / div) % 10).offer(arr[j]);
+            }
+
+            for (int j = 0; j < 10; j++) {
+                Queue<Integer> queue = list.get(j);
+
+                while (!queue.isEmpty()) {
+                    arr[idx++] = queue.poll();
+                }
+            }
+
+            idx = 0;
+            div *= 10;
+        }
+    }
+}
+```
+
+
+
+
+
+### <br>계수 정렬(Counting Sort)
+
+- 숫자끼리 비교하지 않고 카운트를 세서 정렬하는 방식
+- 카운팅을 위한 메모리 필요
+- 알고리즘 복잡도:O(n+k) 
+  - k:정렬 대상 데이터 중 최대 값
+
+```java
+public class CountingSort {
+    public static void countingSort(int[] arr) {
+        int max = Arrays.stream(arr).max().getAsInt();
+        int[] cntArr = new int[max + 1];
+
+        for (int i = 0; i < arr.length; i++) {
+            cntArr[arr[i]]++;
+        }
+
+        int idx = 0;
+        for (int i = 0; i < cntArr.length; i++) {
+            while (cntArr[i] > 0) {
+                arr[idx++] = i;
+                cntArr[i] -= 1;
+            }
+        }
+
+        //배열 사용시 메모리가 너무 커질 수도있으니 HashMap을 사용시 더 좋을 수 있다.
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for (int item : arr) {
+            map.put(item, map.getOrDefault(item, 0) + 1);
+        }
+
+        int idx2 = 0;
+        ArrayList<Integer> list = new ArrayList<>(map.keySet());
+        Collections.sort(list);
+
+        for (int i = 0; i < list.size(); i++) {
+            int cnt = map.get(list.get(i));
+            while (cnt > 0) {
+                arr[idx2++] = list.get(i);
+                cnt--;
+            }
+        }
+    }
+}
+```
+
+
+
+### <br>셸 정렬(Shell Sort)
+
+- 삽입 정렬의 약점 보완한 방식
+- 삽입 정렬의 약점
+  - 오름차순 정렬 기준, 내림 차순으로 구성된 데이터에 대해서는 앞의 데이터와 하나씩 비교하며 모두 교환 필요
+- 이전의 모든 데이터와 비교하지 않고 일정 간격을 두어 비교
+- 알고리즘 복잡도:O(n<sup>2</sup>)
+  - 간격 설정에 따라 Worst case는 삽입 정렬과 동일
+  - 일반적인 산포 데이터 기준으로는 삽입 정렬에 비해 빠르다
+
+```java
+public class ShellSort {
+    public static void shellSort(int[] arr) {
+        int gap = arr.length / 2;
+
+        for (int g = gap; g > 0; g /= 2) {
+            for (int i = g; i < arr.length; i++) {
+                int tmp = arr[i];
+
+                int j = 0;
+                for (j = i - g; j >= 0; j -= g) {
+                    if (arr[j] > tmp) {
+                        arr[j + g] = arr[j];
+                    } else {
+                        break;
+                    }
+                }
+                arr[j + g] = tmp;
+            }
+        }
+    }
+}
+```
+
+
+
+### <br>정렬 연습 문제
+
+- Q1) nums 배열에 3가지 색으로 구분되는 데이터들이 들어 있다.<br>
+  0은 흰색, 1은 파랑, 2는 빨강이라고 할때 주어진 nums 배열에서 흰색 부터 빨강 순으로 인접하게 정렬시킨 후 출력하는 프로그램을 작성하세요<br>
+
+  [입출력 예시]<br>
+  입력: [2, 0, 2, 1, 1, 0]<br>출력: [0, 0, 1, 1, 2, 2] 
+
+```java
+```
+
+
+
+- Q2) 문자열 배열 strs 가 주어졌을 때 anagram 으로 묶어서 출력하는 프로그램을 작성하세요.<br>
+  anagram 은 철자 순서를 바꾸면 같아지는 문자를 의미한다.<br>
+  예) elvis <-> lives<br>
+  nagram 그룹 내에서 출력 순서는 상관 없다.<br>
+
+  [입출력 예시]<br>
+  입력: "eat", "tea", "tan", "ate", "nat", "bat"<br>
+  출력: [[eat, tea, ate], [bat], [tan, nat]]
+
+```java
+```
+
+
+
+- Q3) intervals 라는 구간으로 이루어진 배열이 주어졌을 때 오버랩 되는 구간을 합치는 프로그램을 작성하세요.<br>
+
+  [입출력 예시]<br>
+  입력: [2, 6], [1, 3], [15, 18], [8, 10]<br>
+  출력: [1, 6] [8, 10] [15, 18]
+
+```java
+```
+
+- Q4) 정수 배열 nums 가 주어졌을 때 오름차순으로 정렬하기 위해 배열 내에서 정렬이 필요한 구간의 길이를 출력하는 프로그램을 작성하세요.<br>
+
+  [입출력 예시]<br>
+  입력: 2, 6, 4, 8, 5, 3, 9, 10 / 출력: 5<br>입력: 1, 3, 1 / 출력: 2<br>
+
+```java
+```
+

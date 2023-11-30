@@ -122,11 +122,7 @@ public class Practice1 {
   결과 배열의 원소에는 중복 값이 없도록 하며 순서는 상관 없다.
 
   <br>[입출력 예시]
-  <br>nums1: [1, 2, 2, 1] / nums2: [2, 2]
-  <br>출력: 2
-
-  <br>nums1: [4, 9, 5] / nums2: [9, 4, 9, 8, 4]
-  <br>출력: 4, 9 (or 9, 4)
+  <br>nums1: [1, 2, 2, 1] / nums2: [2, 2] / 출력: 2<br>nums1: [4, 9, 5] / nums2: [9, 4, 9, 8, 4] / 출력: 4, 9 (or 9, 4)
 
 ```java
 public class Practice2 {
@@ -165,12 +161,8 @@ public class Practice2 {
   단, 각 단어의 알파벳 순서는 그대로 출력합니다.<br>
   문장에 공백이 여러개일 시, 단어와 단어 사이 하나의 공백을 제외한 나머지 공백은 제거하세요.
 
-  <br>[입출력 예시]
-  <br>문자열 s: "the sky is blue"
-  <br>출력: "blue is sky the"
-
-  <br>문자열 s: "  hello      java    "
-  <br>출력: "java hello"
+  <br>[입출력 예시]<br>
+  문자열 s: "the sky is blue" / 출력: "blue is sky the"<br>문자열 s: "  hello      java    " / 출력: "java hello"
 
 ```java
 public class Practice3 {
@@ -250,12 +242,11 @@ public class Practice3 {
 - Q4) 주어진 nums 배열에서 3 개의 합이 0이 되는 모든 숫자들을 출력하세요.<br>
   중복된 숫자 셋은 제외하고 출력하세요.
 
-  <br>입출력 예시
-  <br>nums: [-1, 0, 1, 2, -1, -4]
-  <br>출력: [[-1, -1, 2], [-1, 0, 1]]
+  <br>입출력 예시<br>
+  
+  nums: [-1, 0, 1, 2, -1, -4] / 출력: [[-1, -1, 2], [-1, 0, 1]] <br>
 
-  <br>nums: [1, -7, 6, 3, 5, 2]
-  <br>출력: [[-7, 1, 6], [-7, 2, 5]]
+  nums: [1, -7, 6, 3, 5, 2] / 출력: [[-7, 1, 6], [-7, 2, 5]]
 
 ```java
 public class Practice4 {

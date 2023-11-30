@@ -127,7 +127,7 @@ public class Main {
 
 
 
-### 
+
 
 ### <br>연습 문제
 
@@ -136,14 +136,24 @@ public class Main {
   첫 번째 위치에서 시작해서 가장 끝까지 이동이 가능한지 판별하는 프로그램을 작성하세요.<br>
   이동이 가능하면 true, 불가능하면 false 를 반환하세요.
 
-  <br>[입출력 예시]
-  <br>nums: [2, 3, 0, 1, 4] / 출력: true
-  <br>nums: [3, 0, 0, 1, 1] / 출력: true
-  <br>nums: [3, 2, 1, 0, 4] / 출력: false
+  <br>[입출력 예시]<br>nums: [2, 3, 0, 1, 4] / 출력: true<br>nums: [3, 0, 0, 1, 1] / 출력: true<br>nums: [3, 2, 1, 0, 4] / 출력: false
 
 ```java
 public class Practice1 {
-    
+    public static boolean solution(int[] nums) {
+        int pos = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (pos < i) {
+                return false;
+            } else if (pos >= nums.length - 1) {
+                return true;
+            }
+
+            pos = Math.max(pos, i + nums[i]);
+        }
+
+        return true;
+    }
 }
 ```
 
@@ -151,28 +161,62 @@ public class Practice1 {
   각 원소의 의미는 주식 가격을 의미한다.<br>
   한 번에 한 주만 보유할 수 있다고 할 때 prices 를 보고 사고 팔기를 반복해서 얻을 수 있는 최대 수익을 반환하는 프로그램을 작성하세요.
 
-  <br>[입출력 예시]
-  <br>prices: [5, 1, 6, 4, 3, 5] / 출력: 7
-  <br>prices: 1, 2, 3, 4, 5 / 출력: 4
+  <br>[입출력 예시]<br>prices: [5, 1, 6, 4, 3, 5] / 출력: 7<br>prices: 1, 2, 3, 4, 5 / 출력: 4
 
 ```java
 public class Practice2 {
-    
+    public static int solution(int[] prices) {
+        if (prices == null || prices.length < 2) {
+            return 0;
+        }
+
+        int profit = 0;
+        for (int i = 1; i < prices.length; i++) {
+            if (prices[i] > prices[i - 1]) {
+                profit += prices[i] - prices[i - 1];
+            }
+        }
+        
+        return profit;
+    }
 }
 ```
 
 - Q3) 양의 정수 n 이 주어지고 다음의 연산을 수행할 수 있을 때 주어진 n 이 1 이 되는데 필요한 최소한의 연산 횟수를 반환하세요.
   1. n 이 짝수인 경우, 2로 나누기 연산
-  2. n 이 홀수일 때는 1 을 더하거나 1을 뺀다.
+  2. n 이 홀수일 때는 1 을 더하거나 1을 빼는 연산
 
-<br>[입출력 예시]
-<br>n: 8 / 출력: 3
-<br>n: 7 / 출력: 4
-<br>n: 9 / 출력: 4
+  <br>[입출력 예시]<br>n: 8 / 출력: 3<br>n: 7 / 출력: 4<br>n: 9 / 출력: 4
 
 ```java
 public class Practice3 {
-    
+    public static int solution(int n) {
+        if (n == 0 || n == 2) {
+            return 1;
+        }
+        if (n == 1) {
+            return 0;
+        }
+
+        int cnt = 0;
+        while (n != 1) {
+            if (n == 3) {
+                cnt += 2;
+                break;
+            }
+
+            if (n % 2 == 0) {
+                n /= 2;
+            } else if ((n + 1) % 4 == 0) {
+                n += 1;
+            } else if ((n - 1) % 4 == 0) {
+                n -= 1;
+            }
+            cnt++;
+        }
+
+        return cnt;
+    }
 }
 ```
 
@@ -180,25 +224,69 @@ public class Practice3 {
   각 주유소의 가스 보유량은 gas 배열에 주어지고 해당 주유소에서 다음 주유소로의 이동 비용은 cost 배열에 주어진다.<br>
   어떤 위치에서 차량이 가스를 채워 출발하면 모든 주유소를 방문하고 원래의 위치로 돌아올 수 있는지 계산하는 프로그램을 작성하세요.
 
-  <br>[입출력 예시]
-  <br>gas: [1, 2, 3, 4, 5] / cost: [3, 4, 5, 1, 2] / 출력: 3
-  <br>gas: [2, 3, 4] / cost: [3, 4, 3] / 출력: -1
+  <br>[입출력 예시]<br>gas: [1, 2, 3, 4, 5] / cost: [3, 4, 5, 1, 2] / 출력: 3<br>gas: [2, 3, 4] / cost: [3, 4, 3] / 출력: -1
 
 ```java
 public class Practice4 {
-    
+    public static int solution(int[] gas, int[] cost) {
+        if (gas == null || cost == null) {
+            return -1;
+        }
+
+        if (gas.length != cost.length) {
+            return -1;
+        }
+
+        int curGas = 0;
+        int totalGas = 0;
+        int startPos = 0;
+
+        for (int i = 0; i < gas.length; i++) {
+            curGas += gas[i] - cost[i];
+            totalGas += gas[i] - cost[i];
+
+            if (curGas < 0) {
+                startPos = i + 1;
+                curGas = 0;
+            }
+        }
+
+        return totalGas >= 0 ? startPos : -1;
+    }
 }
 ```
 
 - Q5) 정수 num 이 주어졌을 때 num 숫자에서 두 자리를 최대 한번만 교체하여 얻을 수 있는 최대값을 출력하세요.
 
-  <br>[입출력 예시]
-  <br>num: 2736 / 출력: 7236
-  <br>입력: 7116 / 출력: 7611
+  <br>[입출력 예시]<br>num: 2736 / 출력: 7236<br>num: 7116 / 출력: 7611
 
 ```java
 public class Practice5 {
-    
+    public static int solution(int num) {
+        char[] cArr = String.valueOf(num).toCharArray();
+        int[] maxArr = new int[cArr.length];
+
+        int max = 0;
+        for (int i = cArr.length - 1; i >= 0; i--) {
+            max = Math.max(max, cArr[i] - '0');
+            maxArr[i] = max;
+        }
+
+        for (int i = 0; i < cArr.length - 1; i++) {
+            if (cArr[i] - '0' < maxArr[i + 1]) {
+                for (int j = cArr.length - 1; j >= 1 + 1; j--) {
+                    if (cArr[j] - '0' == maxArr[i + 1]) {
+                        char tmp = cArr[j];
+                        cArr[j] = cArr[i];
+                        cArr[i] = tmp;
+                        return Integer.parseInt(String.valueOf(cArr));
+                    }
+                }
+            }
+        }
+
+        return num;
+    }
 }
 ```
 

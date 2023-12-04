@@ -206,7 +206,11 @@ public class Practice2 {
 
     public static void main(String[] args) {
         // Test code
-        int[][] lists = {{2, 3, 9}, {1, 5, 7}, {3, 6, 7, 11}};
+        int[][] lists = {
+            {2, 3, 9}, 
+            {1, 5, 7}, 
+            {3, 6, 7, 11}
+        };
         Node[] node = new Node[lists.length];
         setUpLinkedList(node, lists);
         Node combinedNode = solution(node);

@@ -43,11 +43,50 @@ use_math: true
 - 피보나치 예시 구현
 
 ```java
-// Recursive Function
+public class DP {
+    // Recursive Function
+    public static int fib(int n) {
+        if (n <= 1) {
+            return n;
+        } else {
+            return fib(n - 1) + fib(n - 2);
+        }
+    }
+    
+    // Tabulation
+    public static int fibDP(int n) {
+        int[] dp = new int[n < 2 ? 2 : n + 1];
+        dp[0] = 0;
+        dp[1] = 1;
 
-// Tabulation
+        for (int i = 2; i <= n; i++) {
+            dp[i] = dp[i - 1] + dp[i - 2];
+        }
 
-// Memoization
+        return dp[n];
+    }
+    
+    // Memoization
+    static int[] dp;
+    
+    public static int fibDP2(int n) {
+        dp = new int[n < 2 ? 2 : n + 1];
+        return memoization(n);
+    }
+    
+    public static int memoization(int n) {
+        if (n <= 2) {
+            return 1;
+        }
+
+        if (dp[n] != 0) {
+            return dp[n];
+        }
+
+        dp[n] = memoization(n - 1) + memoization(n - 2);
+        return dp[n];
+    }
+}
 ```
 
 
@@ -67,7 +106,23 @@ use_math: true
 
 ```java
 public class Practice1 {
-    
+    public static int solution(int n) {
+        int[] dp = new int[n + 1];
+
+        for (int i = 2; i <= n; i++) {
+            dp[i] = dp[i - 1] + 1;
+
+            if (i % 2 == 0) {
+                dp[i] = Math.min(dp[i], dp[i / 2] + 1);
+            }
+
+            if (i % 3 == 0) {
+                dp[i] = Math.min(dp[i], dp[i / 3] + 1);
+            }
+        }
+
+        return dp[n];
+    }
 }
 ```
 
@@ -77,7 +132,22 @@ public class Practice1 {
 
 ```java
 public class Practice2 {
-    
+    public static int solution(int[] arr) {
+        int[] dp = new int[arr.length + 1];
+        int result = 0;
+
+        for (int i = 0; i <= arr.length; i++) {
+            dp[i] = 1;
+            for (int j = 1; j < i; j++) {
+                if (arr[j - 1] < arr[i - 1]) {
+                    dp[i] = Math.max(dp[i], dp[j] + 1);
+                }
+            }
+            result = Math.max(result, dp[i]);
+        }
+
+        return result;
+    }
 }
 ```
 
@@ -89,7 +159,21 @@ public class Practice2 {
 
 ```java
 public class Practice3 {
-    
+    public static int solution(int[][] items, int n, int k) {
+        int[][] dp = new int[n + 1][k + 1];
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 1; j <= k; j++) {
+                if (items[i][0] > j) {
+                    dp[i + 1][j] = dp[i][j];
+                } else {
+                    dp[i + 1][j] = Math.max(dp[i][j], dp[i][j - items[i][0]] + items[i][1]);
+                }
+            }
+        }
+
+        return dp[n][k];
+    }
 }
 ```
 

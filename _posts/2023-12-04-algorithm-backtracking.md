@@ -228,7 +228,9 @@ public class Practice3 {
 
 ```java
 public class Practice4 {
-    final static int[][] dirs = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
+    final static int[][] dirs = {
+        {1, 0}, {-1, 0}, {0, 1}, {0, -1}
+    };
     static int cnt;
 
     static class Coin {

@@ -80,8 +80,8 @@
         <span class="nav__sub-title">Coding</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "backjoon" %}
-                        <li><a href="/categories/backjoon" class="">Backjoon ({{category[1].size}})</a></li>
+                    {% if category[0] == "baekjoon" %}
+                        <li><a href="/categories/baekjoon" class="">Baekjoon ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>

@@ -9,11 +9,18 @@
             📂 <span style="font-family: 'Noto Sans KR', sans-serif; font-size: 15px;">전체 포스팅 : {{sum}}개</style>
       </li>
       <li>
-        <span class="nav__sub-title">Comunity</span>
+        <span class="nav__sub-title">ETC</span>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "blog" %}
                         <li><a href="/categories/blog" class="">Blog ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "computerScience" %}
+                        <li><a href="/categories/computerScience" class="">Blog ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>

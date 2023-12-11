@@ -12,15 +12,15 @@
         <span class="nav__sub-title">ETC</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "blog" %}
-                        <li><a href="/categories/blog" class="">Blog ({{category[1].size}})</a></li>
+                    {% if category[0] == "justChat" %}
+                        <li><a href="/categories/justChat" class="">Just Chat ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "computerScience" %}
-                        <li><a href="/categories/computerScience" class="">Blog ({{category[1].size}})</a></li>
+                        <li><a href="/categories/computerScience" class="">Computer Science ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>

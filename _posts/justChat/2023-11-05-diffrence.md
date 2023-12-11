@@ -1,6 +1,6 @@
 ---
 title:  "프론트엔드와 백엔드 차이와 내가 백엔드 개발자가 되고 싶은 이유"
-category: blog
+category: justChat
 tag: ["제로베이스","백엔드","Java","Spring","개발자","백엔드공부","백엔드스쿨"]
 typora-root-url: ../
 ---

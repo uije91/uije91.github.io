@@ -294,7 +294,6 @@ defaults:
       share: #true
       related: #true
       show_date: true
-      typora-root-url: ../
       sidebar_main: true
 
 

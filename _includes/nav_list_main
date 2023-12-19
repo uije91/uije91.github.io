@@ -58,6 +58,13 @@
         <span class="nav__sub-title">Back-End</span>
             <ul>
                 {% for category in site.categories %}
+                    {% if category[0] == "Database" %}
+                        <li><a href="/categories/Database" class="">Database ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
                     {% if category[0] == "dataStructure" %}
                         <li><a href="/categories/dataStructure" class="">Data Structure ({{category[1].size}})</a></li>
                     {% endif %}
@@ -70,6 +77,7 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+        
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "java" %}

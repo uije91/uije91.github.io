@@ -114,15 +114,16 @@
                     {% endif %}
                 {% endfor %}
             </ul>
-        <!--카테고리 주석
+        
         <span class="nav__sub-title">Portfolio</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "personalProject" %}
-                        <li><a href="/categories/personalProject" class="">Personal Project ({{category[1].size}})</a></li>
+                    {% if category[0] == "singleProject" %}
+                        <li><a href="/categories/singleProject" class="">Single Project ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
+            <!--카테고리 주석
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "teamProject" %}

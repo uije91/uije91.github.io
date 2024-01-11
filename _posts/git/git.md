@@ -81,6 +81,8 @@ git config --list
 - Merge : Local Repository의 변경사항을 Working Directory로 전달
 - Branch : 독립적으로 어떤 작업을 따로 진행하기위한 가지
 - Checkout : 사용할 다른 브랜치를 지정
+- Pull : 원격 저장소에서 변경된 파일들을 로컬 저장소에 저장(Fetch+Merge)
+- Clone : 로컬에서 작업하기 위해 Remote Repository를 복제해 내 PC에 Local Repository로 저장
 
 ### <br>Local Repository
 
@@ -96,3 +98,4 @@ git config --list
 
 - 파일이 전용 서버(Github)에서 관리되며 여러사람이 함께 공유
 - Github를 통해 생성
+

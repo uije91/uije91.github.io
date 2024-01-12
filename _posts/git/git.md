@@ -26,7 +26,7 @@ toc_sticky: true
   - Global 설정파일: 한 사용자의 전치 Git Repository에 적용(git config --global)
   - Local 설정파일: 하나의 Repository에만 적용(git config --local)
 
-```
+```bash
 Global Git 사용자 설정
 git config --global user.email "abc@abc.com"
 git config --global user.name "Hong gil-dong"
@@ -98,4 +98,17 @@ git config --list
 
 - 파일이 전용 서버(Github)에서 관리되며 여러사람이 함께 공유
 - Github를 통해 생성
+
+
+
+### Conflict
+
+- Branch를 Merge할 때 발생할 수 있다.
+- 같은 파일 같은 부분을 수정한 브랜치들을 Merge할때 발생
+
+
+
+### <br>터미널로 git 관리
+
+
 

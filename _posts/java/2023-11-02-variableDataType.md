@@ -6,7 +6,7 @@ toc_label: "변수와 자료형"
 toc_sticky: true
 ---
 
-### <br>
+
 
 ## 변수(Variable)
 

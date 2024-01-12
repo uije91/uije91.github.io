@@ -7,15 +7,15 @@ toc_sticky: true
 typora-root-url: ../
 ---
 
-## <br>반복문이란?
+# <br>반복문
 
-반복문이란 프로그램 내에서 똑같은 명령을 일정 횟수만큼 반복하여 수행하도록 제어하는 명령문입니다.
+- 프로그램 내에서 똑같은 명령을 일정 횟수만큼 반복하여 수행하도록 제어하는 명령문
 
-### <br>for문
 
-주어진 횟수만큼 반복하여 실행하는 구조입니다.
+## <br>For
 
-- 문법
+- 주어진 횟수만큼 반복하여 실행하는 구조
+
 
 
 ```java
@@ -24,43 +24,44 @@ for(초기식; 조건식; 증감식){
 }
 ```
 
-### <br>Enhanced for문
+### <br>Enhanced for
 
-for문이 <u>모든 원소를 순회할 경우 사용</u>하며 for-each 문이라는 키워드로도 사용됩니다. 주로 배열의 출력에 사용합니다.
+- for문이 <u>모든 원소를 순회할 경우 사용</u>하며 for-each 문이라는 키워드로도 사용된다.
 
-- 예제 : for문과 Enhanced for문으로 결과 값 출력하기
 
 ```java
+// for문과 Enhanced for문으로 결과 값 출력하기
+
 int[] nums = {1,2,3,4,5};
 
-//for문으로 출력
+// for문으로 출력
 for(int i=0; i<nums.length; i++)
 {
     System.out.println(nums[i]);
 }
 
-//Enhanced for문으로 출력
-for(int n:nums){
+// Enhanced for문으로 출력
+for(int num : nums){
     System.out.println(num);
 }
 ```
 
-### <br>while문
+## <br>While
 
-조건문이 만족하는 동안 반복하여 실행하는 구조입니다.
+- 조건문이 만족하는 동안 반복하여 실행하는 구조
 
-while과 do-while 구조가 있으며, do-while문은 내용을 실행 후 조건에 따라서 반복 여부를 결정합니다.
 
-- 문법
+- while과 do-while 구조가 있으며, do-while문은 내용을 실행 후 조건에 따라서 반복 여부를 결정
+
 
 
 ```java
-//while문
+// while문
 while(조건식){
     반복하여 실행할 내용;
 }
 
-//do-while문
+// do-while문
 do{
    반복하여 실행할 내용; 
 }while(조건식);
@@ -70,16 +71,16 @@ do{
 
 ## <br>기타 제어문
 
-일반적으로 반복문에서는 다음 조건식을 검사하기 전까지 루프 안에 있는 모든 명령문을 실행하지만 기타 제어문을 통해 사용자가 루프의 흐름을 직접 제어할 수 있습니다.
+- 일반적으로 반복문에서는 다음 조건식을 검사하기 전까지 루프 안에 있는 모든 명령문을 실행하지만, 기타 제어문을 통해 사용자가 루프의 흐름을 직접 제어할 수 있다.
 
-### <br>continue문
 
-루프 내에서 사용하며, 해당 루프의 나머지 부분을 건너뛰고 다음 조건식으로 바로 넘어갈 수 있습니다.
+### <br>continue
 
-- 예제 : 별 찍기를 이용한 continue문의 사용
+- 루프 내에서 사용하며, 해당 루프의 나머지 부분을 건너뛰고 다음 조건식으로 바로 넘어갈 수 있다.
+
 
 ```java
-//일반 for문
+// 일반 for문 별찍기
 for (int i = 0; i < 5; i++) {
     for (int j = 0; j < i+1; j++) {
         System.out.print("*");
@@ -87,14 +88,14 @@ for (int i = 0; i < 5; i++) {
     System.out.println();
 }
 
-//일반 for문의 결과
+// 일반 for문의 결과
 *
 **
 ***
 ****
 *****
     
-//continue문 사용
+// continue문 사용
 for (int i = 0; i < 5; i++) {
     if(i==3) continue; // i의 값이 3일때 continue문 실행
     for (int j = 0; j < i+1; j++) {
@@ -103,21 +104,20 @@ for (int i = 0; i < 5; i++) {
     System.out.println();
 }
 
-//continue문 사용 결과
+// continue문 사용 결과
 *
 **
 ***
 *****
 ```
 
-### <br>break문
+### <br>break
 
-루프 내에서 사용하며, 조건식의 판단 결과와 상관없이 반복문을 종료하고 싶을 때 사용합니다.
+- 루프 내에서 사용하며, 조건식의 판단 결과와 상관없이 반복문을 종료하고 싶을 때 사용
 
-- 예제 : 별 찍기를 이용한 break문의 사용
 
 ```java
-//일반 for문
+// 일반 for문 별찍기
 for (int i = 0; i < 5; i++) {
     for (int j = 0; j < i+1; j++) {
         System.out.print("*");
@@ -125,14 +125,14 @@ for (int i = 0; i < 5; i++) {
     System.out.println();
 }
 
-//일반 for문의 결과
+// 일반 for문의 결과
 *
 **
 ***
 ****
 *****
     
-//break문 사용
+// break문 사용
 for (int i = 0; i < 5; i++) {
     if(i==3) break; // i의 값이 3일때 break문 실행
     for (int j = 0; j < i+1; j++) {
@@ -141,22 +141,20 @@ for (int i = 0; i < 5; i++) {
     System.out.println();
 }
 
-//break문 사용 결과
+// break문 사용 결과
 *
 **
 ***
 ```
 
-### <br>Labeled Loop문
+### <br>Labeled Loop
 
-break문과 다르게 지정된 최상단 반복문을 탈출하는 방식입니다.
+- break문과 다르게 지정된 최상단 반복문을 탈출하는 방식
 
-- 예제 : 구구단을 이용한 break문과 loop문의 차이
-
-  break문은 변수가 j인 for문에서만 반복문을 종료하지만 loop문은 지정된 전체 for문을 종료합니다.
+  - break문은 변수가 j인 for문에서만 반복문을 종료하지만 loop문은 지정된 전체 for문을 종료합니다.
 
 ```java
-//break문
+// break문
 for (int i = 2; i < 10; i++) {
     for (int j = 1; j < 10 ; j++) {
         if(j==5) break;
@@ -175,7 +173,7 @@ for (int i = 2; i < 10; i++) {
 08 X 01 : 08	08 X 02 : 16	08 X 03 : 24	08 X 04 : 32	
 09 X 01 : 09	09 X 02 : 18	09 X 03 : 27	09 X 04 : 36
     
-//Labeled Loop문
+// Labeled Loop문
 Loop1:
 for (int i = 2; i < 10; i++) {
     for (int j = 1; j < 10 ; j++) {

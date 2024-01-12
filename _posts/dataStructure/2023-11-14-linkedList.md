@@ -7,19 +7,19 @@ toc_sticky: true
 use_math: true
 ---
 
-## <br>연결 리스트(Linked List)
+# <br>연결 리스트(Linked List)
 
 - 데이터를 링크로 연결해서 관리하는 자료구조
 - 자료의 순서는 정해져 있지만 메모리상 연속성이 보장되지는 않음
 
 
 
-### <br>연결 리스트의 장점
+## <br>연결 리스트의 장점
 
 - 데이터 공간을 미리 할당할 필요 없음
 - 리스트의 길이가 가변적이라 데이터 추가/삭제 용이
 
-### <br>연결 리스트의 단점
+## <br>연결 리스트의 단점
 
 - 연결 구조를 위한 별도 데이터 공간 필요
 - 연결 정보를 찾는 시간 필요(접근 속도가 상대적으로 느림)
@@ -27,7 +27,7 @@ use_math: true
 
 
 
-### <br>연결 리스트의 기본 구조
+## <br>연결 리스트의 기본 구조
 
 - 노드(Node) : 데이터의 저장 단위로 값과 포인터로 구성
 
@@ -35,7 +35,7 @@ use_math: true
 
 
 
-### <br>연결 리스트의 기본 연산
+## <br>연결 리스트의 기본 연산
 
 - 삽입
   1. 삽입하고자 하는 new 노드가 after노드를 가리키게 한다.
@@ -60,9 +60,9 @@ use_math: true
 
 
 
-### <br>연결리스트 구현
+## <br>연결리스트 구현
 
-#### <br>단순 연결 리스트
+### <br>단순 연결 리스트
 
 ```java
 //노드 구현
@@ -206,7 +206,7 @@ class LinkedList {
 
 
 
-#### <br>양방향 연결 리스트
+### <br>양방향 연결 리스트
 
 ```java
 class DoublyLinkedList extends LinkedList {
@@ -317,7 +317,7 @@ class DoublyLinkedList extends LinkedList {
 
 
 
-#### <br>원형 연결 리스트
+### <br>원형 연결 리스트
 
 ```java
 class CircularLinkedList {

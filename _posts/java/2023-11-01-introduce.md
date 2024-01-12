@@ -6,7 +6,8 @@ typora-root-url: ../
 
 # <br>자바(Java)란?
 
-sun사(이후 Oracle에 인수됨)에서 C++를 기반으로 개발한 객체 지향 언어
+- sun사(이후 Oracle에 인수됨)에서 C++를 기반으로 개발한 객체 지향 언어
+
 
 ## <br>자바의 특징
 

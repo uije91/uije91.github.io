@@ -7,6 +7,7 @@ typora-root-url: ../
 # <br>공공 와이파이 프로젝트
 
 - OPEN API를 활용하여 자신의 위치 및 특정 위치에서 주변 와이파이를 찾는 기능 구현
+- Github: [바로가기](https://github.com/uije91/Public_Wifi)
 
 
 

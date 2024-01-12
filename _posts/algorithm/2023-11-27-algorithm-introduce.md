@@ -2,14 +2,12 @@
 title:  "[알고리즘] 소개"
 category: algorithm
 typora-root-url: ../
-toc: true
-toc_sticky: true
 use_math: true
 ---
 
 ## <br>알고리즘(Algorithm)
 
-- 어떤 문제 해결을 위한 절차나 방법입니다.
+- 어떤 문제 해결을 위한 절차나 방법
 
 - 알고리즘의 조건
 
@@ -25,7 +23,7 @@ use_math: true
 
 
 
-### 좋은 알고리즘이란?
+### <br>좋은 알고리즘이란?
 
 - 정확성
 - 시간 복잡도
@@ -33,7 +31,7 @@ use_math: true
 
 
 
-### 알고리즘의 분류
+### <br>알고리즘의 분류
 
 - 정렬
 - 이진 탐색 / 투 포인터
@@ -42,8 +40,4 @@ use_math: true
 - 백 트래킹
 - 최단 경로
 - 최소 신장 트리
-
-
-
-
 

@@ -103,12 +103,39 @@ git config --list
 
 ### Conflict
 
-- Branch를 Merge할 때 발생할 수 있다.
-- 같은 파일 같은 부분을 수정한 브랜치들을 Merge할때 발생
+- 같은 파일 같은 부분을 수정한 브랜치들을 Merge할때 발생	
+
+- Branch를 Merge할 때 발생할 수 있음.
+- 같은 부분을 작업한 다른 작업자와 협의 후 해당부분 수정
 
 
 
 ### <br>터미널로 git 관리
+
+```bash
+# 깃 상태 확인
+git status
+
+# Clone
+git clone [원격 저장소 주소]
+
+# Add
+git add [변경된 파일명]
+# 추가되지 않은 파일들 모두 한번에 Staging Area에 추가
+git add -i
+
+# Staging Area 에서 Working Directory로 내림
+git restore --staged [변경된 파일명]
+
+# Commit
+git commit -m"커밋 메세지"
+
+# Push
+git push
+
+# 그래프와 변경사항을 확인 
+git log --decorate --graph
+```
 
 
 

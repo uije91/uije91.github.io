@@ -174,4 +174,4 @@ CREATE TABLE BOOKMARK_GROUP
 
 ### <br>프로젝트 영상
 
-{% include video id="A0oYx44qVek" provider="youtube" %}
+{% include video id="87FVzyhuf4E" provider="youtube" %}
